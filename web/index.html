@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>East Africa Mobility Watch — Demo</title>
+<meta name="description" content="Interactive web map of disaster displacement by hazard across the IGAD region (demo with illustrative data).">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="logo" aria-hidden="true"></div>
+    <div>
+      <h1>East Africa Mobility Watch</h1>
+      <p>Disaster displacement by hazard · IGAD region · Demo</p>
+    </div>
+  </div>
+  <span class="badge" title="Figures are synthetic and for demonstration only">Illustrative sample data</span>
+</header>
+
+<div class="layout">
+  <aside class="panel" id="panel">
+    <section class="controls">
+      <label class="lbl" for="hazard">Hazard</label>
+      <div class="seg" id="hazard" role="group" aria-label="Hazard filter">
+        <button data-h="All" class="on">All</button>
+        <button data-h="Flood">Flood</button>
+        <button data-h="Drought">Drought</button>
+        <button data-h="Conflict">Conflict</button>
+      </div>
+
+      <label class="lbl" for="month">Period: <b id="monthLabel">Full year 2025</b></label>
+      <div class="slider-row">
+        <button id="play" class="icon" aria-label="Play timeline">▶</button>
+        <input type="range" id="month" min="0" max="12" value="12" aria-label="Month">
+      </div>
+      <div class="ticks"><span>Jan</span><span>Jun</span><span>Dec</span><span>Year</span></div>
+
+      <label class="lbl">Basemap</label>
+      <div class="seg" id="basemap">
+        <button data-b="light" class="on">Light</button>
+        <button data-b="imagery">Imagery</button>
+      </div>
+    </section>
+
+    <section class="kpis">
+      <div class="kpi"><span>New displacements</span><b id="kTotal">—</b></div>
+      <div class="kpi"><span>Most affected</span><b id="kTop">—</b></div>
+    </section>
+
+    <section class="detail" id="detail">
+      <h2 id="dTitle">IGAD region</h2>
+      <p class="hint" id="dHint">Click a country on the map to see its monthly trend.</p>
+      <div class="chart-wrap"><canvas id="chart" height="190"></canvas></div>
+      <table class="tbl" id="rank"><thead><tr><th>Country</th><th class="r">Displacements</th></tr></thead><tbody></tbody></table>
+      <button class="dl" id="download">Download current view (CSV)</button>
+    </section>
+
+    <footer class="foot">
+      Boundaries: Natural Earth (public domain) · Basemaps: © OpenStreetMap, CARTO, Esri.<br>
+      Built by <b>Amna Abdein</b> — Leaflet · Chart.js · Python pipeline · Docker · Netlify CI/CD.
+    </footer>
+  </aside>
+
+  <main class="mapbox">
+    <div id="map" role="application" aria-label="Map of IGAD countries"></div>
+    <div class="legend" id="legend"></div>
+  </main>
+</div>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="vendor/chart.umd.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
