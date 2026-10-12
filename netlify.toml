@@ -1,0 +1,12 @@
+[build]
+  # Rebuilds web/data from data/raw with the Python pipeline, then publishes web/
+  command = "python3 scripts/build_data.py"
+  publish = "web"
+
+[build.environment]
+  PYTHON_VERSION = "3.11"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
