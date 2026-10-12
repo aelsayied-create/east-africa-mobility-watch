@@ -47,7 +47,7 @@ docker run -p 8080:80 eamw-demo           # open http://localhost:8080
 
 ## Data sources
 - Country boundaries: [Natural Earth](https://www.naturalearthdata.com/) (public domain), via `world-atlas`
-- Basemaps: © OpenStreetMap contributors, © CARTO, Esri World Imagery
+- Basemaps: Esri World Light Gray Canvas & World Imagery, © OpenStreetMap contributors
 - Displacement: illustrative sample data (see note above)
 
 ## Roadmap
