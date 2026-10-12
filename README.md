@@ -1,12 +1,12 @@
 # East Africa Mobility Watch — Demo
 
-An interactive web map of **disaster displacement by hazard** (flood, drought, conflict) across the eight IGAD member states, built to show an end-to-end geospatial workflow: a Python data pipeline, a Leaflet web map with charts, Docker packaging and CI/CD deployment to Netlify.
+An interactive web map of **disaster displacement by hazard** (flood, drought, conflict) across the eight IGAD member states, built to show an end-to-end geospatial workflow: a Python data pipeline, a Leaflet web map with charts, Docker packaging and CI/CD deployment to GitHub Pages.
 
 > ⚠️ **Illustrative sample data.** The displacement figures are synthetic, generated with realistic seasonal patterns for demonstration. Replace `data/raw/displacement.csv` with a real export (e.g. IOM DTM or IDMC) to use real figures.
 
 > 💼 **About my production work.** This repo is a public sample. My real production dashboards for Riyadh Municipality run on Netlify behind password protection, because they belong to my employer. I can demonstrate them live during an interview.
 
-**Live demo:** _add your Netlify link here_
+**Live demo:** https://aelsayied-create.github.io/east-africa-mobility-watch/
 
 ![screenshot](docs/screenshot.png)
 
@@ -25,8 +25,8 @@ data/raw/                 source data (boundaries + displacement table)
 scripts/build_data.py     Python pipeline: validate → aggregate → web-ready JSON/GeoJSON
 web/                      static front end (Leaflet, Chart.js, vanilla JS)
 Dockerfile                multi-stage build: pipeline, then nginx
-netlify.toml              Netlify build (runs the pipeline, publishes web/)
-.github/workflows/        CI: pipeline + Docker build check + Netlify deploy
+netlify.toml              optional Netlify build (runs the pipeline, publishes web/)
+.github/workflows/        CI/CD: pipeline + Docker build check + GitHub Pages deploy
 ```
 
 ## Run locally
@@ -42,8 +42,8 @@ docker run -p 8080:80 eamw-demo           # open http://localhost:8080
 ```
 
 ## Deploy
-- **Netlify (from GitHub):** connect the repo in Netlify; `netlify.toml` handles the build.
-- **GitHub Actions:** add repo secrets `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` to deploy on every push to `main`.
+- **GitHub Pages:** every push to `main` runs the pipeline, checks the Docker build and deploys `web/` (`.github/workflows/pages.yml`).
+- **Netlify (alternative):** import the repo in Netlify; `netlify.toml` handles the build.
 
 ## Data sources
 - Country boundaries: [Natural Earth](https://www.naturalearthdata.com/) (public domain), via `world-atlas`
