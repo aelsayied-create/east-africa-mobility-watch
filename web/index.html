@@ -3,12 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>East Africa Mobility Watch — Demo</title>
-<meta name="description" content="Interactive web map of disaster displacement by hazard across the IGAD region (demo with illustrative data).">
+<title>East Africa Mobility Watch</title>
+<meta name="description" content="Disaster displacement by hazard across the IGAD region: explore the map, read the insights or follow the guided story (illustrative sample data).">
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <header class="top">
@@ -16,64 +14,90 @@
     <div class="logo" aria-hidden="true"></div>
     <div>
       <h1>East Africa Mobility Watch</h1>
-      <p>Disaster displacement by hazard · IGAD region · Demo</p>
+      <p>Disaster displacement by hazard · IGAD region · 2025</p>
     </div>
   </div>
-  <span class="badge" title="Figures are synthetic and for demonstration only">Illustrative sample data</span>
+  <nav class="tabs" role="tablist" aria-label="Views">
+    <button role="tab" data-view="explore" aria-selected="true">Explore</button>
+    <button role="tab" data-view="insights" aria-selected="false">Insights</button>
+    <button role="tab" data-view="story" aria-selected="false">Story</button>
+  </nav>
+  <span class="badge" title="Displacement figures are synthetic estimates for demonstration">Illustrative estimates</span>
 </header>
 
-<div class="layout">
-  <aside class="panel" id="panel">
-    <section class="controls">
-      <label class="lbl" for="hazard">Hazard</label>
-      <div class="seg" id="hazard" role="group" aria-label="Hazard filter">
-        <button data-h="All" class="on">All</button>
-        <button data-h="Flood">Flood</button>
-        <button data-h="Drought">Drought</button>
-        <button data-h="Conflict">Conflict</button>
-      </div>
+<section class="filterbar" id="filterbar" aria-label="Filters">
+  <div class="seg" id="hazard" role="group" aria-label="Hazard">
+    <button data-h="All" class="on">All hazards</button><button data-h="Flood">Flood</button><button data-h="Drought">Drought</button><button data-h="Conflict">Conflict</button>
+  </div>
+  <div class="period">
+    <button id="play" class="icon" aria-label="Play timeline">▶</button>
+    <input type="range" id="month" min="0" max="12" value="12" aria-label="Month">
+    <b id="monthLabel">Full year 2025</b>
+  </div>
+  <div class="seg" id="metric" role="group" aria-label="Measure">
+    <button data-m="abs" class="on">People</button><button data-m="share">Share of region</button>
+  </div>
+</section>
 
-      <label class="lbl" for="month">Period: <b id="monthLabel">Full year 2025</b></label>
-      <div class="slider-row">
-        <button id="play" class="icon" aria-label="Play timeline">▶</button>
-        <input type="range" id="month" min="0" max="12" value="12" aria-label="Month">
-      </div>
-      <div class="ticks"><span>Jan</span><span>Jun</span><span>Dec</span><span>Year</span></div>
+<section class="kpis" id="kpis" aria-label="Key figures"></section>
 
-      <label class="lbl">Basemap</label>
-      <div class="seg" id="basemap">
-        <button data-b="light" class="on">Light</button>
-        <button data-b="imagery">Imagery</button>
-      </div>
-    </section>
+<div class="layout" id="map-layout">
+  <aside class="panel" id="panel-explore">
+    <h2 id="dTitle">IGAD region</h2>
+    <p class="hint" id="dHint">Click a country on the map or in the table to see its monthly trend.</p>
+    <div class="chart-wrap" style="height:200px"><canvas id="c-trend" aria-label="Monthly displacements by hazard"></canvas></div>
+    <table class="tbl" id="rank"><thead><tr><th>Country</th><th>New displacements</th><th class="r">Share</th></tr></thead><tbody></tbody></table>
+    <div class="btns"><button id="download">Download current view (CSV)</button></div>
+  </aside>
 
-    <section class="kpis">
-      <div class="kpi"><span>New displacements</span><b id="kTotal">—</b></div>
-      <div class="kpi"><span>Most affected</span><b id="kTop">—</b></div>
-    </section>
-
-    <section class="detail" id="detail">
-      <h2 id="dTitle">IGAD region</h2>
-      <p class="hint" id="dHint">Click a country on the map to see its monthly trend.</p>
-      <div class="chart-wrap"><canvas id="chart" height="190"></canvas></div>
-      <table class="tbl" id="rank"><thead><tr><th>Country</th><th class="r">Displacements</th></tr></thead><tbody></tbody></table>
-      <button class="dl" id="download">Download current view (CSV)</button>
-    </section>
-
-    <footer class="foot">
-      Boundaries: Natural Earth (public domain) · Basemaps: Esri, © OpenStreetMap contributors.<br>
-      Built by <b>Amna Abdein</b> — Leaflet · Chart.js · Python pipeline · Docker · Netlify CI/CD.
-    </footer>
+  <aside class="panel story" id="panel-story" hidden>
+    <div class="story-top">
+      <span class="eyebrow" id="st-count"></span>
+      <div class="dots" id="st-dots"></div>
+    </div>
+    <h2 id="st-title"></h2>
+    <div class="hero"><b id="st-hero"></b><span id="st-hero-l"></span></div>
+    <p class="st-text" id="st-text"></p>
+    <div class="chart-wrap" style="height:150px"><canvas id="c-story" aria-label="Story chart"></canvas></div>
+    <div class="st-nav">
+      <button id="st-prev">← Back</button>
+      <button id="st-next" class="primary">Next →</button>
+    </div>
   </aside>
 
   <main class="mapbox">
-    <div id="map" role="application" aria-label="Map of IGAD countries"></div>
+    <div id="map" aria-label="Map of IGAD countries"></div>
+    <div class="map-ui"><div class="seg" id="basemap"><button data-b="gray" class="on">Map</button><button data-b="imagery">Imagery</button></div></div>
     <div class="legend" id="legend"></div>
   </main>
 </div>
 
+<div class="insights" id="view-insights" hidden>
+  <div class="findings" id="findings"></div>
+  <div class="grid">
+    <figure class="card wide">
+      <figcaption><h3>Seasonal calendar</h3><p>New displacements per country and month for the selected hazard. Darker = more people.</p></figcaption>
+      <div class="heat" id="heat"></div>
+      <div class="heat-legend" id="heat-legend"></div>
+    </figure>
+    <figure class="card">
+      <figcaption><h3>Regional trend by hazard</h3><p>All IGAD countries, people per month</p></figcaption>
+      <div class="chart-wrap" style="height:250px"><canvas id="c-region"></canvas></div>
+    </figure>
+    <figure class="card">
+      <figcaption><h3>What drives displacement in each country</h3><p>Share of each country's yearly total (%)</p></figcaption>
+      <div class="chart-wrap" style="height:250px"><canvas id="c-mix"></canvas></div>
+    </figure>
+  </div>
+</div>
+
+<footer class="foot">
+  Displacement figures are <b>illustrative estimates</b> generated for demonstration, not official data. Boundaries: Natural Earth (public domain).
+  Basemaps: Esri, © OpenStreetMap contributors. Built by Amna Abdein · Leaflet · Chart.js · Python pipeline · GitHub Actions.
+</footer>
+
 <script src="vendor/leaflet/leaflet.js"></script>
 <script src="vendor/chart.umd.js"></script>
-<script src="app.js?v=3"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>

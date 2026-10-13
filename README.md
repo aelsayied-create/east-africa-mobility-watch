@@ -11,13 +11,11 @@ An interactive web map of **disaster displacement by hazard** (flood, drought, c
 ![screenshot](docs/screenshot.png)
 
 ## Features
-- Choropleth map of new displacements per country, with automatic class breaks and legend
-- Filter by hazard; monthly time slider with play animation, or full-year view
-- Click a country (or a table row) for its monthly trend, stacked by hazard
-- Ranked country table and key figures that update with every filter
-- Light / satellite imagery basemap switch
-- Export of the current view to CSV
-- Responsive layout for mobile
+Three views:
+- **Explore**: choropleth map of new displacements per country, filtered by hazard, with a monthly time slider (play animation) and a toggle between people and share of the region. Click a country or table row for its monthly trend by hazard. Light map / satellite imagery switch and CSV export.
+- **Insights**: auto-generated key findings, a seasonal calendar (country × month heatmap), regional trend lines by hazard, and the hazard mix driving displacement in each country.
+- **Story**: a six-step guided story (regional overview → Sudan's flood season → Somalia's Gu and Deyr rains → dry-season drought → year-round conflict → from data to early action). Each step zooms the map, recolours it for that hazard and period, and shows a focused chart. Arrow keys work too.
+- Light/dark mode, responsive layout, colour-blind-checked palettes, no build step (libraries vendored).
 
 ## Architecture
 ```
