@@ -1,0 +1,36 @@
+name: Refresh real data (IDMC · CHIRPS · geoBoundaries)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 20 * *"        # monthly, after CHIRPS publishes the previous month
+  push:
+    paths: ["scripts/fetch_real_data.py", ".github/workflows/refresh-data.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install numpy shapely rasterio
+      - name: Fetch IDMC, geoBoundaries and CHIRPS
+        run: python scripts/fetch_real_data.py
+      - name: Commit refreshed raw data
+        run: |
+          git config user.name "eamw-data-bot"
+          git config user.email "eamw-data-bot@users.noreply.github.com"
+          git add data/raw
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "Refresh real data $(date -u +%Y-%m-%d)"
+          git push
