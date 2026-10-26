@@ -1,0 +1,332 @@
+{
+ "total": 152967,
+ "igad": 51562,
+ "keys": [
+  "id",
+  "country",
+  "iso3",
+  "latitude",
+  "longitude",
+  "centroid",
+  "role",
+  "displacement_type",
+  "qualifier",
+  "figure",
+  "displacement_date",
+  "displacement_start_date",
+  "displacement_end_date",
+  "year",
+  "event_id",
+  "event_name",
+  "event_codes",
+  "event_code_types",
+  "event_start_date",
+  "event_end_date",
+  "category",
+  "subcategory",
+  "type",
+  "subtype",
+  "standard_popup_text",
+  "standard_info_text",
+  "old_id",
+  "sources",
+  "source_url",
+  "locations_name",
+  "locations_coordinates",
+  "locations_accuracy",
+  "locations_type",
+  "displacement_occurred",
+  "created_at"
+ ],
+ "samples": [
+  {
+   "id": 516012,
+   "country": "Ethiopia",
+   "iso3": "ETH",
+   "latitude": 6.803865,
+   "longitude": 39.449175,
+   "centroid": "[6.803865, 39.449175]",
+   "role": "Recommended figure",
+   "displacement_type": "Conflict",
+   "qualifier": "more than or equal to",
+   "figure": 9,
+   "displacement_date": "2026-10-11",
+   "displacement_start_date": "2026-10-04",
+   "displacement_end_date": "2026-10-11",
+   "year": 2026,
+   "event_id": 81347,
+   "event_name": "Ethiopia: Non-International armed conflict (NIAC) - Southern Ethiopia (Oromia, Sidama)- 01/01/2026",
+   "event_codes": "",
+   "event_code_types": "",
+   "event_start_date": "2026-01-01",
+   "event_end_date": "2026-12-31",
+   "category": null,
+   "subcategory": null,
+   "type": "Non-International armed conflict (NIAC)",
+   "subtype": "Non-International armed conflict (NIAC)",
+   "standard_popup_text": "<b> Ethiopia:                9 displacements, 04 October   - 11 October   </b> <br> According to local authorities, at least two households were displaced in Oromia Region and Sidama due to non-international armed conflict between the 4th and 11th of October 2026. <br> Addis Standard - 11 March     2026",
+   "standard_info_text": "<b> Ethiopia:                9 displacements, 04 October   - 11 October   </b>",
+   "old_id": null,
+   "sources": "Local Authorities",
+   "source_url": "",
+   "locations_name": "Oromia Region, Ethiopia; Sidama, Southern Nations, Ethiopia",
+   "locations_coordinates": "6.95227, 40.416779; 6.65546, 38.481571",
+   "locations_accuracy": "State/Region/Province (ADM1); District/Zone/Department (ADM2)",
+   "locations_type": "Origin; Origin",
+   "displacement_occurred": null,
+   "created_at": "2026-10-11T22:39:53.052135Z"
+  },
+  {
+   "id": 516242,
+   "country": "Ethiopia",
+   "iso3": "ETH",
+   "latitude": 12.64781,
+   "longitude": 40.243055,
+   "centroid": "[12.64781, 40.243055]",
+   "role": "Recommended figure",
+   "displacement_type": "Conflict",
+   "qualifier": "total",
+   "figure": 161,
+   "displacement_date": "2026-09-28",
+   "displacement_start_date": "2026-09-28",
+   "displacement_end_date": "2026-09-28",
+   "year": 2026,
+   "event_id": 81416,
+   "event_name": "Ethiopia: Non-International armed conflict (NIAC) - Tigray (Makelle Zone) - 28/09/2026",
+   "event_codes": "",
+   "event_code_types": "",
+   "event_start_date": "2026-09-28",
+   "event_end_date": "2026-09-28",
+   "category": null,
+   "subcategory": null,
+   "type": "Non-International armed conflict (NIAC)",
+   "subtype": "Non-International armed conflict (NIAC)",
+   "standard_popup_text": "<b> Ethiopia:              161 displacements (evacuated), 28 September - 28 September </b> <br> According to the International Committee of the Red Cross (ICRC), 161 people were evacuated from Mekelle, Tigray Region, to Semera, Afar Region, on 28 September 2026 due to renewed hostilities in northern Ethiopia. <br> International Committee of the Red Cross (ICRC) - 20 October   2026",
+   "standard_info_text": "<b> Ethiopia:              161 displacements (evacuated), 28 September - 28 September </b>",
+   "old_id": null,
+   "sources": "International Committee of the Red Cross (ICRC)",
+   "source_url": "",
+   "locations_name": "Mek'el\u0113, Mekele, Tigray Region, Ethiopia; Semera, Zone 1, Afar Region, Ethiopia",
+   "locations_coordinates": "13.50112, 39.475761; 11.7945, 41.010349",
+   "locations_accuracy": "County/City/town/Village/Woreda (ADM3); County/City/town/Village/Woreda (ADM3)",
+   "locations_type": "Origin; Destination",
+   "displacement_occurred": "Displacement without preventive evacuations reported",
+   "created_at": "2026-10-21T10:34:56.442186Z"
+  },
+  {
+   "id": 516027,
+   "country": "Ethiopia",
+   "iso3": "ETH",
+   "latitude": 11.69324,
+   "longitude": 40.87817,
+   "centroid": "[11.69324, 40.87817]",
+   "role": "Recommended figure",
+   "displacement_type": "Conflict",
+   "qualifier": "more than or equal to",
+   "figure": 150000,
+   "displacement_date": "2026-09-28",
+   "displacement_start_date": "2026-09-23",
+   "displacement_end_date": "2026-09-28",
+   "year": 2026,
+   "event_id": 81354,
+   "event_name": "Ethiopia: Non-International armed conflict (NIAC) - Afar - 22/09/2026",
+   "event_codes": "",
+   "event_code_types": "",
+   "event_start_date": "2026-09-22",
+   "event_end_date": "2026-09-22",
+   "category": null,
+   "subcategory": null,
+   "type": "Non-International armed conflict (NIAC)",
+   "subtype": "Non-International armed conflict (NIAC)",
+   "standard_popup_text": "<b> Ethiopia:          150,000 displacements, 23 September - 28 September </b> <br> According to Local civil society organisations (CSOs), at least 150,000 people were displaced in Afar Region due to non-international armed conflict between 23 and 28 September, 2026. <br> Addis Standard - 28 September 2026",
+   "standard_info_text": "<b> Ethiopia:          150,000 displacements, 23 September - 28 September </b>",
+   "old_id": null,
+   "sources": "Local civil society organisations (CSOs)",
+   "source_url": "",
+   "locations_name": "Afar Region, Ethiopia",
+   "locations_coordinates": "11.69324, 40.87817",
+   "locations_accuracy": "State/Region/Province (ADM1)",
+   "locations_type": "Origin",
+   "displacement_occurred": "Displacement without preventive evacuations reported",
+   "created_at": "2026-10-12T01:39:06.436720Z"
+  }
+ ],
+ "types": "[(('Disaster', 'Drought'), 31408), (('Conflict', 'Unclear/Unknown'), 13453), (('Disaster', 'Flood'), 3912), (('Conflict', 'Non-International armed conflict (NIAC)'), 1796), (('Conflict', 'Other situations of violence (OSV)'), 639), (('Disaster', 'Storm'), 179), (('Disaster', 'Mass Movement'), 138), (('Disaster', 'Wildfire'), 14), (('Other', None), 13), (('Disaster', 'Earthquake'), 6), (('Disaster', 'Mixed disasters'), 3), (('Conflict', 'International armed conflict (IAC)'), 1)]",
+ "months": [
+  [
+   "2023-07",
+   123973
+  ],
+  [
+   "2023-08",
+   108775
+  ],
+  [
+   "2023-09",
+   163122
+  ],
+  [
+   "2023-10",
+   18905695
+  ],
+  [
+   "2023-11",
+   30127565
+  ],
+  [
+   "2023-12",
+   26432803
+  ],
+  [
+   "2024-01",
+   308484
+  ],
+  [
+   "2024-02",
+   478250
+  ],
+  [
+   "2024-03",
+   518454
+  ],
+  [
+   "2024-04",
+   902360
+  ],
+  [
+   "2024-05",
+   1705795
+  ],
+  [
+   "2024-06",
+   434272
+  ],
+  [
+   "2024-07",
+   2166629
+  ],
+  [
+   "2024-08",
+   1152071
+  ],
+  [
+   "2024-09",
+   107670
+  ],
+  [
+   "2024-10",
+   507480
+  ],
+  [
+   "2024-11",
+   565261
+  ],
+  [
+   "2024-12",
+   330766
+  ],
+  [
+   "2025-01",
+   352269
+  ],
+  [
+   "2025-02",
+   110295
+  ],
+  [
+   "2025-03",
+   365972
+  ],
+  [
+   "2025-04",
+   905943
+  ],
+  [
+   "2025-05",
+   939985
+  ],
+  [
+   "2025-06",
+   278483
+  ],
+  [
+   "2025-07",
+   634532
+  ],
+  [
+   "2025-08",
+   467218
+  ],
+  [
+   "2025-09",
+   227210
+  ],
+  [
+   "2025-10",
+   1035737
+  ],
+  [
+   "2025-11",
+   621022
+  ],
+  [
+   "2025-12",
+   250782
+  ],
+  [
+   "2026-01",
+   925183
+  ],
+  [
+   "2026-02",
+   646802
+  ],
+  [
+   "2026-03",
+   259688
+  ],
+  [
+   "2026-04",
+   172935
+  ],
+  [
+   "2026-05",
+   224330
+  ],
+  [
+   "2026-06",
+   196086
+  ],
+  [
+   "2026-07",
+   118769
+  ],
+  [
+   "2026-08",
+   597920
+  ],
+  [
+   "2026-09",
+   207596
+  ],
+  [
+   "2026-10",
+   9
+  ]
+ ],
+ "minmax": [
+  "2016-01",
+  "2026-10"
+ ],
+ "chirps_range": [
+  "1981.01",
+  "2026.09",
+  1647
+ ],
+ "gb_keys": {
+  "boundarySourceURL": "africaopendata.org/dataset/ethiopia-shapefiles",
+  "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM1/geoBoundaries-ETH-ADM1-all.zip",
+  "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM1/geoBoundaries-ETH-ADM1.geojson",
+  "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ETH/ADM1/geoBoundaries-ETH-ADM1.topojson"
+ }
+}
