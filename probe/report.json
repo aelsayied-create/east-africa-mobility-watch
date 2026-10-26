@@ -1,0 +1,47 @@
+{
+ "idu_180": {
+  "status": 200,
+  "type": "application/json",
+  "bytes": 705486
+ },
+ "idu_all": {
+  "status": 200,
+  "type": "application/json",
+  "bytes": 16948417
+ },
+ "gidd_dis": {
+  "status": 200,
+  "type": "application/json",
+  "bytes": 2026
+ },
+ "gidd_dis_export": {
+  "status": 200,
+  "type": "application/octet-stream",
+  "bytes": 43112
+ },
+ "gidd_disp": {
+  "status": 200,
+  "type": "application/json",
+  "bytes": 1178
+ },
+ "hdx_pkg": {
+  "status": 200,
+  "type": "application/json;charset=utf-8",
+  "bytes": 229760
+ },
+ "chirps_month": {
+  "status": 200,
+  "type": "text/html; charset=utf-8",
+  "bytes": 112715
+ },
+ "chirps_2025": {
+  "status": 200,
+  "type": "application/octet-stream",
+  "bytes": 4548125
+ },
+ "gb_sdn": {
+  "status": 200,
+  "type": "application/json",
+  "bytes": 1852
+ }
+}
