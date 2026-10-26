@@ -39,7 +39,8 @@ Dockerfile                   multi-stage build: pipeline, then nginx
 pip install -r requirements.txt
 python scripts/build_data.py              # uses the committed data/raw/
 cd web && python -m http.server 8000      # open http://localhost:8000
-# to refresh the raw data yourself: pip install rasterio && python scripts/fetch_real_data.py
+# to refresh the raw data yourself (IDMC API key from ch.datainfo@idmc.ch):
+# pip install rasterio && IDMC_CLIENT_ID=<your key> python scripts/fetch_real_data.py
 ```
 
 Or with Docker:

@@ -13,6 +13,7 @@ import csv
 import gzip
 import io
 import json
+import os
 import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
@@ -24,7 +25,8 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 IGAD = ["DJI", "ERI", "ETH", "KEN", "SOM", "SSD", "SDN", "UGA"]
-IDU = "https://helix-tools-api.idmcdb.org/external-api/idus/all/?client_id=IDMCWSHSOLO009"
+# Personal IDMC API key, stored as the GitHub Actions secret IDMC_CLIENT_ID (never in code)
+IDU = "https://helix-tools-api.idmcdb.org/external-api/idus/all/?client_id={cid}"
 GB = "https://www.geoboundaries.org/api/current/gbOpen/{iso}/ADM1/"
 CHIRPS = "https://data.chc.ucsb.edu/products/CHIRPS-2.0/africa_monthly/tifs/chirps-v2.0.{y}.{m:02d}.tif.gz"
 BBOX = (21.0, -5.0, 52.0, 23.5)          # lon_min, lat_min, lon_max, lat_max (IGAD)
@@ -69,8 +71,12 @@ def hazard_of(r):
 
 
 def fetch_idu(months):
+    cid = os.environ.get("IDMC_CLIENT_ID", "").strip()
+    if not cid:
+        print("IDMC_CLIENT_ID not set: keeping the committed idu_igad.csv")
+        return
     keep = {f"{y}-{m:02d}" for y, m in months}
-    data = json.loads(get(IDU))
+    data = json.loads(get(IDU.format(cid=cid)))
     rows = []
     for r in data:
         if r.get("iso3") not in IGAD or r.get("role") != "Recommended figure":

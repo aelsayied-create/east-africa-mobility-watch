@@ -4,8 +4,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "17 6 20 * *"        # monthly, after CHIRPS publishes the previous month
-  push:
-    paths: ["scripts/fetch_real_data.py", ".github/workflows/refresh-data.yml"]
 
 permissions:
   contents: write
@@ -25,6 +23,8 @@ jobs:
           python-version: "3.11"
       - run: pip install numpy shapely rasterio
       - name: Fetch IDMC, geoBoundaries and CHIRPS
+        env:
+          IDMC_CLIENT_ID: ${{ secrets.IDMC_CLIENT_ID }}
         run: python scripts/fetch_real_data.py
       - name: Commit refreshed raw data
         run: |
