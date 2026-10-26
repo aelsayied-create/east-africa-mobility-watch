@@ -1,0 +1,1927 @@
+{
+ "hdx-hapi-sdn": [
+  {
+   "name": "Affected People: Internally-Displaced Persons for Sudan",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/17760c0d-ed8c-4fbc-a95f-53f104a5f3d2/download/hdx_hapi_idps_sdn.csv",
+   "mod": "2026-10-20",
+   "bytes": 2657581,
+   "head": [
+    "location_code,has_hrp,in_gho,provider_admin1_name,provider_admin2_name,admin1_code,admin1_name,admin2_code,admin2_name,admin_level,operation,assessment_type,population,reporting_round,reference_period_start,reference_period_end",
+    "SDN,True,True,,,,,,,0,Armed Clashes in Sudan,BA,334053,2,2023-04-28,2023-04-28",
+    "SDN,True,True,,,,,,,0,Armed Clashes in Sudan,BA,736223,3,2023-05-07,2023-05-07",
+    "SDN,True,True,,,,,,,0,Armed Clashes in Sudan,BA,843130,4,2023-05-14,2023-05-14"
+   ],
+   "nrows": 20146
+  },
+  {
+   "name": "Affected People: Refugees & Persons of Concern for Sudan",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/b3398d52-1ab2-426b-b2d4-148aec70f986/download/hdx_hapi_refugees_sdn.csv",
+   "mod": "2026-06-13",
+   "bytes": 3923752,
+   "head": [
+    "origin_location_code,origin_has_hrp,origin_in_gho,asylum_location_code,asylum_has_hrp,asylum_in_gho,population_group,gender,age_range,min_age,max_age,population,reference_period_start,reference_period_end",
+    "AFG,True,True,SDN,True,True,OOC,f,0-4,0,4,0,2020-01-01,2020-12-31",
+    "AFG,True,True,SDN,True,True,OOC,f,5-11,5,11,5,2020-01-01,2020-12-31",
+    "AFG,True,True,SDN,True,True,OOC,f,12-17,12,17,0,2020-01-01,2020-12-31"
+   ],
+   "nrows": 54003
+  },
+  {
+   "name": "Affected People: Returnees for Sudan",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/4abc1480-48bd-4551-a15f-0e6ae4896844/download/hdx_hapi_returnees_sdn.csv",
+   "mod": "2026-06-13",
+   "bytes": 34710,
+   "head": [
+    "origin_location_code,origin_has_hrp,origin_in_gho,asylum_location_code,asylum_has_hrp,asylum_in_gho,population_group,gender,age_range,min_age,max_age,population,reference_period_start,reference_period_end",
+    "SDN,True,True,SDN,True,True,RET,f,0-4,0,4,0,2001-01-01,2001-12-31",
+    "SDN,True,True,SDN,True,True,RET,f,5-11,5,11,0,2001-01-01,2001-12-31",
+    "SDN,True,True,SDN,True,True,RET,f,12-17,12,17,0,2001-01-01,2001-12-31"
+   ],
+   "nrows": 482
+  },
+  {
+   "name": "Affected People: Humanitarian Needs for Sudan",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/b028496e-c210-4515-b24b-cb32ab76a8d7/download/hdx_hapi_humanitarian_needs_sdn.csv",
+   "mod": "2026-02-11",
+   "bytes": 10715725,
+   "head": [
+    "location_code,has_hrp,in_gho,provider_admin1_name,provider_admin2_name,admin1_code,admin1_name,admin2_code,admin2_name,admin_level,sector_code,sector_name,category,population_status,population,reference_period_start,reference_period_end",
+    "SDN,True,True,,,,,,,0,Intersectoral,Intersectoral,,INN,33699770,2026-01-01,2026-12-31",
+    "SDN,True,True,,,,,,,0,Intersectoral,Intersectoral,,TGT,20419163,2026-01-01,2026-12-31",
+    "SDN,True,True,,,,,,,0,Intersectoral,Intersectoral,,all,51700000,2026-01-01,2026-12-31"
+   ],
+   "nrows": 84033
+  },
+  {
+   "name": "Coordination & Context: Operational Presence for Sudan",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/b3f1aa9d-df49-4f77-ba3e-a01c07fac924/download/hdx_hapi_operational_presence_sdn.csv",
+   "mod": "2026-10-21",
+   "bytes": 562865,
+   "head": [
+    "location_code,has_hrp,in_gho,provider_admin1_name,provider_admin2_name,admin1_code,admin1_name,admin2_code,admin2_name,admin_level,org_acronym,org_name,org_type_description,sector_code,sector_name,reference_period_start,reference_period_end",
+    "SDN,True,True,Blue Nile,Al Kurmuk,SD08,Blue Nile,SD08106,Al Kurmuk,2,WR,World Relief,International NGO,NUT,Nutrition,2026-01-01,2026-07-31",
+    "SDN,True,True,Blue Nile,Baw,SD08,Blue Nile,SD08104,Baw,2,HA UK,Human Appeal - UK,International NGO,SHL,Emergency Shelter and NFI,2026-01-01,2026-07-31",
+    "SDN,True,True,Northern,Dongola,SD17,Northern,SD17017,Dongola,2,CDF,Child Development Foundation,National NGO,PRO,Protection,2026-01-01,2026-07-31"
+   ],
+   "nrows": 3467
+  },
+  {
+   "name": "Coordination & Context: Funding for Sudan",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/d74f57dd-2a9a-469c-b05a-d6595698b205/download/hdx_hapi_funding_sdn.csv",
+   "mod": "2026-10-24",
+   "bytes": 6571,
+   "head": [
+    "location_code,has_hrp,in_gho,appeal_code,appeal_name,appeal_type,requirements_usd,funding_usd,funding_pct,reference_period_start,reference_period_end",
+    "SDN,True,True,Not specified,Not specified,None,None,6091474,None,2029-01-01,2029-12-31",
+    "SDN,True,True,Not specified,Not specified,None,None,16938602,None,2028-01-01,2028-12-31",
+    "SDN,True,True,Not specified,Not specified,None,None,89663318,None,2027-01-01,2027-12-31"
+   ],
+   "nrows": 60
+  },
+  {
+   "name": "Coordination & Context: Conflict Events for Sudan",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/d6c17883-6ff8-455b-acbb-91011ac8c161/download/hdx_hapi_conflict_event_sdn.csv",
+   "mod": "2026-10-24",
+   "bytes": 24706685,
+   "head": [
+    "location_code,has_hrp,in_gho,provider_admin1_name,provider_admin2_name,admin1_code,admin1_name,admin2_code,admin2_name,admin_level,event_type,events,fatalities,reference_period_start,reference_period_end",
+    "SDN,True,True,Abyei,Abyei,SD19,Abyei PCA,SD19001,Abyei PCA area,2,civilian_targeting,3,4,2025-01-01,2025-01-31",
+    "SDN,True,True,Al Jazirah,Al Hasahisa,SD15,Aj Jazirah,SD15034,Al Hasahisa,2,civilian_targeting,47,86,2025-01-01,2025-01-31",
+    "SDN,True,True,Al Jazirah,Al Kamlin,SD15,Aj Jazirah,SD15035,Al Kamlin,2,civilian_targeting,16,19,2025-01-01,2025-01-31"
+   ],
+   "nrows": 210505
+  },
+  {
+   "name": "Coordination & Context: National Risk for Sudan",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/62640929-8799-4265-b522-485fd928024a/download/hdx_hapi_national_risk_sdn.csv",
+   "mod": "2026-05-28",
+   "bytes": 290,
+   "head": [
+    "location_code,has_hrp,in_gho,risk_class,global_rank,overall_risk,hazard_exposure_risk,vulnerability_risk,coping_capacity_risk,meta_missing_indicators_pct,meta_avg_recentness_years,reference_period_start,reference_period_end",
+    "SDN,True,True,5,7,7.8,8.3,7.4,7.7,0.0,0.7,2025-01-01,2025-12-31"
+   ],
+   "nrows": 2
+  },
+  {
+   "name": "Food Security, Nutrition & Poverty: Food Security for Sudan",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/ea185f40-494e-4209-9cf0-caf436172da6/download/hdx_hapi_food_security_sdn.csv",
+   "mod": "2026-10-16",
+   "bytes": 3215840,
+   "head": [
+    "location_code,has_hrp,in_gho,provider_admin1_name,provider_admin2_name,admin1_code,admin1_name,admin2_code,admin2_name,admin_level,ipc_phase,ipc_type,population_in_phase,population_fraction_in_phase,reference_period_start,reference_period_end",
+    "SDN,True,True,,,,,,,0,all,current,47535794,1.0,2026-02-01,2026-05-31",
+    "SDN,True,True,,,,,,,0,3+,current,19466533,0.41,2026-02-01,2026-05-31",
+    "SDN,True,True,,,,,,,0,1,current,12069469,0.25,2026-02-01,2026-05-31"
+   ],
+   "nrows": 26794
+  },
+  {
+   "name": "Food Security, Nutrition & Poverty: Food Prices & Market Monitor for Sudan",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/0b521abd-3b80-49d7-a73b-9c31d368644b/download/hdx_hapi_food_price_sdn.csv",
+   "mod": "2026-10-20",
+   "bytes": 2721954,
+   "head": [
+    "location_code,has_hrp,in_gho,provider_admin1_name,provider_admin2_name,admin1_code,admin1_name,admin2_code,admin2_name,admin_level,market_name,lat,lon,commodity_category,commodity_name,unit,price_flag,price_type,currency_code,price,reference_period_start,reference_period_end",
+    "SDN,True,True,Al Gezira,Wad Madani El Kobra,SD15,Aj Jazirah,SD15030,Medani Al Kubra,2,Wad Medani,14.4,33.52,cereals and tubers,Millet,3.5 KG,actual,Retail,SDG,5925,2026-01-15,2026-02-14",
+    "SDN,True,True,Al Gezira,Wad Madani El Kobra,SD15,Aj Jazirah,SD15030,Medani Al Kubra,2,Wad Medani,14.4,33.52,cereals and tubers,Sorghum,3 KG,actual,Retail,SDG,3075,2026-01-15,2026-02-14",
+    "SDN,True,True,Al Gezira,Wad Madani El Kobra,SD15,Aj Jazirah,SD15030,Medani Al Kubra,2,Wad Medani,14.4,33.52,cereals and tubers,Wheat flour,KG,actual,Retail,SDG,2500,2026-01-15,2026-02-14"
+   ],
+   "nrows": 15704
+  },
+  {
+   "name": "Food Security, Nutrition & Poverty: Poverty Rate for Sudan",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/a4c2befa-f463-49b9-a1b4-eaf9a1a1320d/download/hdx_hapi_poverty_rate_sdn.csv",
+   "mod": "2025-10-20",
+   "bytes": 2248,
+   "head": [
+    "location_code,has_hrp,in_gho,provider_admin1_name,admin1_code,admin1_name,admin_level,mpi,headcount_ratio,intensity_of_deprivation,vulnerable_to_poverty,in_severe_poverty,reference_period_start,reference_period_end",
+    "SDN,True,True,,,,0,0.3166,57.0012,55.5476,16.2972,35.9205,2010-01-01,2010-12-31",
+    "SDN,True,True,,,,0,0.2794,52.328,53.4015,17.6605,30.8783,2014-01-01,2014-12-31",
+    "SDN,True,True,Al Jazirah,SD15,Aj Jazirah,1,0.1671,34.7602,48.0697,21.9695,15.4247,2014-01-01,2014-12-31"
+   ],
+   "nrows": 21
+  },
+  {
+   "name": "Geography & Infrastructure: Baseline Population for Sudan",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/fb308229-79fc-4997-b637-ec0ffa05046b/download/hdx_hapi_population_sdn.csv",
+   "mod": "2026-10-23",
+   "bytes": 1265491,
+   "head": [
+    "location_code,has_hrp,in_gho,provider_admin1_name,provider_admin2_name,admin1_code,admin1_name,admin2_code,admin2_name,admin_level,gender,age_range,min_age,max_age,population,reference_period_start,reference_period_end",
+    "SDN,True,True,,,,,,,0,f,all,None,None,23757049,2024-01-01,2024-12-31",
+    "SDN,True,True,,,,,,,0,m,all,None,None,23757480,2024-01-01,2024-12-31",
+    "SDN,True,True,,,,,,,0,all,all,None,None,47514529,2024-01-01,2024-12-31"
+   ],
+   "nrows": 11179
+  },
+  {
+   "name": "Climate: Rainfall for Sudan",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/10bd241c-2b38-4734-adc1-efc5a495a429/download/hdx_hapi_rainfall_sdn.csv",
+   "mod": "2026-10-20",
+   "bytes": 3889899,
+   "head": [
+    "location_code,has_hrp,in_gho,provider_admin1_name,provider_admin2_name,admin1_code,admin1_name,admin2_code,admin2_name,admin_level,provider_admin1_code,provider_admin2_code,aggregation_period,rainfall,rainfall_long_term_average,rainfall_anomaly_pct,number_pixels,version,reference_period_start,reference_period_end",
+    "SDN,True,True,Not provided,,SD08,Blue Nile,,,1,900115,,dekad,14.340597,25.686684,63.026024,1239,final,2025-10-21,2025-10-31",
+    "SDN,True,True,Not provided,,SD08,Blue Nile,,,1,900115,,1-month,86.188866,82.94603,103.6873,1239,final,2025-10-21,2025-10-31",
+    "SDN,True,True,Not provided,,SD08,Blue Nile,,,1,900115,,3-month,452.16547,411.35767,109.80114,1239,final,2025-10-21,2025-10-31"
+   ],
+   "nrows": 27244
+  },
+  {
+   "name": "Metadata: Data Availability for Sudan",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/4df70743-6eac-4501-af31-e1208c7710b7/download/hdx_hapi_data_availability_sdn.csv",
+   "mod": "2026-10-25",
+   "bytes": 125712,
+   "head": [
+    "category,subcategory,location_code,admin1_code,admin1_name,admin2_code,admin2_name,admin_level,hapi_updated_date",
+    "geography-infrastructure,baseline-population,SDN,SD15,Aj Jazirah,SD15034,Al Hasahisa,2,2026-10-24",
+    "geography-infrastructure,baseline-population,SDN,SD15,Aj Jazirah,SD15035,Al Kamlin,2,2026-10-24",
+    "geography-infrastructure,baseline-population,SDN,SD15,Aj Jazirah,SD15036,Al Manaqil,2,2026-10-24"
+   ],
+   "nrows": 1427
+  }
+ ],
+ "cod-ab-sdn": [
+  {
+   "name": "sdn_admin_boundaries.gdb.zip",
+   "fmt": "Geodatabase",
+   "url": "https://data.humdata.org/dataset/a66a4b6c-92de-4507-9546-aa1900474180/resource/7651165b-65dd-46d3-827b-297902bb335a/download/sdn_admin_boundaries.gdb.zip",
+   "mod": "2026-01-26",
+   "bytes": 584349,
+   "files": [
+    [
+     "sdn_admin_boundaries.gdb/",
+     0
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000005.gdbtablx",
+     4128
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000004.gdbtablx",
+     4128
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000a.gdbtablx",
+     5152
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000d.spx",
+     4118
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000a.gdbtable",
+     148834
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000005.gdbtable",
+     1724
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000004.gdbtable",
+     44283
+    ],
+    [
+     "sdn_admin_boundaries.gdb/gdb",
+     8
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000c.spx",
+     12310
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000b.spx",
+     4118
+    ],
+    [
+     "sdn_admin_boundaries.gdb/timestamps",
+     400
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000c.gdbindexes",
+     122
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000a.spx",
+     4118
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000d.gdbindexes",
+     122
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000002.gdbtablx",
+     4128
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000003.gdbtablx",
+     4128
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000009.gdbtable",
+     46745
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000009.gdbtablx",
+     5152
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000002.gdbtable",
+     2074
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000003.gdbtable",
+     777
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000a.gdbindexes",
+     122
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000b.gdbindexes",
+     122
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000009.gdbindexes",
+     122
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000c.gdbtable",
+     182908
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000b.gdbtable",
+     292549
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000006.gdbtable",
+     574
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000007.gdbtable",
+     2282
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000006.gdbtablx",
+     4128
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000007.gdbtablx",
+     4128
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000c.gdbtablx",
+     5152
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000b.gdbtablx",
+     5152
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000d.gdbtable",
+     34859
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000001.gdbtable",
+     425
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000001.gdbtablx",
+     4128
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a00000009.spx",
+     4118
+    ],
+    [
+     "sdn_admin_boundaries.gdb/a0000000d.gdbtablx",
+     5152
+    ]
+   ]
+  },
+  {
+   "name": "sdn_admin_boundaries.shp.zip",
+   "fmt": "SHP",
+   "url": "https://data.humdata.org/dataset/a66a4b6c-92de-4507-9546-aa1900474180/resource/8addf835-4224-465a-a5a8-88fb606abcad/download/sdn_admin_boundaries.shp.zip",
+   "mod": "2026-01-26",
+   "bytes": 1041654,
+   "files": [
+    [
+     "sdn_admin0.shp",
+     97388
+    ],
+    [
+     "sdn_admin0.cpg",
+     5
+    ],
+    [
+     "sdn_admin0.dbf",
+     1739
+    ],
+    [
+     "sdn_admin0.prj",
+     145
+    ],
+    [
+     "sdn_admin0.shx",
+     108
+    ],
+    [
+     "sdn_admin1.shp",
+     320732
+    ],
+    [
+     "sdn_admin1.cpg",
+     5
+    ],
+    [
+     "sdn_admin1.dbf",
+     26717
+    ],
+    [
+     "sdn_admin1.prj",
+     145
+    ],
+    [
+     "sdn_admin1.shx",
+     252
+    ],
+    [
+     "sdn_admin2.shp",
+     560764
+    ],
+    [
+     "sdn_admin2.cpg",
+     5
+    ],
+    [
+     "sdn_admin2.dbf",
+     335207
+    ],
+    [
+     "sdn_admin2.prj",
+     145
+    ],
+    [
+     "sdn_admin2.shx",
+     1612
+    ],
+    [
+     "sdn_adminlines.shp",
+     362916
+    ],
+    [
+     "sdn_adminlines.cpg",
+     5
+    ],
+    [
+     "sdn_adminlines.dbf",
+     195402
+    ],
+    [
+     "sdn_adminlines.prj",
+     145
+    ],
+    [
+     "sdn_adminlines.shx",
+     4612
+    ],
+    [
+     "sdn_adminpoints.shp",
+     5952
+    ],
+    [
+     "sdn_adminpoints.cpg",
+     5
+    ],
+    [
+     "sdn_adminpoints.dbf",
+     585228
+    ],
+    [
+     "sdn_adminpoints.prj",
+     145
+    ],
+    [
+     "sdn_adminpoints.shx",
+     1772
+    ]
+   ]
+  },
+  {
+   "name": "sdn_admin_boundaries.geojson.zip",
+   "fmt": "GeoJSON",
+   "url": "https://data.humdata.org/dataset/a66a4b6c-92de-4507-9546-aa1900474180/resource/018af991-4aa7-4043-a0d5-e429a55851fb/download/sdn_admin_boundaries.geojson.zip",
+   "mod": "2026-01-26",
+   "bytes": 1200093,
+   "files": [
+    [
+     "sdn_admin2.geojson",
+     1621077
+    ],
+    [
+     "sdn_admin1.geojson",
+     876096
+    ],
+    [
+     "sdn_admin0.geojson",
+     263182
+    ],
+    [
+     "sdn_adminpoints.geojson",
+     197603
+    ],
+    [
+     "sdn_adminlines.geojson",
+     1025496
+    ]
+   ]
+  }
+ ],
+ "new-arrivals-from-sudan": [
+  {
+   "name": "UNHCR - New Arrivals from Sudan",
+   "fmt": "XLSX",
+   "url": "https://docs.google.com/spreadsheets/d/1G5FSrIZ5qvyrMSps4xE3vZf6kIQ9311Wm-mSx7HcPog/edit?usp=drive_web",
+   "mod": "2026-10-24",
+   "bytes": 237472,
+   "err": "BadZipFile('File is not a zip file')"
+  },
+  {
+   "name": "UNHCR - New Arrivals from Sudan per day",
+   "fmt": "XLSX",
+   "url": "https://docs.google.com/spreadsheets/d/1MEDlbvR09E4xcKtjJDnF6mQtb11NhuI_BEDPxkIuSfY/edit?usp=drive_web",
+   "mod": "2026-10-24",
+   "bytes": 264647,
+   "err": "BadZipFile('File is not a zip file')"
+  }
+ ],
+ "sudan-humanitarian-needs": [
+  {
+   "name": "sdn_hpc_needs_api_2026.csv",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/0aa8c43b-ea03-4ab4-b8dc-04c26542bf76/resource/97b92430-1fd7-4895-89eb-a142fadcfef1/download/sdn_hpc_needs_api_2026.csv",
+   "mod": "2026-02-13",
+   "bytes": 122,
+   "head": [
+    "Description,Cluster,Category,Population,In Need,Targeted,Affected,Reached,Info",
+    "Final,ALL,,51700000,33699770,20419163,,,"
+   ],
+   "nrows": 2
+  }
+ ],
+ "sudan-acute-food-insecurity-classification-april-2023-september-2023": [
+  {
+   "name": "Sudan Acute Food Insecurity Classification Shapefile August 2026 (.zip)",
+   "fmt": "zip",
+   "url": "https://fdw.fews.net/api/ipcpackage/country/SD/2026-08-01/",
+   "mod": "2026-09-16",
+   "bytes": 5464453,
+   "files": [
+    [
+     "Readme.pdf",
+     19745
+    ],
+    [
+     "SD_202608_ML2.shx",
+     3036
+    ],
+    [
+     "SD_202608_ML2_IDP.dbf",
+     25053
+    ],
+    [
+     "SD_202608_ML2_IDP.cpg",
+     5
+    ],
+    [
+     "SD_202608_ML1.shp",
+     2195088
+    ],
+    [
+     "SD_202608_ML2_IDP.prj",
+     145
+    ],
+    [
+     "IDP_HA_Symbology.lyrx",
+     22976
+    ],
+    [
+     "SD_202608_ML2_IDP.shx",
+     268
+    ],
+    [
+     "SD_202608_ML1.cpg",
+     5
+    ],
+    [
+     "SD_202608_ML2.cpg",
+     5
+    ],
+    [
+     "SD_202608_ML1_IDP.prj",
+     145
+    ],
+    [
+     "IDP_IPC_Symbology.lyrx",
+     40087
+    ],
+    [
+     "SD_202608_ML2.prj",
+     145
+    ],
+    [
+     "SD_202608_ML1.prj",
+     145
+    ],
+    [
+     "SD_202608_ML1_IDP.shp",
+     688
+    ],
+    [
+     "SD_202608_ML1_IDP.shx",
+     268
+    ],
+    [
+     "SD_202608_ML1.shx",
+     3036
+    ],
+    [
+     "SD_202608_ML1_IDP.dbf",
+     25053
+    ],
+    [
+     "IPC_Symbology.lyrx",
+     42768
+    ],
+    [
+     "SD_202608_ML2.shp",
+     2195088
+    ],
+    [
+     "SD_202608_ML1_IDP.cpg",
+     5
+    ],
+    [
+     "SD_202608_ML2.dbf",
+     424064
+    ],
+    [
+     "SD_202608_ML1.dbf",
+     424064
+    ],
+    [
+     "HA_Symbology.lyrx",
+     39025
+    ],
+    [
+     "SD_202608_ML2_IDP.shp",
+     688
+    ]
+   ]
+  },
+  {
+   "name": "Sudan Acute Food Insecurity Classification August 2026 (.geojson)",
+   "fmt": "GeoJSON",
+   "url": "https://fdw.fews.net/api/ipcphasemap/country/SD/2026-08-01.geojson",
+   "mod": "2026-09-26",
+   "bytes": 1014364,
+   "nfeat": 11,
+   "props": {
+    "projection_start": "2026-08-01",
+    "projection_end": "2026-09-30",
+    "reporting_date": "2026-08-01",
+    "classification_scale": "IPC 3.1",
+    "scenario": "ML1",
+    "datasourcedocument": 6579,
+    "datasourceorganization": 2034,
+    "value": 2,
+    "is_allowing_for_assistance": false,
+    "unit_type": "fsc_admin_lhz",
+    "country_code": "SD"
+   }
+  }
+ ],
+ "wfp-food-prices-for-sudan": [
+  {
+   "name": "Sudan - Food Prices",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/369e003b-f0af-4e48-99d7-34fc85b44635/resource/8fea18b2-615f-4af5-9bd5-85cc31a25ffd/download/wfp_food_prices_sdn.csv",
+   "mod": "2026-10-19",
+   "bytes": 2858033,
+   "head": [
+    "date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commodity_id,unit,priceflag,pricetype,currency,price,usdprice",
+    "2001-01-15,Blue Nile,Damazin,Damazin,1026,11.79,34.36,cereals and tubers,Sorghum (white),135,90 KG,actual,Wholesale,SDG,46,17.76",
+    "2001-01-15,Gedaref,Al Gedaref Rural,El Gedarif,2580,14.04,35.38,cereals and tubers,Sorghum (white),135,90 KG,actual,Wholesale,SDG,51.67,19.95",
+    "2001-01-15,Khartoum,Jebal Aulya,Khartoum,2588,15.51,32.54,cereals and tubers,Millet,73,90 KG,actual,Wholesale,SDG,77.29,29.84"
+   ],
+   "nrows": 22699
+  },
+  {
+   "name": "Sudan - Markets",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/369e003b-f0af-4e48-99d7-34fc85b44635/resource/6bc993a6-0c4b-47bc-b757-af220aa5f00f/download/wfp_markets_sdn.csv",
+   "mod": "2026-08-09",
+   "bytes": 5760,
+   "head": [
+    "market_id,market,countryiso3,admin1,admin2,latitude,longitude",
+    "1025,Al Fashir,SDN,North Darfur,El Fasher,13.63,25.35",
+    "1026,Damazin,SDN,Blue Nile,Damazin,11.79,34.36",
+    "1027,Eddein,SDN,Eastern Darfur,Ed Daein,11.43,26.15"
+   ],
+   "nrows": 107
+  }
+ ],
+ "sudan-acled-conflict-data": [
+  {
+   "name": "sudan_HRP_political_violence_events_and_fatalities_by_month-year",
+   "fmt": "XLSX",
+   "url": "https://data.humdata.org/dataset/5efad450-8b15-4867-b7b3-8a25b455eed8/resource/cebc4989-f114-4b7e-9f7b-ce1c6476bb00/download/sudan_hrp_political_violence_events_and_fatalities_by_month-year_as-of-21oct2026.xlsx",
+   "mod": "2026-10-21",
+   "bytes": 3077492,
+   "sheets": {
+    "TOU": [
+     [
+      "Licensing"
+     ],
+     [
+      "By using ACLED data you agree to abide b"
+     ],
+     [
+      "https://acleddata.com/terms-of-use/"
+     ],
+     [
+      "None"
+     ],
+     [
+      "Terms of Use"
+     ],
+     [
+      "All rights to use or exploit ACLED data "
+     ],
+     [
+      "No user is permitted to (i) use ACLED\u2019s "
+     ]
+    ],
+    "Data": [
+     [
+      "Country",
+      "Admin1",
+      "Admin2",
+      "ISO3",
+      "Admin2 Pcode",
+      "Admin1 Pcode",
+      "Month",
+      "Year",
+      "Events",
+      "Fatalities"
+     ],
+     [
+      "Sudan",
+      "Abyei",
+      "Abyei",
+      "SDN",
+      "SD19001",
+      "SD19",
+      "January",
+      "1997",
+      "0",
+      "0"
+     ],
+     [
+      "Sudan",
+      "Al Jazirah",
+      "Al Hasahisa",
+      "SDN",
+      "SD15034",
+      "SD15",
+      "January",
+      "1997",
+      "0",
+      "0"
+     ],
+     [
+      "Sudan",
+      "Al Jazirah",
+      "Al Kamlin",
+      "SDN",
+      "SD15035",
+      "SD15",
+      "January",
+      "1997",
+      "0",
+      "0"
+     ],
+     [
+      "Sudan",
+      "Al Jazirah",
+      "Al Manaqil",
+      "SDN",
+      "SD15036",
+      "SD15",
+      "January",
+      "1997",
+      "0",
+      "0"
+     ],
+     [
+      "Sudan",
+      "Al Jazirah",
+      "Al Qurashi",
+      "SDN",
+      "SD15037",
+      "SD15",
+      "January",
+      "1997",
+      "0",
+      "0"
+     ],
+     [
+      "Sudan",
+      "Al Jazirah",
+      "Janub Al Jazirah",
+      "SDN",
+      "SD15031",
+      "SD15",
+      "January",
+      "1997",
+      "0",
+      "0"
+     ]
+    ]
+   }
+  },
+  {
+   "name": "sudan_HRP_civilian_targeting_events_and_fatalities_by_month-year",
+   "fmt": "XLSX",
+   "url": "https://data.humdata.org/dataset/5efad450-8b15-4867-b7b3-8a25b455eed8/resource/3352a0d8-2996-4e70-b618-3be58699be7f/download/sudan_hrp_civilian_targeting_events_and_fatalities_by_month-year_as-of-21oct2026.xlsx",
+   "mod": "2026-10-21",
+   "bytes": 3066895,
+   "sheets": {
+    "TOU": [
+     [
+      "Licensing"
+     ],
+     [
+      "By using ACLED data you agree to abide b"
+     ],
+     [
+      "https://acleddata.com/terms-of-use/"
+     ],
+     [
+      "None"
+     ],
+     [
+      "Terms of Use"
+     ],
+     [
+      "All rights to use or exploit ACLED data "
+     ],
+     [
+      "No user is permitted to (i) use ACLED\u2019s "
+     ]
+    ],
+    "Data": [
+     [
+      "Country",
+      "Admin1",
+      "Admin2",
+      "ISO3",
+      "Admin2 Pcode",
+      "Admin1 Pcode",
+      "Month",
+      "Year",
+      "Events",
+      "Fatalities"
+     ],
+     [
+      "Sudan",
+      "Abyei",
+      "Abyei",
+      "SDN",
+      "SD19001",
+      "SD19",
+      "January",
+      "1997",
+      "0",
+      "0"
+     ],
+     [
+      "Sudan",
+      "Al Jazirah",
+      "Al Hasahisa",
+      "SDN",
+      "SD15034",
+      "SD15",
+      "January",
+      "1997",
+      "0",
+      "0"
+     ],
+     [
+      "Sudan",
+      "Al Jazirah",
+      "Al Kamlin",
+      "SDN",
+      "SD15035",
+      "SD15",
+      "January",
+      "1997",
+      "0",
+      "0"
+     ],
+     [
+      "Sudan",
+      "Al Jazirah",
+      "Al Manaqil",
+      "SDN",
+      "SD15036",
+      "SD15",
+      "January",
+      "1997",
+      "0",
+      "0"
+     ],
+     [
+      "Sudan",
+      "Al Jazirah",
+      "Al Qurashi",
+      "SDN",
+      "SD15037",
+      "SD15",
+      "January",
+      "1997",
+      "0",
+      "0"
+     ],
+     [
+      "Sudan",
+      "Al Jazirah",
+      "Janub Al Jazirah",
+      "SDN",
+      "SD15031",
+      "SD15",
+      "January",
+      "1997",
+      "0",
+      "0"
+     ]
+    ]
+   }
+  }
+ ],
+ "sudan-acute-food-insecurity-country-data": [
+  {
+   "name": "ipc_sdn.geojson",
+   "fmt": "GeoJSON",
+   "url": "https://data.humdata.org/dataset/d21ca2c3-6675-4463-bcb1-ff713c60fcb0/resource/34bc177a-344f-4894-837e-86fea689e3b5/download/ipc_sdn.geojson",
+   "mod": "2026-10-05",
+   "bytes": 801966,
+   "nfeat": 196,
+   "props": {
+    "aar_id": "1558",
+    "confidence_level": 2,
+    "ipc_period": "C",
+    "overall_phase": 3,
+    "population_min": "37161",
+    "population_percentage_min": "0.4",
+    "justification": "",
+    "prolonged_crisis": false,
+    "population_phase_worse": null,
+    "population_percentage_phase_worse": null,
+    "anl_id": "87143417",
+    "admin_type": "rural",
+    "title": "Abassiya",
+    "view_level": "area",
+    "hide_settlement_labels": false,
+    "hide_area_labels": false,
+    "hide_area_borders": false,
+    "show_area_popups": true,
+    "color": "#E67800",
+    "estimated_population": "92902",
+    "phase1_population": 13935,
+    "phase1_percent": 0.15,
+    "phase1_color": "#CCFFCC",
+    "phase2_population": 41806,
+    "phase2_percent": 0.45,
+    "phase2_color": "#FAE61E",
+    "phase3_population": 37161,
+    "phase3_percent": 0.4,
+    "phase3_color": "#E67800",
+    "phase4_population": 0,
+    "phase4_percent": 0,
+    "phase4_color": "#C80000",
+    "phase5_population": 0,
+    "phase5_percent": 0,
+    "phase5_color": "#640000"
+   }
+  },
+  {
+   "name": "ipc_sdn_national_long_latest.csv",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/d21ca2c3-6675-4463-bcb1-ff713c60fcb0/resource/f92dcdf7-f5cb-4b7e-8ade-052a4379a24d/download/ipc_sdn_national_long_latest.csv",
+   "mod": "2026-10-05",
+   "bytes": 1660,
+   "head": [
+    "Date of analysis,Country,Total country population,Validity period,From,To,Phase,Number,Percentage",
+    "Jan 2026,SDN,47535794,current,2026-02-01,2026-05-31,all,47535794,1.0",
+    "Jan 2026,SDN,47535794,current,2026-02-01,2026-05-31,3+,19466533,0.41",
+    "Jan 2026,SDN,47535794,current,2026-02-01,2026-05-31,1,12069469,0.25"
+   ],
+   "nrows": 22
+  },
+  {
+   "name": "ipc_sdn_level1_long_latest.csv",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/d21ca2c3-6675-4463-bcb1-ff713c60fcb0/resource/664f3b4b-8105-488c-ad96-371d02872c56/download/ipc_sdn_level1_long_latest.csv",
+   "mod": "2026-10-05",
+   "bytes": 38405,
+   "head": [
+    "Date of analysis,Country,Total country population,Level 1,Validity period,From,To,Phase,Number,Percentage",
+    "Jan 2026,SDN,47535794,Northern,current,2026-02-01,2026-05-31,all,1529740,1.0",
+    "Jan 2026,SDN,47535794,Northern,current,2026-02-01,2026-05-31,3+,373339,0.25",
+    "Jan 2026,SDN,47535794,Northern,current,2026-02-01,2026-05-31,1,651677,0.43"
+   ],
+   "nrows": 463
+  },
+  {
+   "name": "ipc_sdn_level1_wide_latest.csv",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/d21ca2c3-6675-4463-bcb1-ff713c60fcb0/resource/95c3c714-06b7-467e-97d8-4506148ae68e/download/ipc_sdn_level1_wide_latest.csv",
+   "mod": "2026-10-05",
+   "bytes": 7284,
+   "head": [
+    "Date of analysis,Country,Total country population,Level 1,Current from,Current to,Population analyzed current,Phase 3+ number current,Phase 3+ percentage current,Phase 1 number current,Phase 1 percentage current,Phase 2 number current,Phase 2 percentage current,Phase 3 number current,Phase 3 percentage current,Phase 4 number current,Phase 4 percentage current,Phase 5 number current,Phase 5 percentage current,First projection from,First projection to,Population analyzed first projection,Phase 3+ number first projection,Phase 3+ percentage first projection,Phase 1 number first projection,Phase 1 percentage first projection,Phase 2 number first projection,Phase 2 percentage first projection,Phase 3 number first projection,Phase 3 percentage first projection,Phase 4 number first projection,Phase 4 percentage first projection,Phase 5 number first projection,Phase 5 percentage first projection,Second projection from,Second projection to,Population analyzed second projection,Phase 3+ number second projection,Phase 3+ percentage second projection,Phase 1 number second projection,Phase 1 percentage second projection,Phase 2 number second projection,Phase 2 percentage second projection,Phase 3 number second projection,Phase 3 percentage second projection,Phase 4 number second projection,Phase 4 percentage second projection,Phase 5 number second projection,Phase 5 percentage second projection",
+    "Jan 2026,SDN,47535794,Northern,2026-02-01,2026-05-31,1529740,373339,0.25,651677,0.43,504723,0.33,314979,0.21,58360,0.04,0,0,2026-06-01,2026-09-30,1529740,0,0,0,0,0,0,0,0,0,0,0,0,2026-10-01,2027-01-31,1529740,0,0,0,0,0,0,0,0,0,0,0,0",
+    "Jan 2026,SDN,47535794,Gedaref,2026-02-01,2026-05-31,3001252,773825,0.26,1053635,0.35,1173794,0.39,649090,0.22,124735,0.04,0,0,2026-06-01,2026-09-30,3001252,0,0,0,0,0,0,0,0,0,0,0,0,2026-10-01,2027-01-31,3001252,0,0,0,0,0,0,0,0,0,0,0,0",
+    "Jan 2026,SDN,47535794,West Kordofan,2026-02-01,2026-05-31,2714311,1258956,0.47,528545,0.19,926812,0.34,1000356,0.37,258600,0.1,0,0,2026-06-01,2026-09-30,2714311,722527,0.26,130567,0.05,320453,0.12,446243,0.16,263072,0.1,13212,0,2026-10-01,2027-01-31,2714311,601506,0.23,189245,0.07,382797,0.14,422208,0.16,179298,0.07,0,0"
+   ],
+   "nrows": 23
+  }
+ ],
+ "cod-ps-sdn": [
+  {
+   "name": "sdn_admpop_2025.xlsx",
+   "fmt": "XLSX",
+   "url": "https://data.humdata.org/dataset/f4d30e65-a162-437a-a35d-d81b99723bd6/resource/dfddbc15-77c4-4875-a640-d50e37ef7b6d/download/sdn_admpop_2025.xlsx",
+   "mod": "2025-12-29",
+   "err": "<HTTPError 404: 'Not Found'>"
+  },
+  {
+   "name": "sdn_admpop_adm2_2025.csv",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/f4d30e65-a162-437a-a35d-d81b99723bd6/resource/f340a059-e3e5-40fd-8577-e4cac8d4aa33/download/sdn_admpop_adm2_2025.csv",
+   "mod": "2025-12-29",
+   "bytes": 73898,
+   "head": [
+    "Year,ISO3,ADM0_EN,ADM0_AR,ADM0_PCODE,ADM1_EN,ADM1_AR,ADM1_PCODE,ADM2_EN,ADM2_AR,ADM2_PCODE,F_TL,M_TL,T_TL,F_00_04,F_05_09,F_10_14,F_15_19,F_20_24,F_25_29,F_30_34,F_35_39,F_40_44,F_45_49,F_50_54,F_55_59,F_60_64,F_65_69,F_70_74,F_75_79,F_80Plus,M_00_04,M_05_09,M_10_14,M_15_19,M_20_24,M_25_29,M_30_34,M_35_39,M_40_44,M_45_49,M_50_54,M_55_59,M_60_64,M_65_69,M_70_74,M_75_79,M_80Plus,T_00_04,T_05_09,T_10_14,T_15_19,T_20_24,T_25_29,T_30_34,T_35_39,T_40_44,T_45_49,T_50_54,T_55_59,T_60_64,T_65_69,T_70_74,T_75_79,T_80Plus",
+    "2024,SDN,Sudan (the),\u0627\u0644\u0633\u0648\u062f\u0627\u0646\u200e,SD,Aj Jazirah,\u0627\u0644\u062c\u0632\u064a\u0631\u0629,SD15,Al Hasahisa,\u0627\u0644\u062d\u0635\u0627\u062d\u064a\u0635\u0627,SD15034,486599,454556,941155,71820,63976,57921,51681,43473,35623,30249,24824,22166,20799,18116,14501,11681,8445,5529,3306,2489,73200,65348,58781,51953,42964,35902,29388,19348,14234,13415,12281,10979,9577,7166,4824,2900,2296,145020,129324,116702,103634,86437,71525,59637,44172,36400,34214,30397,25480,21258,15611,10353,6206,4785",
+    "2024,SDN,Sudan (the),\u0627\u0644\u0633\u0648\u062f\u0627\u0646\u200e,SD,Aj Jazirah,\u0627\u0644\u062c\u0632\u064a\u0631\u0629,SD15,Al Kamlin,\u0627\u0644\u0643\u0627\u0645\u0644\u064a\u0646,SD15035,332736,323503,656239,50357,42967,38994,35742,30095,24039,20569,17469,15494,13887,11801,9400,8281,5874,3794,2267,1706,50947,43977,39635,35939,29831,24722,21194,15702,12189,11164,9896,8449,7422,5265,3443,2102,1626,101304,86944,78629,71681,59926,48761,41763,33171,27683,25051,21697,17849,15703,11139,7237,4369,3332",
+    "2024,SDN,Sudan (the),\u0627\u0644\u0633\u0648\u062f\u0627\u0646\u200e,SD,Aj Jazirah,\u0627\u0644\u062c\u0632\u064a\u0631\u0629,SD15,Al Manaqil,\u0627\u0644\u0645\u0646\u0627\u0642\u0644,SD15036,447543,414058,861601,66907,58652,54188,52507,43598,33237,27685,22868,19910,17527,14621,11419,8885,6555,4384,2675,1925,68357,59831,55037,52969,42542,32184,25134,15836,11521,11274,10265,8712,7238,5322,3627,2313,1896,135264,118483,109225,105476,86140,65421,52819,38704,31431,28801,24886,20131,16123,11877,8011,4988,3821"
+   ],
+   "nrows": 189
+  },
+  {
+   "name": "sdn_admpop_adm1_2025.csv",
+   "fmt": "CSV",
+   "url": "https://data.humdata.org/dataset/f4d30e65-a162-437a-a35d-d81b99723bd6/resource/2a4ae1be-dd48-4ea1-8240-29622d7fdc6b/download/sdn_admpop_adm1_2025.csv",
+   "mod": "2025-12-29",
+   "bytes": 7987,
+   "head": [
+    "Year,ISO3,ADM0_EN,ADM0_AR,ADM0_PCODE,ADM1_EN,ADM1_AR,ADM1_PCODE,F_TL,M_TL,T_TL,F_00_04,F_05_09,F_10_14,F_15_19,F_20_24,F_25_29,F_30_34,F_35_39,F_40_44,F_45_49,F_50_54,F_55_59,F_60_64,F_65_69,F_70_74,F_75_79,F_80Plus,M_00_04,M_05_09,M_10_14,M_15_19,M_20_24,M_25_29,M_30_34,M_35_39,M_40_44,M_45_49,M_50_54,M_55_59,M_60_64,M_65_69,M_70_74,M_75_79,M_80Plus,T_00_04,T_05_09,T_10_14,T_15_19,T_20_24,T_25_29,T_30_34,T_35_39,T_40_44,T_45_49,T_50_54,T_55_59,T_60_64,T_65_69,T_70_74,T_75_79,T_80Plus",
+    "2024,SDN,Sudan (the),\u0627\u0644\u0633\u0648\u062f\u0627\u0646\u200e,SD,Aj Jazirah,\u0627\u0644\u062c\u0632\u064a\u0631\u0629,SD15,2754548,2583000,5337548,401391,362644,331698,304473,254796,202633,171717,142814,126574,114640,98156,78754,61631,43980,28654,17269,12724,410072,371738,338855,308992,251350,199904,162513,108888,81284,76486,69502,61159,51223,37480,25263,15759,12532,811463,734382,670553,613465,506146,402537,334230,251702,207858,191126,167658,139913,112854,81460,53917,33028,25256",
+    "2024,SDN,Sudan (the),\u0627\u0644\u0633\u0648\u062f\u0627\u0646\u200e,SD,Blue Nile,\u0627\u0644\u0646\u064a\u0644 \u0627\u0644\u0623\u0632\u0631\u0642,SD08,461013,462415,923428,89833,69558,62218,59354,44121,28987,21880,19700,17923,14145,10814,7917,5888,3906,2286,1393,1090,89938,69615,61941,58320,42941,30080,24185,16842,12895,12778,12011,9966,8161,5521,3351,2158,1712,179771,139173,124159,117674,87062,59067,46065,36542,30818,26923,22825,17883,14049,9427,5637,3551,2802",
+    "2024,SDN,Sudan (the),\u0627\u0644\u0633\u0648\u062f\u0627\u0646\u200e,SD,Central Darfur,\u0648\u0633\u0637 \u062f\u0627\u0631\u0641\u0648\u0631,SD06,628513,592112,1220625,117797,91809,80435,68580,51184,42938,37659,31527,26710,22208,17825,13183,9976,6917,4370,2854,2541,119417,93892,80161,67727,48228,42378,37058,24195,16689,15597,14020,10910,8177,5619,3651,2361,2032,237214,185701,160596,136307,99412,85316,74717,55722,43399,37805,31845,24093,18153,12536,8021,5215,4573"
+   ],
+   "nrows": 19
+  }
+ ],
+ "sudan-displacement-situation-countrywide-idps-iom-dtm": [
+  {
+   "name": "DTM Sudan Displacement and Return Snapshot (8).xlsx",
+   "fmt": "XLSX",
+   "url": "https://data.humdata.org/dataset/44594ae2-dde9-417f-acae-523bc012c162/resource/dfeac4ff-47a0-454c-92c1-501d34ec0fff/download/2026_dtm_sdn_idps_returnees_snapshot_008_28072026_public_hdx_vf.xlsx",
+   "mod": "2026-08-24",
+   "bytes": 238546,
+   "sheets": {
+    "Read Me": [
+     [
+      "None"
+     ],
+     [
+      "DISCLAIMER"
+     ],
+     [
+      "DTM Sudan is a suite of methodological t"
+     ],
+     [
+      "HOW TO READ THIS DATASET"
+     ],
+     [
+      "IDPs Masterist (ADMIN 1)"
+     ],
+     [
+      "IDPs Masterlist (ADMIN 2)"
+     ],
+     [
+      "Returnees Masterlist (ADMIN1)"
+     ]
+    ],
+    "IDPs Masterlist (ADMIN1)": [
+     [
+      "DTM SUDAN: IDP Master List 30-Jul-2026",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
+     ],
+     [
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
+     ],
+     [
+      "Location Information",
+      "None",
+      "TOTAL",
+      "None",
+      "STATE of ORIGIN BY INDIVIUALS",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "NATIONALITY BY INDIVIUALS",
+      "None"
+     ],
+     [
+      "State of Displacement",
+      "State Code",
+      "IDPs",
+      "HHs",
+      "Aj Jazirah",
+      "Blue Nile",
+      "Central Darfur",
+      "East Darfur",
+      "Gedaref",
+      "Kassala",
+      "Khartoum",
+      "North Darfur",
+      "North Kordofan",
+      "Northern",
+      "Red Sea",
+      "River Nile",
+      "Sennar",
+      "South Darfur",
+      "South Kordofan",
+      "West Darfur",
+      "West Kordofan",
+      "White Nile",
+      "SUDANESE",
+      "NON SUDANESE"
+     ],
+     [
+      "#adm1+name",
+      "#adm1+pcode",
+      "#affected+idps+ind",
+      "#affected+idps+hh",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
+     ],
+     [
+      "Aj Jazirah",
+      "SD15",
+      "49350",
+      "9870",
+      "70",
+      "1715",
+      "30",
+      "185",
+      "0",
+      "0",
+      "24825",
+      "5765",
+      "8430",
+      "0",
+      "0",
+      "0",
+      "40",
+      "1240",
+      "3110",
+      "475",
+      "3280",
+      "185",
+      "49350",
+      "0"
+     ],
+     [
+      "Blue Nile",
+      "SD08",
+      "370745",
+      "73917",
+      "13069",
+      "263446",
+      "122",
+      "0",
+      "357",
+      "0",
+      "78029",
+      "355",
+      "381",
+      "0",
+      "0",
+      "0",
+      "13800",
+      "420",
+      "676",
+      "10",
+      "0",
+      "80",
+      "370745",
+      "0"
+     ]
+    ],
+    "IDPs Masterlist (ADMIN2)": [
+     [
+      "DTM SUDAN: IDP Master List 30-Jul-2026",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
+     ],
+     [
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
+     ],
+     [
+      "Location Information",
+      "None",
+      "None",
+      "None",
+      "TOTAL",
+      "None",
+      "STATE of ORIGIN BY INDIVIUALS",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "NATIONALITY BY INDIVIUALS",
+      "None"
+     ],
+     [
+      "STATE OF DISPLACEMET",
+      "STATE CODE",
+      "LOCALITY OF DISPLACEMENT",
+      "LOCALITY_ CODE",
+      "IDPs",
+      "HHs",
+      "Aj Jazirah",
+      "Blue Nile",
+      "Central Darfur",
+      "East Darfur",
+      "Gedaref",
+      "Kassala",
+      "Khartoum",
+      "North Darfur",
+      "North Kordofan",
+      "Northern",
+      "Red Sea",
+      "River Nile",
+      "Sennar",
+      "South Darfur",
+      "South Kordofan",
+      "West Darfur",
+      "West Kordofan",
+      "White Nile",
+      "SUDANESE",
+      "NON SUDANESE"
+     ],
+     [
+      "#adm1+name",
+      "#adm1+pcode",
+      "#adm2+name",
+      "#adm2+pcode",
+      "#affected+idps+ind",
+      "#affected+idps+hh",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
+     ],
+     [
+      "Aj Jazirah",
+      "SD15",
+      "Al Hasahisa",
+      "SD15034",
+      "7170",
+      "1434",
+      "40",
+      "10",
+      "0",
+      "85",
+      "0",
+      "0",
+      "3925",
+      "535",
+      "2285",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "290",
+      "0",
+      "7170",
+      "0"
+     ],
+     [
+      "Aj Jazirah",
+      "SD15",
+      "Al Kamlin",
+      "SD15035",
+      "2610",
+      "522",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "2605",
+      "5",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "2610",
+      "0"
+     ]
+    ],
+    "Returnees Masterlist (ADMIN1)": [
+     [
+      "DTM SUDAN: Return Master List  28-Jul-20",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
+     ],
+     [
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
+     ],
+     [
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
+     ],
+     [
+      "Location Information",
+      "None",
+      "Total",
+      "None",
+      "State of Displacement by Individuals",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
+     ],
+     [
+      "State of Return",
+      "State Code",
+      "INDs",
+      "HHs",
+      " Aj Jazirah",
+      " Blue Nile",
+      " Central Darfur",
+      " East Darfur",
+      " Gedaref",
+      " Kassala",
+      " Khartoum",
+      " North Darfur",
+      " North Kordofan",
+      " Northern",
+      " Red Sea",
+      " River Nile",
+      " Sennar",
+      " South Darfur",
+      " South Kordofan",
+      " West Darfur",
+      " West Kordofan",
+      " White Nile",
+      "Returned from outside Sudan",
+      "Total"
+     ],
+     [
+      "None",
+      "#adm1+pcode",
+      "#affected+rets+ind",
+      "#affected+rets+hh",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
+     ],
+     [
+      "Aj Jazirah",
+      "SD15",
+      "1251240",
+      "250248",
+      "136053",
+      "21470",
+      "0",
+      "0",
+      "376866",
+      "125866",
+      "0",
+      "0",
+      "168",
+      "24951",
+      "22637",
+      "68295",
+      "95228",
+      "0",
+      "0",
+      "0",
+      "0",
+      "55399",
+      "324307",
+      "1251240"
+     ]
+    ],
+    "Returnees Masterlist (ADMIN2)": [
+     [
+      "DTM SUDAN: Return Master List 28-Jul-202",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
+     ],
+     [
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
+     ],
+     [
+      "Location Information",
+      "None",
+      "None",
+      "None",
+      "Total",
+      "None",
+      "State of Displacement by Individuals",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
+     ],
+     [
+      "State of Return",
+      "State Code",
+      "Locality Of Return",
+      "Locality Code",
+      "INDs",
+      "HHs",
+      "Aj Jazirah",
+      "Blue Nile",
+      "Central Darfur",
+      "East Darfur",
+      "Gedaref",
+      "Kassala",
+      "Khartoum",
+      "North Darfur",
+      "North Kordofan",
+      "Northern",
+      "Red Sea",
+      "River Nile",
+      "Sennar",
+      "South Darfur",
+      "South Kordofan",
+      "West Darfur",
+      "West Kordofan",
+      "White Nile",
+      "Returned from outside Sudan",
+      "Total"
+     ],
+     [
+      "#adm1+name",
+      "#adm1+pcode",
+      "#adm2+name",
+      "#adm2+pcode",
+      "#affected+rets+ind",
+      "#affected+rets+hh",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
+     ],
+     [
+      "Aj Jazirah",
+      "SD15",
+      "Al Hasahisa",
+      "SD15034",
+      "104350",
+      "20870",
+      "10993",
+      "1726",
+      "0",
+      "0",
+      "31291",
+      "10327",
+      "0",
+      "0",
+      "28",
+      "2150",
+      "1473",
+      "6152",
+      "7865",
+      "0",
+      "0",
+      "0",
+      "0",
+      "5020",
+      "27325",
+      "104350"
+     ],
+     [
+      "Aj Jazirah",
+      "SD15",
+      "Al Kamlin",
+      "SD15035",
+      "101890",
+      "20378",
+      "13582",
+      "1993",
+      "0",
+      "0",
+      "36293",
+      "13037",
+      "0",
+      "0",
+      "33",
+      "2370",
+      "100",
+      "9034",
+      "9004",
+      "0",
+      "0",
+      "0",
+      "0",
+      "5618",
+      "10826",
+      "101890"
+     ]
+    ]
+   }
+  }
+ ],
+ "sudan-operational-presence": [
+  {
+   "name": "2026-consolidated-3w-data-january-to-july.xlsx",
+   "fmt": "XLSX",
+   "url": "https://data.humdata.org/dataset/bdccda24-2122-416c-aed1-6bdebcfea76c/resource/2db829b4-19e4-436f-80c6-f3ebe39d2766/download/2026-consolidated-3w-data-january-to-july.xlsx",
+   "mod": "2026-08-31",
+   "bytes": 339441,
+   "sheets": {
+    "2026 HRP Response Monitoring - ": [
+     [
+      "Reporting Month",
+      "State",
+      "Locality",
+      "Cluster Name",
+      "Org name",
+      "Org acronym",
+      "Org type"
+     ],
+     [
+      "2026-07",
+      "Gedaref",
+      "Al Fashaga",
+      "Food Security and Livelihoods",
+      "MERCY CORPS",
+      "MC",
+      "INGO"
+     ],
+     [
+      "2026-07",
+      "Kassala",
+      "Reifi Wad Elhilaiw",
+      "Health",
+      "CARE International in Sudan",
+      "CARE",
+      "INGO"
+     ],
+     [
+      "2026-07",
+      "Sennar",
+      "Sennar",
+      "Health",
+      "Pan Health Care Organization",
+      "PHCO",
+      "NNGO"
+     ],
+     [
+      "2026-07",
+      "Red Sea",
+      "Port Sudan",
+      "Health",
+      "Sudanese American Physicians Association",
+      "SAPA",
+      "INGO"
+     ],
+     [
+      "2026-07",
+      "North Darfur",
+      "Tawila",
+      "Health",
+      "INTERSOS",
+      "INTERSOS",
+      "INGO"
+     ],
+     [
+      "2026-07",
+      "North Darfur",
+      "Kernoi",
+      "Nutrition",
+      "Welthungerhilfe (German Agro Action)",
+      "WHH",
+      "INGO"
+     ]
+    ]
+   }
+  }
+ ]
+}
