@@ -1,29 +1,37 @@
-import urllib.request, json, gzip, pathlib, urllib.parse
+import urllib.request, json, gzip, pathlib, io, csv, zipfile
 out = pathlib.Path("out"); out.mkdir(exist_ok=True)
-def get(u, n=None):
+def get(u):
     req = urllib.request.Request(u, headers={"User-Agent": "sudan-dashboard", "Accept-Encoding": "gzip"})
-    with urllib.request.urlopen(req, timeout=180) as r:
+    with urllib.request.urlopen(req, timeout=300) as r:
         b = r.read(); return gzip.decompress(b) if b[:2] == b"\x1f\x8b" else b
+HDX = "https://data.humdata.org/api/3/action/package_show?id="
 rep = {}
-HDX = "https://data.humdata.org/api/3/action/"
-for q in ["sudan dtm idps", "sudan acled", "sudan ipc acute food insecurity", "wfp food prices sudan",
-          "sudan operational presence 3w", "sudan subnational population cod-ps", "sudan administrative boundaries",
-          "unhcr sudan", "sudan health facilities", "sudan cholera", "sudan humanitarian needs", "sudan refugees returnees chad south sudan"]:
-    try:
-        d = json.loads(get(HDX + "package_search?rows=6&q=" + urllib.parse.quote(q)))
-        rep[q] = [{"name": p["name"], "title": p["title"], "org": (p.get("organization") or {}).get("title"),
-                   "modified": p.get("metadata_modified", "")[:10], "license": p.get("license_title"),
-                   "res": [{"n": r.get("name"), "f": r.get("format"), "u": r.get("url"), "m": (r.get("last_modified") or "")[:10]} for r in p.get("resources", [])][:8]}
-                  for p in d["result"]["results"]]
-    except Exception as e:
-        rep[q] = repr(e)
-for k, u in {"fts_plans": "https://api.hpc.tools/v1/public/plan/country/SDN",
-             "unhcr_pop": "https://api.unhcr.org/population/v1/population/?limit=50&coo=SDN&yearFrom=2023&yearTo=2025&coa_all=true",
-             "unhcr_sit": "https://data.unhcr.org/population/get/sublocation?widget_id=283559&sv_id=100&population_group=5460&forcesublocation=0&fromDate=1900-01-01",
-             "ipc_api": "https://api.ipcinfo.org/population?country=SD&format=json",
-             "worldpop": "https://hub.worldpop.org/rest/data/pop/wpgpunadj?iso3=SDN"}.items():
-    try:
-        b = get(u); rep[k] = b[:3000].decode("utf-8", "replace")
-    except Exception as e:
-        rep[k] = repr(e)
-(out / "report.json").write_text(json.dumps(rep, indent=1))
+def heads(pkg, maxres=40, rows=4):
+    p = json.loads(get(HDX + pkg))["result"]; res = []
+    for r in p["resources"][:maxres]:
+        e = {"name": r["name"], "fmt": r["format"], "url": r["url"], "mod": (r.get("last_modified") or "")[:10]}
+        try:
+            b = get(r["url"]); e["bytes"] = len(b)
+            if r["format"].upper() == "CSV":
+                t = b.decode("utf-8-sig", "replace").splitlines(); e["head"] = t[:rows]; e["nrows"] = len(t)
+            elif r["format"].upper() in ("XLSX", "XLS"):
+                import openpyxl
+                wb = openpyxl.load_workbook(io.BytesIO(b), read_only=True, data_only=True)
+                e["sheets"] = {}
+                for ws in wb.worksheets[:6]:
+                    e["sheets"][ws.title] = [[str(c)[:40] for c in row] for row in ws.iter_rows(max_row=rows + 3, values_only=True)]
+            elif "zip" in r["format"].lower() or r["url"].endswith(".zip"):
+                z = zipfile.ZipFile(io.BytesIO(b)); e["files"] = [(i.filename, i.file_size) for i in z.infolist()]
+            elif r["format"].lower() == "geojson":
+                g = json.loads(b); e["nfeat"] = len(g["features"]); e["props"] = g["features"][0]["properties"]
+        except Exception as ex:
+            e["err"] = repr(ex)[:200]
+        res.append(e)
+    return res
+for pkg, mx in [("hdx-hapi-sdn", 40), ("cod-ab-sdn", 3), ("new-arrivals-from-sudan", 2), ("sudan-humanitarian-needs", 1),
+                ("sudan-acute-food-insecurity-classification-april-2023-september-2023", 2), ("wfp-food-prices-for-sudan", 2),
+                ("sudan-acled-conflict-data", 2), ("sudan-acute-food-insecurity-country-data", 4), ("cod-ps-sdn", 3),
+                ("sudan-displacement-situation-countrywide-idps-iom-dtm", 1), ("sudan-operational-presence", 1)]:
+    try: rep[pkg] = heads(pkg, mx)
+    except Exception as ex: rep[pkg] = repr(ex)
+(out / "report2.json").write_text(json.dumps(rep, indent=1, default=str))

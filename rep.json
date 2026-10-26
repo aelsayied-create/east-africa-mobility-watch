@@ -1,0 +1,2374 @@
+{
+ "sudan dtm idps": [
+  {
+   "name": "sudan-displacement-situation-countrywide-idps-iom-dtm",
+   "title": "Sudan: Displacement Situation - IDPs [IOM DTM]",
+   "org": "International Organization for Migration (IOM)",
+   "modified": "2026-08-24",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "DTM Sudan Displacement and Return Snapshot (8).xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/44594ae2-dde9-417f-acae-523bc012c162/resource/dfeac4ff-47a0-454c-92c1-501d34ec0fff/download/2026_dtm_sdn_idps_returnees_snapshot_008_28072026_public_hdx_vf.xlsx",
+     "m": "2026-08-24"
+    },
+    {
+     "n": "DTM Sudan Displacement and Return Snapshot (7).xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/44594ae2-dde9-417f-acae-523bc012c162/resource/6e581848-fe19-4a68-a288-aba26d06bf20/download/2026_dtm_sdn_idps_returnees_snapshot_007_30062026_public.xlsx",
+     "m": "2026-08-04"
+    },
+    {
+     "n": "DTM Sudan Displacement and Return Snapshot (6).xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/44594ae2-dde9-417f-acae-523bc012c162/resource/a96c10db-c597-4f73-8289-76830c3ee42c/download/2026_24_05_dtm_sdn_idps_returnees_snapshot_006_public_hdx_v1.xlsx",
+     "m": "2026-06-18"
+    },
+    {
+     "n": "DTM Sudan Displacement and Return Snapshot (5).xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/44594ae2-dde9-417f-acae-523bc012c162/resource/009e1ec8-0eba-47a4-a15d-5c67b252942b/download/dtm_sdn_idps_returnees_snapshot_005_20260428_public.xlsx",
+     "m": "2026-06-01"
+    },
+    {
+     "n": "DTM Sudan Displacement and Return Snapshot (4).xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/44594ae2-dde9-417f-acae-523bc012c162/resource/18d5308b-61b5-4b68-8291-44c855b24ebd/download/dtm_sdn_idps_returnees_snapshot_004_31032026_public.xlsx",
+     "m": "2026-06-01"
+    },
+    {
+     "n": "DTM Sudan Displacement and Return Snapshot (3).xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/44594ae2-dde9-417f-acae-523bc012c162/resource/73467e29-c5eb-4fab-bfe2-96eb5dcaee2a/download/dtm_sdn_idps_returnees_snapshot_003_27022026_public.xlsx",
+     "m": "2026-06-01"
+    },
+    {
+     "n": "DTM Sudan Displacement and Return Snapshot (2).xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/44594ae2-dde9-417f-acae-523bc012c162/resource/6ff7b53f-2f56-4c44-92fb-ce8df2013131/download/dtm_sdn_idps_returnees_snapshot_002_30122025_public_hdx.xlsx",
+     "m": "2026-02-12"
+    },
+    {
+     "n": "DTM Sudan Displacement and Return Snapshot (1)",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/44594ae2-dde9-417f-acae-523bc012c162/resource/118eb395-a968-4833-9d1d-d50ba94d7573/download/dtm_sdn_idps_returnees_snapshot_001_26112025_public_hdx.xlsx",
+     "m": "2026-02-12"
+    }
+   ]
+  },
+  {
+   "name": "sudan-idp-registration-dtm-iom",
+   "title": "Sudan IDP Registration - DTM IOM",
+   "org": "OCHA Sudan",
+   "modified": "2025-12-04",
+   "license": "Public Domain / No restrictions (CC0)",
+   "res": [
+    {
+     "n": "Sudan_DTM_IDPs_DATASET_29Feb20_REG..xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/0b1e5207-ea5f-4509-8aca-4ed117c07761/resource/0c3b7a7c-4358-4d26-8476-d7fa41c3e403/download/sudan_dtm_idps_dataset_29feb20_reg..xlsx",
+     "m": "2020-03-30"
+    }
+   ]
+  },
+  {
+   "name": "sudan-displacement-data-idps-iom-dtm",
+   "title": "Sudan Displacement Data - IDPs [IOM DTM]",
+   "org": "International Organization for Migration (IOM)",
+   "modified": "2025-07-22",
+   "license": "Other",
+   "res": [
+    {
+     "n": "DTM Sudan IDPs Master List Round 7",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/f09ff170-23a7-41b0-9711-940d2c298131/resource/f297e6de-b77f-42f6-8646-85d51d46ac87/download/sudan-monthly-displacement_7_mar_public_v01_hdx.xlsx",
+     "m": "2024-04-29"
+    },
+    {
+     "n": "DTM Sudan IDPs Master List Round 6",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/f09ff170-23a7-41b0-9711-940d2c298131/resource/e06c7e61-dd14-4912-a00f-73d280a73117/download/mt-r6-1-idps-dataset-external-3.xlsx",
+     "m": "2023-09-21"
+    },
+    {
+     "n": "DTM Sudan IDPs Master List Round 5",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/f09ff170-23a7-41b0-9711-940d2c298131/resource/b27deb4b-99c8-4104-b6e2-9263b9b47016/download/mt-r5-1-idps-datasetexternal.xlsx",
+     "m": "2022-12-29"
+    },
+    {
+     "n": "DTM Sudan IDPs Master List Round 4",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/f09ff170-23a7-41b0-9711-940d2c298131/resource/5ccf6d15-6dd8-4801-87d6-300a9d53b8cc/download/round-4_idp.xlsx",
+     "m": "2022-09-01"
+    },
+    {
+     "n": "DTM Sudan IDPs Master List Round 3",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/f09ff170-23a7-41b0-9711-940d2c298131/resource/00d0b0f8-96e4-4a12-a6c2-6ae08c2561d0/download/hdx_mt-r31-idpsdataset.xlsx",
+     "m": "2023-01-23"
+    },
+    {
+     "n": "DTM Sudan IDPs Master List Round 2",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/f09ff170-23a7-41b0-9711-940d2c298131/resource/34670813-f9ed-40ec-82a4-3bf2b2a66b2a/download/dtm-sudan-idps-master-list-round-2.xlsx",
+     "m": "2021-09-08"
+    },
+    {
+     "n": "DTM Sudan IDPs Master List Round 1",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/f09ff170-23a7-41b0-9711-940d2c298131/resource/95fcf41c-21e1-4d0b-97cf-16372714fdbc/download/dtm-sudan-idps-master-list-round-1.xlsx",
+     "m": "2020-11-06"
+    }
+   ]
+  },
+  {
+   "name": "sudan-displacement-situation-idps-iom-dtm",
+   "title": "Sudan Displacement Situation - IDPs [IOM DTM]",
+   "org": "International Organization for Migration (IOM)",
+   "modified": "2025-05-05",
+   "license": "Other",
+   "res": [
+    {
+     "n": "DTM Sudan Monthly Displacement Overview (08)",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/319dd40f-c0f8-4f6d-9a8e-9acf31007dd5/resource/9148b279-3400-4d3f-b64c-c8ef04523ebe/download/sudan-monthly-displacement_08_apr_public_v02.xlsx",
+     "m": "2024-05-09"
+    },
+    {
+     "n": "DTM Sudan - Weekly displacement snapshot 28",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/319dd40f-c0f8-4f6d-9a8e-9acf31007dd5/resource/dfb33e56-2d6c-46aa-aafa-0bd7f6fef6d7/download/dtm_sdn_report_snapshot-28_20240418_v02_public.xlsx",
+     "m": "2024-04-26"
+    },
+    {
+     "n": "DTM Sudan - Weekly displacement snapshot 27",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/319dd40f-c0f8-4f6d-9a8e-9acf31007dd5/resource/0b2ccc99-6c8a-4ebb-b39e-54fb464f982a/download/dtm_sdn_report_snapshot-27_20240412_v02_public.xlsx",
+     "m": "2024-04-24"
+    },
+    {
+     "n": "DTM Sudan - Weekly displacement snapshot 26",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/319dd40f-c0f8-4f6d-9a8e-9acf31007dd5/resource/3891ca5c-c4d6-4806-8288-36946236692c/download/dtm_sdn_report_snapshot-26_20240409_v02_public.xlsx",
+     "m": "2024-04-24"
+    },
+    {
+     "n": "DTM Sudan - Weekly displacement snapshot 25",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/319dd40f-c0f8-4f6d-9a8e-9acf31007dd5/resource/f5d01fea-a71f-4e36-b984-88ac2ff2f19a/download/dtm_sdn_report_snapshot-25_20240328_v02_public.xlsx",
+     "m": "2024-04-08"
+    },
+    {
+     "n": "DTM Sudan Monthly Displacement Overview (07)",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/319dd40f-c0f8-4f6d-9a8e-9acf31007dd5/resource/bb996618-92cd-4b9a-9ec1-b459ef7067ae/download/sudan-monthly-displacement_7_mar_public_v01.xlsx",
+     "m": "2024-04-08"
+    },
+    {
+     "n": "DTM Sudan - Weekly displacement snapshot 24",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/319dd40f-c0f8-4f6d-9a8e-9acf31007dd5/resource/9dfc1aa6-ce0e-4e3c-a5b2-d03fa9c2543c/download/dtm_sdn_report_snapshot-24_20240314_v02_public.xlsx",
+     "m": "2024-03-21"
+    },
+    {
+     "n": "DTM Sudan - Weekly displacement snapshot 23",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/319dd40f-c0f8-4f6d-9a8e-9acf31007dd5/resource/e7d42d71-4dc5-4936-98f1-37a5b1df172b/download/dtm_sdn_report_snapshot-23_20240307_v02_public.xlsx",
+     "m": "2024-03-15"
+    }
+   ]
+  },
+  {
+   "name": "idp-population-dtm-iom-sudan",
+   "title": "IDP Population DTM IOM - Sudan",
+   "org": "OCHA Sudan",
+   "modified": "2025-12-04",
+   "license": "Public Domain / No restrictions (CC0)",
+   "res": [
+    {
+     "n": "Sudan DTM IDPs DATASET 29Feb20 (003).xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/7e86e642-d1e0-4c03-8943-075936e46bce/resource/1eae3776-bc50-4105-a32b-1fec5bf10cda/download/sudan-dtm-idps-dataset-29feb20-003.xlsx",
+     "m": "2020-04-09"
+    }
+   ]
+  },
+  {
+   "name": "south-sudan-displacement-data-idps-returnees-baseline-assessment-iom-dtm",
+   "title": "South Sudan Displacement - [IDPs, Returnees] - Baseline Assessment [IOM DTM]",
+   "org": "International Organization for Migration (IOM)",
+   "modified": "2025-05-07",
+   "license": "Other",
+   "res": [
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 16",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/14e85ffc-ef9d-4628-a44d-51b16c7cfe30/download/ssd-dtm-mobility-tracking-r16-baseline-assessment-dataset_updated_20250507.xlsx",
+     "m": "2025-05-07"
+    },
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 15",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/d2d40f85-3586-432a-956f-65976ada09d3/download/ssd-dtm-mobility-tracking-r15-baseline-assessment-dataset_publish_hdx.xlsx",
+     "m": "2024-11-25"
+    },
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 14",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/6341ffbf-85a3-44ec-b3eb-7ff300174252/download/ssd-dtm-mobility-tracking-r14-baseline-assessment-dataset.xlsx",
+     "m": "2023-10-10"
+    },
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 13",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/3c275af2-2d7a-408b-8c78-d6de10f7c5a6/download/ssd-dtm-mobility-tracking-r13-baseline-assessment-dataset_hdx.xlsx",
+     "m": "2023-04-04"
+    },
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 12",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/f45e1990-d881-43f6-bd67-d7ddf7faf6cb/download/ssd-dtm-mobility-tracking-r12-baseline-locations-dataset.xlsx",
+     "m": "2022-07-21"
+    },
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 11",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/fc91e2b5-460e-4c68-87f1-fafd33aba80d/download/dtm-south-sudan-baseline-assessment-round-11-hdx.xlsx",
+     "m": "2021-12-03"
+    },
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 10",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/4cb997a1-1dec-4983-896d-ceb606416268/download/dtm_south_sudan-baseline-assessment-round-10-hdx.xlsx",
+     "m": "2021-12-03"
+    },
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 9",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/0b18f98a-e9a4-4d15-9032-066a0f646ff2/download/dtm-south-sudan-baseline-assessment-round-9.xlsx",
+     "m": "2021-01-26"
+    }
+   ]
+  }
+ ],
+ "sudan acled": [
+  {
+   "name": "sudan-acled-conflict-data",
+   "title": "Sudan - Conflict Events",
+   "org": "Armed Conflict Location & Event Data Project (ACLED)",
+   "modified": "2026-10-21",
+   "license": "Other",
+   "res": [
+    {
+     "n": "sudan_HRP_political_violence_events_and_fatalities_by_month-year",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/5efad450-8b15-4867-b7b3-8a25b455eed8/resource/cebc4989-f114-4b7e-9f7b-ce1c6476bb00/download/sudan_hrp_political_violence_events_and_fatalities_by_month-year_as-of-21oct2026.xlsx",
+     "m": "2026-10-21"
+    },
+    {
+     "n": "sudan_HRP_civilian_targeting_events_and_fatalities_by_month-year",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/5efad450-8b15-4867-b7b3-8a25b455eed8/resource/3352a0d8-2996-4e70-b618-3be58699be7f/download/sudan_hrp_civilian_targeting_events_and_fatalities_by_month-year_as-of-21oct2026.xlsx",
+     "m": "2026-10-21"
+    },
+    {
+     "n": "sudan_HRP_demonstration_events_by_month-year",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/5efad450-8b15-4867-b7b3-8a25b455eed8/resource/d31ea704-2681-4434-b5ac-1d83fbb152f6/download/sudan_hrp_demonstration_events_by_month-year_as-of-21oct2026.xlsx",
+     "m": "2026-10-21"
+    }
+   ]
+  },
+  {
+   "name": "south-sudan-acled-conflict-data",
+   "title": "South Sudan - Conflict Events",
+   "org": "Armed Conflict Location & Event Data Project (ACLED)",
+   "modified": "2026-10-21",
+   "license": "Other",
+   "res": [
+    {
+     "n": "south sudan_HRP_political_violence_events_and_fatalities_by_month-year",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/2f85df58-ab46-49dd-9253-d1d77aec687a/resource/de70c202-2ad4-4b11-b6de-58b0653017c0/download/south-sudan_hrp_political_violence_events_and_fatalities_by_month-year_as-of-21oct2026.xlsx",
+     "m": "2026-10-21"
+    },
+    {
+     "n": "south sudan_HRP_civilian_targeting_events_and_fatalities_by_month-year",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/2f85df58-ab46-49dd-9253-d1d77aec687a/resource/6247d4c5-decd-4e29-87a4-6db282dd3cb0/download/south-sudan_hrp_civilian_targeting_events_and_fatalities_by_month-year_as-of-21oct2026.xlsx",
+     "m": "2026-10-21"
+    },
+    {
+     "n": "south sudan_HRP_demonstration_events_by_month-year",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/2f85df58-ab46-49dd-9253-d1d77aec687a/resource/b00690ad-44a2-4deb-9f9a-7ee1ff6d72bc/download/south-sudan_hrp_demonstration_events_by_month-year_as-of-21oct2026.xlsx",
+     "m": "2026-10-21"
+    }
+   ]
+  },
+  {
+   "name": "hdx-hapi-sdn",
+   "title": "HDX HAPI Data for Sudan",
+   "org": "HDX Humanitarian API Data",
+   "modified": "2026-10-25",
+   "license": "Other",
+   "res": [
+    {
+     "n": "Affected People: Internally-Displaced Persons for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/17760c0d-ed8c-4fbc-a95f-53f104a5f3d2/download/hdx_hapi_idps_sdn.csv",
+     "m": "2026-10-20"
+    },
+    {
+     "n": "Affected People: Refugees & Persons of Concern for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/b3398d52-1ab2-426b-b2d4-148aec70f986/download/hdx_hapi_refugees_sdn.csv",
+     "m": "2026-06-13"
+    },
+    {
+     "n": "Affected People: Returnees for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/4abc1480-48bd-4551-a15f-0e6ae4896844/download/hdx_hapi_returnees_sdn.csv",
+     "m": "2026-06-13"
+    },
+    {
+     "n": "Affected People: Humanitarian Needs for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/b028496e-c210-4515-b24b-cb32ab76a8d7/download/hdx_hapi_humanitarian_needs_sdn.csv",
+     "m": "2026-02-11"
+    },
+    {
+     "n": "Coordination & Context: Operational Presence for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/b3f1aa9d-df49-4f77-ba3e-a01c07fac924/download/hdx_hapi_operational_presence_sdn.csv",
+     "m": "2026-10-21"
+    },
+    {
+     "n": "Coordination & Context: Funding for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/d74f57dd-2a9a-469c-b05a-d6595698b205/download/hdx_hapi_funding_sdn.csv",
+     "m": "2026-10-24"
+    },
+    {
+     "n": "Coordination & Context: Conflict Events for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/d6c17883-6ff8-455b-acbb-91011ac8c161/download/hdx_hapi_conflict_event_sdn.csv",
+     "m": "2026-10-24"
+    },
+    {
+     "n": "Coordination & Context: National Risk for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/62640929-8799-4265-b522-485fd928024a/download/hdx_hapi_national_risk_sdn.csv",
+     "m": "2026-05-28"
+    }
+   ]
+  },
+  {
+   "name": "hdx-hapi-ssd",
+   "title": "HDX HAPI Data for South Sudan",
+   "org": "HDX Humanitarian API Data",
+   "modified": "2026-10-25",
+   "license": "Other",
+   "res": [
+    {
+     "n": "Affected People: Internally-Displaced Persons for South Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/fe9af2cf-dd0e-4b76-b1c4-22df94cc2197/resource/7f923b4f-9dc7-43ca-9221-9288450d03af/download/hdx_hapi_idps_ssd.csv",
+     "m": "2026-10-20"
+    },
+    {
+     "n": "Affected People: Refugees & Persons of Concern for South Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/fe9af2cf-dd0e-4b76-b1c4-22df94cc2197/resource/2e05f919-b84d-474d-af95-dd56102b8f16/download/hdx_hapi_refugees_ssd.csv",
+     "m": "2026-06-13"
+    },
+    {
+     "n": "Affected People: Returnees for South Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/fe9af2cf-dd0e-4b76-b1c4-22df94cc2197/resource/694e9a20-ad7c-487d-8429-27589af1578f/download/hdx_hapi_returnees_ssd.csv",
+     "m": "2026-06-13"
+    },
+    {
+     "n": "Affected People: Humanitarian Needs for South Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/fe9af2cf-dd0e-4b76-b1c4-22df94cc2197/resource/a08f8f57-0436-4935-a453-d0e881edf905/download/hdx_hapi_humanitarian_needs_ssd.csv",
+     "m": "2026-02-11"
+    },
+    {
+     "n": "Coordination & Context: Operational Presence for South Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/fe9af2cf-dd0e-4b76-b1c4-22df94cc2197/resource/114bb9fb-c66f-4a0c-89a2-160b95aebdf5/download/hdx_hapi_operational_presence_ssd.csv",
+     "m": "2026-10-21"
+    },
+    {
+     "n": "Coordination & Context: Funding for South Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/fe9af2cf-dd0e-4b76-b1c4-22df94cc2197/resource/49f0a208-c204-4a9e-9d88-e48268689671/download/hdx_hapi_funding_ssd.csv",
+     "m": "2026-10-24"
+    },
+    {
+     "n": "Coordination & Context: Conflict Events for South Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/fe9af2cf-dd0e-4b76-b1c4-22df94cc2197/resource/38995d1e-eca4-4530-9186-da1977b941af/download/hdx_hapi_conflict_event_ssd.csv",
+     "m": "2026-10-24"
+    },
+    {
+     "n": "Coordination & Context: National Risk for South Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/fe9af2cf-dd0e-4b76-b1c4-22df94cc2197/resource/5b322de6-0a94-4b44-b332-ee2a03ba96d4/download/hdx_hapi_national_risk_ssd.csv",
+     "m": "2026-05-28"
+    }
+   ]
+  },
+  {
+   "name": "rainfall-conflict-and-food-insecurity-measurement-in-post-succession-sudan-and-south-sudan",
+   "title": "Rainfall, Conflict, and Food Insecurity Measurement in Post-Succession Sudan and South Sudan (July Months, 2013-2016)",
+   "org": "Drew University (inactive)",
+   "modified": "2024-03-15",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "Sudan_Climate-Conflict_Dataset.zip",
+     "f": "SHP",
+     "u": "https://data.humdata.org/dataset/c244053c-2a7c-4a2c-b83d-5355725474be/resource/84eac0c8-aff5-424f-a0e7-d2c12099da1d/download/sudan_climate-conflict_dataset.zip",
+     "m": "2019-01-24"
+    }
+   ]
+  },
+  {
+   "name": "south-sudan-2019-gridded-population-estimates",
+   "title": "South Sudan 2019 gridded population estimates from census projections adjusted for displacement, version 1.0",
+   "org": "GRID3",
+   "modified": "2025-12-09",
+   "license": "Creative Commons Attribution Share-Alike (CC BY-SA)",
+   "res": [
+    {
+     "n": "SSD_population_v1_0_gridded.zip",
+     "f": "GeoTIFF",
+     "u": "https://wopr.worldpop.org/download/23",
+     "m": "2025-12-09"
+    },
+    {
+     "n": "SSD_population_v1_0_README.pdf",
+     "f": "PDF",
+     "u": "https://wopr.worldpop.org/download/24",
+     "m": "2025-08-26"
+    }
+   ]
+  }
+ ],
+ "sudan ipc acute food insecurity": [
+  {
+   "name": "ipc-country-data",
+   "title": "IPC Acute Food Insecurity Country Data",
+   "org": "Integrated Food Security Phase Classification (IPC)",
+   "modified": "2025-04-09",
+   "license": "Public Domain / No restrictions (CC0)",
+   "res": [
+    {
+     "n": "All Countries-2017-2023.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/1237f795-64fe-4acf-9706-a212abde80e8/resource/3f1a4518-4d4c-42bb-b61c-dc3813843041/download/all-countries-2017-2023.xlsx",
+     "m": "2023-03-15"
+    }
+   ]
+  },
+  {
+   "name": "sudan-acute-food-insecurity-country-data",
+   "title": "Sudan: Acute Food Insecurity Country Data",
+   "org": "Integrated Food Security Phase Classification (IPC)",
+   "modified": "2026-10-05",
+   "license": "Public Domain / No restrictions (CC0)",
+   "res": [
+    {
+     "n": "ipc_sdn.geojson",
+     "f": "GeoJSON",
+     "u": "https://data.humdata.org/dataset/d21ca2c3-6675-4463-bcb1-ff713c60fcb0/resource/34bc177a-344f-4894-837e-86fea689e3b5/download/ipc_sdn.geojson",
+     "m": "2026-10-05"
+    },
+    {
+     "n": "ipc_sdn_national_long_latest.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/d21ca2c3-6675-4463-bcb1-ff713c60fcb0/resource/f92dcdf7-f5cb-4b7e-8ade-052a4379a24d/download/ipc_sdn_national_long_latest.csv",
+     "m": "2026-10-05"
+    },
+    {
+     "n": "ipc_sdn_level1_long_latest.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/d21ca2c3-6675-4463-bcb1-ff713c60fcb0/resource/664f3b4b-8105-488c-ad96-371d02872c56/download/ipc_sdn_level1_long_latest.csv",
+     "m": "2026-10-05"
+    },
+    {
+     "n": "ipc_sdn_level1_wide_latest.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/d21ca2c3-6675-4463-bcb1-ff713c60fcb0/resource/95c3c714-06b7-467e-97d8-4506148ae68e/download/ipc_sdn_level1_wide_latest.csv",
+     "m": "2026-10-05"
+    },
+    {
+     "n": "ipc_sdn_area_long_latest.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/d21ca2c3-6675-4463-bcb1-ff713c60fcb0/resource/b74da561-cb54-4b76-a3b0-1b5483e803d5/download/ipc_sdn_area_long_latest.csv",
+     "m": "2026-10-05"
+    },
+    {
+     "n": "ipc_sdn_area_wide_latest.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/d21ca2c3-6675-4463-bcb1-ff713c60fcb0/resource/532c4144-db3a-497d-bbd2-f8f90ccba9ef/download/ipc_sdn_area_wide_latest.csv",
+     "m": "2026-10-05"
+    },
+    {
+     "n": "ipc_sdn_national_long.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/d21ca2c3-6675-4463-bcb1-ff713c60fcb0/resource/794f1edc-5456-4247-a7e6-fc830733e53e/download/ipc_sdn_national_long.csv",
+     "m": "2026-10-05"
+    },
+    {
+     "n": "ipc_sdn_national_wide.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/d21ca2c3-6675-4463-bcb1-ff713c60fcb0/resource/ff9269bb-c458-40d5-8694-b0f45f60c69c/download/ipc_sdn_national_wide.csv",
+     "m": "2026-10-05"
+    }
+   ]
+  },
+  {
+   "name": "south-sudan-acute-food-insecurity-country-data",
+   "title": "South Sudan: Acute Food Insecurity Country Data",
+   "org": "Integrated Food Security Phase Classification (IPC)",
+   "modified": "2026-10-05",
+   "license": "Public Domain / No restrictions (CC0)",
+   "res": [
+    {
+     "n": "ipc_ssd.geojson",
+     "f": "GeoJSON",
+     "u": "https://data.humdata.org/dataset/c81bb6db-0f1d-4c59-8bde-52d7edc562e9/resource/1ada1f60-5465-4aa2-a8e9-188ab5bd2f0a/download/ipc_ssd.geojson",
+     "m": "2026-10-05"
+    },
+    {
+     "n": "ipc_ssd_national_long_latest.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/c81bb6db-0f1d-4c59-8bde-52d7edc562e9/resource/5dc31009-611d-44d9-9d1b-00e51d6e8fa3/download/ipc_ssd_national_long_latest.csv",
+     "m": "2026-10-05"
+    },
+    {
+     "n": "ipc_ssd_level1_long_latest.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/c81bb6db-0f1d-4c59-8bde-52d7edc562e9/resource/0b79be00-7c46-4784-934d-6c80fc9d46ae/download/ipc_ssd_level1_long_latest.csv",
+     "m": "2026-10-05"
+    },
+    {
+     "n": "ipc_ssd_level1_wide_latest.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/c81bb6db-0f1d-4c59-8bde-52d7edc562e9/resource/70864418-b009-4850-8ebf-01e5534d16ee/download/ipc_ssd_level1_wide_latest.csv",
+     "m": "2026-10-05"
+    },
+    {
+     "n": "ipc_ssd_area_long_latest.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/c81bb6db-0f1d-4c59-8bde-52d7edc562e9/resource/356161ff-673d-480f-a183-abe93a268450/download/ipc_ssd_area_long_latest.csv",
+     "m": "2026-10-05"
+    },
+    {
+     "n": "ipc_ssd_area_wide_latest.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/c81bb6db-0f1d-4c59-8bde-52d7edc562e9/resource/e36a52ee-1aa6-4bd3-a4a8-b47ec5d3ee66/download/ipc_ssd_area_wide_latest.csv",
+     "m": "2026-10-05"
+    },
+    {
+     "n": "ipc_ssd_national_long.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/c81bb6db-0f1d-4c59-8bde-52d7edc562e9/resource/5e88477c-9d87-4ab2-bfa5-0303e21d9cc2/download/ipc_ssd_national_long.csv",
+     "m": "2026-10-05"
+    },
+    {
+     "n": "ipc_ssd_national_wide.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/c81bb6db-0f1d-4c59-8bde-52d7edc562e9/resource/d0b0faa3-1cad-470c-9b72-16f83932398d/download/ipc_ssd_national_wide.csv",
+     "m": "2026-10-05"
+    }
+   ]
+  },
+  {
+   "name": "sudan-acute-food-insecurity-classification-april-2023-september-2023",
+   "title": "Sudan Acute Food Insecurity Classification",
+   "org": "FEWS NET",
+   "modified": "2026-10-24",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "Sudan Acute Food Insecurity Classification Shapefile August 2026 (.zip)",
+     "f": "zip",
+     "u": "https://fdw.fews.net/api/ipcpackage/country/SD/2026-08-01/",
+     "m": "2026-09-16"
+    },
+    {
+     "n": "Sudan Acute Food Insecurity Classification August 2026 (.geojson)",
+     "f": "GeoJSON",
+     "u": "https://fdw.fews.net/api/ipcphasemap/country/SD/2026-08-01.geojson",
+     "m": "2026-09-26"
+    },
+    {
+     "n": "Near Term Projection: August 2026 - September 2026 (.png)",
+     "f": "PNG",
+     "u": "https://fdw.fews.net/en/viz/viz_visualizations_ipc_ipccountryregionstaticmap.png_attachment?show_logos=True&data_center_image=True&datacollection__collection_date=2026-08-01&dataseries__geographic_unit__country=SD&dataseries__ipcclassification__scenario=ML1",
+     "m": "2026-10-10"
+    },
+    {
+     "n": "Medium Term Projection: October 2026 - January 2027 (.png)",
+     "f": "PNG",
+     "u": "https://fdw.fews.net/en/viz/viz_visualizations_ipc_ipccountryregionstaticmap.png_attachment?show_logos=True&data_center_image=True&datacollection__collection_date=2026-08-01&dataseries__geographic_unit__country=SD&dataseries__ipcclassification__scenario=ML2",
+     "m": "2026-09-17"
+    },
+    {
+     "n": "Near Term Projection: August 2026 - September 2026 (.kml)",
+     "f": "KML",
+     "u": "https://fdw.fews.net/api/ipcphasemap/country/SD/ML1/2026-08-01.kml",
+     "m": "2026-09-26"
+    },
+    {
+     "n": "Medium Term Projection: October 2026 - January 2027 (.kml)",
+     "f": "KML",
+     "u": "https://fdw.fews.net/api/ipcphasemap/country/SD/ML2/2026-08-01.kml",
+     "m": "2026-09-26"
+    },
+    {
+     "n": "Sudan Acute Food Insecurity Classification Shapefile October 2020 (.zip)",
+     "f": "zip",
+     "u": "https://fdw.fews.net/api/ipcpackage/country/SD/2020-10-01/",
+     "m": "2026-09-21"
+    },
+    {
+     "n": "Sudan Acute Food Insecurity Classification October 2020 (.geojson)",
+     "f": "GeoJSON",
+     "u": "https://fdw.fews.net/api/ipcphasemap/country/SD/2020-10-01.geojson",
+     "m": "2026-09-26"
+    }
+   ]
+  },
+  {
+   "name": "south-sudan-acute-food-insecurity-classification-march-2023-september-2023",
+   "title": "South Sudan Acute Food Insecurity Classification",
+   "org": "FEWS NET",
+   "modified": "2026-10-24",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "South Sudan Acute Food Insecurity Classification Shapefile October 2018 (.zip)",
+     "f": "zip",
+     "u": "https://fdw.fews.net/api/ipcpackage/country/SS/2018-10-01/",
+     "m": "2026-09-21"
+    },
+    {
+     "n": "South Sudan Acute Food Insecurity Classification October 2018 (.geojson)",
+     "f": "GeoJSON",
+     "u": "https://fdw.fews.net/api/ipcphasemap/country/SS/2018-10-01.geojson",
+     "m": "2026-09-30"
+    },
+    {
+     "n": "Current Situation: October 2018 (.png)",
+     "f": "PNG",
+     "u": "https://fdw.fews.net/en/viz/viz_visualizations_ipc_ipccountryregionstaticmap.png_attachment?show_logos=True&data_center_image=True&datacollection__collection_date=2018-10-01&dataseries__geographic_unit__country=SS&dataseries__ipcclassification__scenario=CS",
+     "m": "2026-09-20"
+    },
+    {
+     "n": "Near Term Projection: October 2018 - January 2019 (.png)",
+     "f": "PNG",
+     "u": "https://fdw.fews.net/en/viz/viz_visualizations_ipc_ipccountryregionstaticmap.png_attachment?show_logos=True&data_center_image=True&datacollection__collection_date=2018-10-01&dataseries__geographic_unit__country=SS&dataseries__ipcclassification__scenario=ML1",
+     "m": "2026-10-20"
+    },
+    {
+     "n": "Medium Term Projection: February 2019 - May 2019 (.png)",
+     "f": "PNG",
+     "u": "https://fdw.fews.net/en/viz/viz_visualizations_ipc_ipccountryregionstaticmap.png_attachment?show_logos=True&data_center_image=True&datacollection__collection_date=2018-10-01&dataseries__geographic_unit__country=SS&dataseries__ipcclassification__scenario=ML2",
+     "m": "2026-09-18"
+    },
+    {
+     "n": "Current Situation: October 2018 (.kml)",
+     "f": "KML",
+     "u": "https://fdw.fews.net/api/ipcphasemap/country/SS/CS/2018-10-01.kml",
+     "m": "2026-09-30"
+    },
+    {
+     "n": "Near Term Projection: October 2018 - January 2019 (.kml)",
+     "f": "KML",
+     "u": "https://fdw.fews.net/api/ipcphasemap/country/SS/ML1/2018-10-01.kml",
+     "m": "2026-09-30"
+    },
+    {
+     "n": "Medium Term Projection: February 2019 - May 2019 (.kml)",
+     "f": "KML",
+     "u": "https://fdw.fews.net/api/ipcphasemap/country/SS/ML2/2018-10-01.kml",
+     "m": "2026-09-30"
+    }
+   ]
+  },
+  {
+   "name": "nigeria-acute-food-insecurity-country-data",
+   "title": "Nigeria: Acute Food Insecurity Country Data",
+   "org": "Integrated Food Security Phase Classification (IPC)",
+   "modified": "2026-10-12",
+   "license": "Public Domain / No restrictions (CC0)",
+   "res": [
+    {
+     "n": "ipc_nga.geojson",
+     "f": "GeoJSON",
+     "u": "https://data.humdata.org/dataset/c3d8899b-11d9-4946-8987-89fe2b2b7c15/resource/da292737-3489-4674-aebd-3c4ad2301980/download/ipc_nga.geojson",
+     "m": "2026-10-12"
+    },
+    {
+     "n": "ipc_nga_national_long_latest.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/c3d8899b-11d9-4946-8987-89fe2b2b7c15/resource/1b4ca57a-a406-461b-b36d-613735985f17/download/ipc_nga_national_long_latest.csv",
+     "m": "2026-10-12"
+    },
+    {
+     "n": "ipc_nga_level1_long_latest.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/c3d8899b-11d9-4946-8987-89fe2b2b7c15/resource/e229f7c5-2468-418c-b1c4-6684e7701496/download/ipc_nga_level1_long_latest.csv",
+     "m": "2026-10-12"
+    },
+    {
+     "n": "ipc_nga_level1_wide_latest.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/c3d8899b-11d9-4946-8987-89fe2b2b7c15/resource/589f7016-0b04-4ea4-93aa-f0e049f519b4/download/ipc_nga_level1_wide_latest.csv",
+     "m": "2026-10-12"
+    },
+    {
+     "n": "ipc_nga_area_long_latest.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/c3d8899b-11d9-4946-8987-89fe2b2b7c15/resource/ba554706-cba6-482e-a9d0-fabec521ae5d/download/ipc_nga_area_long_latest.csv",
+     "m": "2026-10-12"
+    },
+    {
+     "n": "ipc_nga_area_wide_latest.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/c3d8899b-11d9-4946-8987-89fe2b2b7c15/resource/66f23760-edc9-4929-8731-33466d4198a5/download/ipc_nga_area_wide_latest.csv",
+     "m": "2026-10-12"
+    },
+    {
+     "n": "ipc_nga_national_long.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/c3d8899b-11d9-4946-8987-89fe2b2b7c15/resource/8a9fe1c3-d62d-4833-93af-f459b1d3c065/download/ipc_nga_national_long.csv",
+     "m": "2026-10-12"
+    },
+    {
+     "n": "ipc_nga_national_wide.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/c3d8899b-11d9-4946-8987-89fe2b2b7c15/resource/697aad43-1445-4691-9406-80e274e0cc24/download/ipc_nga_national_wide.csv",
+     "m": "2026-10-12"
+    }
+   ]
+  }
+ ],
+ "wfp food prices sudan": [
+  {
+   "name": "wfp-food-prices",
+   "title": "Global Food Prices Database (WFP)",
+   "org": "WFP - World Food Programme",
+   "modified": "2026-04-27",
+   "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+   "res": [
+    {
+     "n": "Global Food Prices Database (WFP)",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/4fdcd4dc-5c2f-43af-a1e4-93c9b6539a27/resource/12d7c8e3-eff9-4db0-93b7-726825c4fe9a/download/wfpvam_foodprices.csv",
+     "m": "2021-08-22"
+    }
+   ]
+  },
+  {
+   "name": "wfp-food-prices-for-sudan",
+   "title": "Sudan - Food Prices",
+   "org": "WFP - World Food Programme",
+   "modified": "2026-10-19",
+   "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+   "res": [
+    {
+     "n": "Sudan - Food Prices",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/369e003b-f0af-4e48-99d7-34fc85b44635/resource/8fea18b2-615f-4af5-9bd5-85cc31a25ffd/download/wfp_food_prices_sdn.csv",
+     "m": "2026-10-19"
+    },
+    {
+     "n": "Sudan - Markets",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/369e003b-f0af-4e48-99d7-34fc85b44635/resource/6bc993a6-0c4b-47bc-b757-af220aa5f00f/download/wfp_markets_sdn.csv",
+     "m": "2026-08-09"
+    }
+   ]
+  },
+  {
+   "name": "wfp-food-prices-for-south-sudan",
+   "title": "South Sudan - Food Prices",
+   "org": "WFP - World Food Programme",
+   "modified": "2026-10-19",
+   "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+   "res": [
+    {
+     "n": "South Sudan - Food Prices",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/4f48c45b-1a20-4478-b62d-bf637b8d4666/resource/5a3e103d-f352-41f6-94e9-acaad13c66a5/download/wfp_food_prices_ssd.csv",
+     "m": "2026-10-19"
+    },
+    {
+     "n": "South Sudan - Markets",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/4f48c45b-1a20-4478-b62d-bf637b8d4666/resource/73640d00-adb7-4f9f-a5e0-9f8c7f143d9c/download/wfp_markets_ssd.csv",
+     "m": "2026-07-19"
+    }
+   ]
+  },
+  {
+   "name": "sdn-faostat-food-prices",
+   "title": "Sudan - Food Prices",
+   "org": "Food and Agriculture Organization (FAO) of the United Nations",
+   "modified": "2026-10-19",
+   "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+   "res": [
+    {
+     "n": "sdn_faostat_producer_price_deflators.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/841408d9-04be-4ac1-b213-969be59e2e27/resource/e729e6b8-adf4-4043-bd68-019d9454964e/download/sdn_faostat_producer_price_deflators.csv",
+     "m": "2026-10-19"
+    },
+    {
+     "n": "sdn_faostat_exchange_rates.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/841408d9-04be-4ac1-b213-969be59e2e27/resource/e3efb89e-a779-435f-bad8-065c51fed9f7/download/sdn_faostat_exchange_rates.csv",
+     "m": "2026-10-19"
+    },
+    {
+     "n": "sdn_faostat_producer_prices.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/841408d9-04be-4ac1-b213-969be59e2e27/resource/e8f3b731-872e-4f50-8f26-9788718192bd/download/sdn_faostat_producer_prices.csv",
+     "m": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "name": "ssd-faostat-food-prices",
+   "title": "South Sudan - Food Prices",
+   "org": "Food and Agriculture Organization (FAO) of the United Nations",
+   "modified": "2026-10-19",
+   "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+   "res": [
+    {
+     "n": "ssd_faostat_consumer_price_indices.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/d2022ba2-dd4e-4242-b3da-cb05603d8265/resource/2b132b12-c59c-48fd-b25f-dad21d64bb48/download/ssd_faostat_consumer_price_indices.csv",
+     "m": "2026-08-03"
+    },
+    {
+     "n": "ssd_faostat_producer_price_deflators.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/d2022ba2-dd4e-4242-b3da-cb05603d8265/resource/26a3959a-88f6-4e98-a9e1-75a62109a2c6/download/ssd_faostat_producer_price_deflators.csv",
+     "m": "2026-06-11"
+    },
+    {
+     "n": "ssd_faostat_exchange_rates.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/d2022ba2-dd4e-4242-b3da-cb05603d8265/resource/9e0011a8-86b5-4616-a399-382d3f4b76cc/download/ssd_faostat_exchange_rates.csv",
+     "m": "2026-09-21"
+    }
+   ]
+  },
+  {
+   "name": "global-wfp-food-prices",
+   "title": "Global - Food Prices",
+   "org": "WFP - World Food Programme",
+   "modified": "2026-10-19",
+   "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+   "res": [
+    {
+     "n": "Global WFP food prices 2026",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/31579af5-3895-4002-9ee3-c50857480785/resource/502190c6-0d3d-4b84-977e-ef062f053662/download/wfp_food_prices_global_2026.csv",
+     "m": "2026-10-19"
+    },
+    {
+     "n": "Global WFP food prices 2025",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/31579af5-3895-4002-9ee3-c50857480785/resource/d62af4be-cff6-437b-89a3-67f8fa4c53bf/download/wfp_food_prices_global_2025.csv",
+     "m": "2026-10-19"
+    },
+    {
+     "n": "Global WFP food prices 2024",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/31579af5-3895-4002-9ee3-c50857480785/resource/5867679b-7ef4-4117-84b8-2bb4ddd7817f/download/wfp_food_prices_global_2024.csv",
+     "m": "2026-10-19"
+    },
+    {
+     "n": "Global WFP food prices 2023",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/31579af5-3895-4002-9ee3-c50857480785/resource/e96b8f67-c4de-4173-a814-2f7d84c47475/download/wfp_food_prices_global_2023.csv",
+     "m": "2026-10-19"
+    },
+    {
+     "n": "Global WFP food prices 2022",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/31579af5-3895-4002-9ee3-c50857480785/resource/747fe8d0-83e7-4da7-a40e-3afdd11832c9/download/wfp_food_prices_global_2022.csv",
+     "m": "2026-10-19"
+    },
+    {
+     "n": "Global WFP food prices 2021",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/31579af5-3895-4002-9ee3-c50857480785/resource/70bc3058-1ff7-41e3-b16a-3492422fcab6/download/wfp_food_prices_global_2021.csv",
+     "m": "2026-10-19"
+    },
+    {
+     "n": "Global WFP food prices 2020",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/31579af5-3895-4002-9ee3-c50857480785/resource/587f89db-9c7e-4e42-822a-6c23f060d63c/download/wfp_food_prices_global_2020.csv",
+     "m": "2026-10-19"
+    },
+    {
+     "n": "Global WFP food prices 2019",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/31579af5-3895-4002-9ee3-c50857480785/resource/b8399f61-e9d9-4c6a-93a4-303afb2197b3/download/wfp_food_prices_global_2019.csv",
+     "m": "2026-10-19"
+    }
+   ]
+  }
+ ],
+ "sudan operational presence 3w": [
+  {
+   "name": "sudan-operational-presence",
+   "title": "Sudan: Operational Presence",
+   "org": "OCHA Sudan",
+   "modified": "2026-09-02",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "2026-consolidated-3w-data-january-to-july.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/bdccda24-2122-416c-aed1-6bdebcfea76c/resource/2db829b4-19e4-436f-80c6-f3ebe39d2766/download/2026-consolidated-3w-data-january-to-july.xlsx",
+     "m": "2026-08-31"
+    },
+    {
+     "n": "2026-consolidated-3w-data-january-to-June.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/bdccda24-2122-416c-aed1-6bdebcfea76c/resource/2e652578-b336-4913-b44c-653a86237396/download/2026-consolidated-3w-data-january-to-june.xlsx",
+     "m": "2026-07-31"
+    },
+    {
+     "n": "2026-consolidated-3w-data-january-to-may.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/bdccda24-2122-416c-aed1-6bdebcfea76c/resource/11f22bd8-4bb8-4bcd-b62a-b45bd8ec93e0/download/2026-consolidated-3w-data-january-to-may.xlsx",
+     "m": "2026-06-25"
+    },
+    {
+     "n": "2026-consolidated-3w-data-January-to-April.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/bdccda24-2122-416c-aed1-6bdebcfea76c/resource/be1c279f-44fd-4d00-8f20-20543abc8d80/download/2026-consolidated-3w-data-january-to-april.xlsx",
+     "m": "2026-05-31"
+    },
+    {
+     "n": "2026-consolidated-3w-data-January-to-March.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/bdccda24-2122-416c-aed1-6bdebcfea76c/resource/1b7caf55-54ba-42ea-924f-f352058d23f1/download/2026-consolidated-3w-data-january-to-march.xlsx",
+     "m": "2026-05-31"
+    },
+    {
+     "n": "2026-consolidated-3w-data-january-to-february.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/bdccda24-2122-416c-aed1-6bdebcfea76c/resource/05c3b539-104e-4d78-b564-c49c36ac0020/download/2026-consolidated-3w-data-january-to-february.xlsx",
+     "m": "2026-03-28"
+    },
+    {
+     "n": "2026-consolidated-3w-data-january.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/bdccda24-2122-416c-aed1-6bdebcfea76c/resource/b222b062-91fc-4f05-9472-8f89dade1705/download/2026-consolidated-3w-data-january.xlsx",
+     "m": "2026-03-28"
+    },
+    {
+     "n": "2025-consolidated-3w-data-january-to-december.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/bdccda24-2122-416c-aed1-6bdebcfea76c/resource/13bd8a3b-3748-4f48-9bea-5b376c08fab5/download/2025-consolidated-3w-data-january-to-december.xlsx",
+     "m": "2026-02-09"
+    }
+   ]
+  },
+  {
+   "name": "3w-operational-presence",
+   "title": "3W Operational Presence",
+   "org": "OCHA Ethiopia",
+   "modified": "2024-09-13",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "3W_Operational_Presence_September2017.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8e2a40e4-d237-4684-970f-45017b7ab3c7/resource/099d311a-d4c0-4b2b-ad05-bf9eb977e33c/download/3w_operational_presence_september2017.csv",
+     "m": "2017-12-20"
+    }
+   ]
+  },
+  {
+   "name": "south-sudan-operational-presence",
+   "title": "South Sudan: Operational Presence",
+   "org": "OCHA South Sudan",
+   "modified": "2026-10-14",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "ss_202601012_3w_operational presence_Jan-Aug_2026.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/531fe931-4b87-43e9-ae4c-a3e25a2bd388/resource/26625cd4-3b6f-43f9-80e2-035b7c4835b8/download/ss_202601012_3w_operational-presence_jan-aug_2026.xlsx",
+     "m": "2026-10-12"
+    },
+    {
+     "n": "ss_20260901_3w_operational presence_Jan-Jul_2026.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/531fe931-4b87-43e9-ae4c-a3e25a2bd388/resource/8772f95a-0f00-49aa-acdd-ca106a3a30e2/download/ss_20260901_3w_operational-presence_jan-jul_2026.xlsx",
+     "m": "2026-09-01"
+    },
+    {
+     "n": "ss_20260806_3w_operational presence_Jan-June_2026.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/531fe931-4b87-43e9-ae4c-a3e25a2bd388/resource/529fd9e4-075c-497a-b48a-869cc8ae9c36/download/ss_20260806_3w_operational-presence_jan-june_2026.xlsx",
+     "m": "2026-08-06"
+    },
+    {
+     "n": "ss_20260704_3w_operational presence_Jan-May_2026.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/531fe931-4b87-43e9-ae4c-a3e25a2bd388/resource/610f03a1-458d-4a57-8e16-67f370e40470/download/ss_20260704_3w_operational-presence_jan-may_2026.xlsx",
+     "m": "2026-08-06"
+    },
+    {
+     "n": "ss_20260526_3w_operational presence_Jan-Apr_2026.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/531fe931-4b87-43e9-ae4c-a3e25a2bd388/resource/6bc765da-897d-4b48-9050-7c2402cffa07/download/ss_20260526_3w_operational-presence_jan-apr_2026.xlsx",
+     "m": "2026-05-28"
+    },
+    {
+     "n": "ss_20260513_3w_operational presence_Jan-Mar_2026.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/531fe931-4b87-43e9-ae4c-a3e25a2bd388/resource/e6ab5700-c748-4337-8ea0-b6462e2270ae/download/ss_20260513_3w_operational-presence_jan-mar_2026.xlsx",
+     "m": "2026-05-13"
+    },
+    {
+     "n": "ss_20262006_3w_operational presence_Jan-Dec_2025.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/531fe931-4b87-43e9-ae4c-a3e25a2bd388/resource/bf244e0b-5a7b-44e0-a72b-88a82fbf607c/download/ss_20262006_3w_operational-presence_jan-dec_2025.xlsx",
+     "m": "2026-02-06"
+    },
+    {
+     "n": "ss_20261020_3w_operational presence_Jan-Nov_2025.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/531fe931-4b87-43e9-ae4c-a3e25a2bd388/resource/1d42f26c-6164-4c25-8ae1-594c5bb17a12/download/ss_20261020_3w_operational-presence_jan-nov_2025.xlsx",
+     "m": "2026-02-06"
+    }
+   ]
+  },
+  {
+   "name": "south-sudan-2015-3w-operational-presence",
+   "title": "SOUTH SUDAN 2015 3W Operational Presence",
+   "org": "OCHA South Sudan",
+   "modified": "2023-09-20",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "2015_South-Sudan_3Ws.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/d45acc7b-e9f1-4e3c-9592-a97e98837c19/resource/d4ac7da8-ddb1-43cf-9dd9-5ee49227942b/download/2015_south-sudan_3ws.xlsx",
+     "m": "2016-05-31"
+    },
+    {
+     "n": "OCHA_South_Sudan_2015_3W.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/d45acc7b-e9f1-4e3c-9592-a97e98837c19/resource/46db95a6-80d5-4791-9711-e0cee0d78739/download/ocha_south_sudan_2015_3w.csv",
+     "m": "2016-06-23"
+    }
+   ]
+  },
+  {
+   "name": "south-sudan-2016-3w-operational-presence-jan-apr",
+   "title": "South Sudan 3W Operational Presence (Jan - Apr-2016)",
+   "org": "OCHA South Sudan",
+   "modified": "2023-09-20",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "2016_South-Sudan_3Ws_Jan_Apr_Data.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/5340efb6-81d5-44e3-92a6-d15893b00322/resource/46cbf014-0f81-492b-9365-686ce49fc2b2/download/2016_south-sudan_3ws_jan_apr_data.xlsx",
+     "m": "2016-08-25"
+    },
+    {
+     "n": "OCHA_South_Sudan_2016_3W_Jan_Apr.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/5340efb6-81d5-44e3-92a6-d15893b00322/resource/b339820c-3f1e-4d19-9827-f2426e11782c/download/ocha_south_sudan_2016_3w_jan_apr.csv",
+     "m": "2016-08-25"
+    }
+   ]
+  },
+  {
+   "name": "iraq-humanitarian-operational-presence-3w",
+   "title": "Iraq - Humanitarian Operational Presence 3W",
+   "org": "OCHA Iraq (inactive)",
+   "modified": "2024-11-29",
+   "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+   "res": [
+    {
+     "n": "iraq_3w_jan-to-dec_2022_longtable_20230124.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/c8e4b52a-846d-43a7-a976-9e27019c29a6/resource/6683462f-232f-4c81-b6c1-ea2bc0a3c5a7/download/iraq_3w_jan-to-dec_2022_longtable_20230124.xlsx",
+     "m": "2023-02-05"
+    },
+    {
+     "n": "iraq_3w_jan-to-dec_2021_longtable_20220120.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/c8e4b52a-846d-43a7-a976-9e27019c29a6/resource/c60189eb-c280-4094-9ef0-b67f7c557e39/download/iraq_3w_jan-to-dec_2021_longtable_20220120.xlsx",
+     "m": "2022-01-23"
+    },
+    {
+     "n": "covid_and_noncovid_iraq_3w_jan-to-dec_2020_longtable_20210118.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/c8e4b52a-846d-43a7-a976-9e27019c29a6/resource/d4a466e2-006a-4e98-bb4d-e2e32d47aa06/download/covid_and_noncovid_iraq_3w_jan-to-dec_2020_longtable_20210118.xlsx",
+     "m": "2022-02-23"
+    }
+   ]
+  }
+ ],
+ "sudan subnational population cod-ps": [
+  {
+   "name": "philippines-common-operational-datasets-population-statistics",
+   "title": "Philippines - Population Statistics (COD-PS)",
+   "org": "UNFPA Philippines",
+   "modified": "2025-04-15",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "PHL_ADM2_POP_2024 COD-PS.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/a6551efc-3cd2-43f5-ab76-b622fa60ac5c/resource/ec54d2e9-6577-4f66-bc0a-704c6f588c17/download/phl_adm2_pop_2024-cod-ps.xlsx",
+     "m": "2024-07-16"
+    },
+    {
+     "n": "PHL 2024 Technical Accompanying Note.pdf",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/a6551efc-3cd2-43f5-ab76-b622fa60ac5c/resource/8f5b0763-6f5b-4304-b353-cd3bb0a409f6/download/phl-2024-technical-accompanying-note.pdf",
+     "m": "2024-07-16"
+    }
+   ]
+  },
+  {
+   "name": "cod-ps-sdn",
+   "title": "Sudan - Subnational Population Statistics",
+   "org": "UNFPA",
+   "modified": "2026-05-07",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "sdn_admpop_2025.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/f4d30e65-a162-437a-a35d-d81b99723bd6/resource/dfddbc15-77c4-4875-a640-d50e37ef7b6d/download/sdn_admpop_2025.xlsx",
+     "m": "2025-12-29"
+    },
+    {
+     "n": "sdn_admpop_adm2_2025.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/f4d30e65-a162-437a-a35d-d81b99723bd6/resource/f340a059-e3e5-40fd-8577-e4cac8d4aa33/download/sdn_admpop_adm2_2025.csv",
+     "m": "2025-12-29"
+    },
+    {
+     "n": "sdn_admpop_adm1_2025.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/f4d30e65-a162-437a-a35d-d81b99723bd6/resource/2a4ae1be-dd48-4ea1-8240-29622d7fdc6b/download/sdn_admpop_adm1_2025.csv",
+     "m": "2025-12-29"
+    },
+    {
+     "n": "sdn_admpop_adm0_2025.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/f4d30e65-a162-437a-a35d-d81b99723bd6/resource/18dfaccd-3c7f-48a7-8527-28d287eed3a4/download/sdn_admpop_adm0_2025.csv",
+     "m": "2025-12-29"
+    },
+    {
+     "n": "sdn_2025_technical_accompanying_note.pdf",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/f4d30e65-a162-437a-a35d-d81b99723bd6/resource/da553e79-6898-452f-8cd3-0ed52ad88366/download/sdn_2025_technical_accompanying_note.pdf",
+     "m": "2025-12-29"
+    },
+    {
+     "n": "2025-sdn-cod-ps-end_user_release_note.pdf",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/f4d30e65-a162-437a-a35d-d81b99723bd6/resource/9fe4cec6-c519-45b1-927a-c81ace82e6e8/download/2025-sdn-cod-ps-end_user_release_note.pdf",
+     "m": "2025-12-29"
+    },
+    {
+     "n": "2024-SDN-COD-PS-End_User_Release_Note.pdf",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/f4d30e65-a162-437a-a35d-d81b99723bd6/resource/5afe193e-38cb-4db0-9924-2b7ef0dfec02/download/2024-sdn-cod-ps-end_user_release_note.pdf",
+     "m": "2024-08-01"
+    },
+    {
+     "n": "2024-SDN-COD-PS-Technical-Accompanying-Note.pdf",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/f4d30e65-a162-437a-a35d-d81b99723bd6/resource/71a4b51d-7aad-434e-a63f-2d2b63463097/download/2024-sdn-cod-ps-technical-accompanying-note.pdf",
+     "m": "2024-08-01"
+    }
+   ]
+  },
+  {
+   "name": "gridded-population-estimates-for-sudan-using-un-cod-ps-estimates-2022-v2",
+   "title": "Gridded population estimates for Sudan using UN COD-PS estimates 2022, version 2.0",
+   "org": "WorldPop",
+   "modified": "2026-07-22",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "SDN_population_v2_0_README.pdf",
+     "f": "PDF",
+     "u": "https://data.worldpop.org/repo/wopr/SDN/population/v2/SDN_population_v2_0_README.pdf",
+     "m": "2023-05-09"
+    },
+    {
+     "n": "sdn_population_2022_100m_constrained_v2.zip",
+     "f": "GeoTIFF",
+     "u": "https://data.worldpop.org/repo/wopr/SDN/population/v2/constrained/100m/sdn_population_2022_100m_constrained_v2.zip",
+     "m": "2023-05-08"
+    },
+    {
+     "n": "sdn_agegender_2022_100m_constrained_v2.zip",
+     "f": "GeoTIFF",
+     "u": "https://data.worldpop.org/repo/wopr/SDN/population/v2/constrained/100m/sdn_agesex_2022_100m_constrained_v2.zip",
+     "m": "2023-05-08"
+    },
+    {
+     "n": "sdn_population_2022_1km_constrained_v2.zip",
+     "f": "GeoTIFF",
+     "u": "https://data.worldpop.org/repo/wopr/SDN/population/v2/constrained/1km/sdn_population_2022_1km_constrained_v2.zip",
+     "m": "2023-05-08"
+    },
+    {
+     "n": "sdn_agegender_2022_1km_constrained_v2.zip",
+     "f": "GeoTIFF",
+     "u": "https://data.worldpop.org/repo/wopr/SDN/population/v2/constrained/1km/sdn_agesex_2022_1km_constrained_v2.zip",
+     "m": "2023-05-08"
+    },
+    {
+     "n": "sdn_school_age_2022_1km_constrained_v2.zip",
+     "f": "GeoTIFF",
+     "u": "https://data.worldpop.org/repo/wopr/SDN/population/v2/constrained/1km/sdn_school_age_2022_1km_constrained_v2.zip",
+     "m": "2023-05-09"
+    },
+    {
+     "n": "sdn_school_age_adm2_2022.zip",
+     "f": "TXT",
+     "u": "https://data.worldpop.org/repo/wopr/SDN/population/v2/constrained/csv/sdn_school_age_adm2_2022.zip",
+     "m": "2023-05-08"
+    },
+    {
+     "n": "sdn_pop_adm2_2022.zip",
+     "f": "TXT",
+     "u": "https://data.worldpop.org/repo/wopr/SDN/population/v2/constrained/csv/sdn_pop_adm2_2022.zip",
+     "m": "2023-05-08"
+    }
+   ]
+  },
+  {
+   "name": "cod-ps-ssd",
+   "title": "South Sudan - Subnational Population Statistics",
+   "org": "UNFPA",
+   "modified": "2026-05-07",
+   "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+   "res": [
+    {
+     "n": "SSD_2024_population_estimates_data.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/dfad888d-c594-4795-9b5b-3cbe958a3c18/download/ssd_2024_population_estimates_data.xlsx",
+     "m": "2024-12-27"
+    },
+    {
+     "n": "SSD_2023_Population_Estimates_Data.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/8bd5f105-6fcb-43be-b53f-f3e31c992654/download/ssd_2023_population_estimates_data.xlsx",
+     "m": "2023-09-05"
+    },
+    {
+     "n": "SS_20211210_2022_Population_Estimates_Overview v3.pdf",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/75ecc4e4-e128-400d-b7e3-03cb9ac40ccd/download/ss_20211210_2022_population_estimates_overview-v3.pdf",
+     "m": "2022-01-12"
+    },
+    {
+     "n": "SSD_AdminBoundaries_TabularData.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/48a8f978-8dc7-42c2-8f07-703a56a2af2d/download/ssd_adminboundaries_tabulardata.xlsx",
+     "m": "2023-04-04"
+    },
+    {
+     "n": "ssd_admpop_2022_v2.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/d57b3d1a-c297-4a91-a676-b0de55df6af7/download/ssd_admpop_2022_v2.xlsx",
+     "m": "2022-06-11"
+    },
+    {
+     "n": "ssd_admpop_adm0_2022_v2.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/de6f609b-fba3-4088-8cd4-b870f79a7e01/download/ssd_admpop_adm0_2022_v2.csv",
+     "m": "2022-06-11"
+    },
+    {
+     "n": "ssd_admpop_adm1_2022_v2.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/7a5243b5-9b54-4453-a30e-044e79417e1f/download/ssd_admpop_adm1_2022_v2.csv",
+     "m": "2022-06-11"
+    },
+    {
+     "n": "ssd_admpop_adm2_2022_v2.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/209b6acb-99d0-4055-878e-e1a68618abe1/download/ssd_admpop_adm2_2022_v2.csv",
+     "m": "2022-06-11"
+    }
+   ]
+  },
+  {
+   "name": "gridded-population-estimates-for-turkey-using-un-cod-ps-estimates-2021-version-1-0",
+   "title": "Gridded population estimates for Turkey using UN COD-PS estimates 2021, version 1.0",
+   "org": "WorldPop",
+   "modified": "2026-07-22",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "TUR_population_v1_0_README.pdf",
+     "f": "PDF",
+     "u": "https://data.worldpop.org/repo/wopr/TUR/v1/TUR_population_v1_0_README.pdf",
+     "m": "2023-02-24"
+    },
+    {
+     "n": "tur_population_2021_100m_constrained_v1.zip",
+     "f": "GeoTIFF",
+     "u": "https://data.worldpop.org/repo/wopr/TUR/v1/constrained/100m/tur_population_2021_100m_constrained_v1.zip",
+     "m": "2023-02-24"
+    },
+    {
+     "n": "tur_population_2021_100m_unconstrained_v1.zip",
+     "f": "GeoTIFF",
+     "u": "https://data.worldpop.org/repo/wopr/TUR/v1/unconstrained/100m/tur_population_2021_100m_unconstrained_v1.zip",
+     "m": "2023-02-24"
+    },
+    {
+     "n": "ur_population_2021_1km_constrained_v1.zip",
+     "f": "GeoTIFF",
+     "u": "https://data.worldpop.org/repo/wopr/TUR/v1/constrained/1km/tur_population_2021_1km_constrained_v1.zip",
+     "m": "2023-02-24"
+    },
+    {
+     "n": "tur_population_2021_1km_unconstrained_v1.zip",
+     "f": "GeoTIFF",
+     "u": "https://data.worldpop.org/repo/wopr/TUR/v1/unconstrained/1km/tur_population_2021_1km_unconstrained_v1.zip",
+     "m": "2023-02-24"
+    },
+    {
+     "n": "tur_agegender_2021_100m_unconstrained_v1.zip",
+     "f": "GeoTIFF",
+     "u": "https://data.worldpop.org/repo/wopr/TUR/v1/unconstrained/100m/tur_agesex_2021_100m_unconstrained_v1.zip",
+     "m": "2023-02-24"
+    },
+    {
+     "n": "tur_agegender_2021_100m_constrained_v1.zip",
+     "f": "GeoTIFF",
+     "u": "https://data.worldpop.org/repo/wopr/TUR/v1/constrained/100m/tur_agesex_2021_100m_constrained_v1.zip",
+     "m": "2023-02-24"
+    },
+    {
+     "n": "tur_agegender_2021_1km_unconstrained_v1.zip",
+     "f": "GeoTIFF",
+     "u": "https://data.worldpop.org/repo/wopr/TUR/v1/unconstrained/1km/tur_agesex_2021_1km_unconstrained_v1.zip",
+     "m": "2023-02-24"
+    }
+   ]
+  },
+  {
+   "name": "cod-ps-global",
+   "title": "Global - Subnational Population Statistics",
+   "org": "HDX",
+   "modified": "2026-10-23",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "cod_population_admin0.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/27e3d1c6-c57a-4159-85a4-adb6b7aca6b9/resource/d4ea8fba-3d98-4d6e-85c8-84a5b0b4ebd9/download/cod_population_admin0.csv",
+     "m": "2026-10-22"
+    },
+    {
+     "n": "cod_population_admin1.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/27e3d1c6-c57a-4159-85a4-adb6b7aca6b9/resource/3f7e17af-4ffa-455a-874c-6bf75e031730/download/cod_population_admin1.csv",
+     "m": "2026-09-16"
+    },
+    {
+     "n": "cod_population_admin2.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/27e3d1c6-c57a-4159-85a4-adb6b7aca6b9/resource/87186331-46fd-4cc2-9be8-bceb715abb91/download/cod_population_admin2.csv",
+     "m": "2026-09-16"
+    },
+    {
+     "n": "cod_population_admin3.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/27e3d1c6-c57a-4159-85a4-adb6b7aca6b9/resource/3a58aef6-7884-40fc-8a0f-5bca8886e358/download/cod_population_admin3.csv",
+     "m": "2026-02-19"
+    },
+    {
+     "n": "cod_population_admin4.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/27e3d1c6-c57a-4159-85a4-adb6b7aca6b9/resource/11c76189-42fa-48d2-b794-b89517f0c811/download/cod_population_admin4.csv",
+     "m": "2026-02-19"
+    }
+   ]
+  }
+ ],
+ "sudan administrative boundaries": [
+  {
+   "name": "sudan-administrative-boundaries-2",
+   "title": "Sudan - Administrative Boundaries",
+   "org": "OCHA Sudan",
+   "modified": "2025-04-15",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "Locality_Polygon_Mar20.zip",
+     "f": "SHP",
+     "u": "https://data.humdata.org/dataset/d71e61dd-4aab-4182-b0fc-87f41e9c2c4d/resource/1def77da-03b4-4599-9ecb-597ce63e6b9e/download/locality_polygon_mar20.zip",
+     "m": "2024-09-22"
+    }
+   ]
+  },
+  {
+   "name": "cod-ab-sdn",
+   "title": "Sudan - Subnational Administrative Boundaries",
+   "org": "OCHA Field Information Services Section (FISS)",
+   "modified": "2026-08-14",
+   "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+   "res": [
+    {
+     "n": "sdn_admin_boundaries.gdb.zip",
+     "f": "Geodatabase",
+     "u": "https://data.humdata.org/dataset/a66a4b6c-92de-4507-9546-aa1900474180/resource/7651165b-65dd-46d3-827b-297902bb335a/download/sdn_admin_boundaries.gdb.zip",
+     "m": "2026-01-26"
+    },
+    {
+     "n": "sdn_admin_boundaries.shp.zip",
+     "f": "SHP",
+     "u": "https://data.humdata.org/dataset/a66a4b6c-92de-4507-9546-aa1900474180/resource/8addf835-4224-465a-a5a8-88fb606abcad/download/sdn_admin_boundaries.shp.zip",
+     "m": "2026-01-26"
+    },
+    {
+     "n": "sdn_admin_boundaries.geojson.zip",
+     "f": "GeoJSON",
+     "u": "https://data.humdata.org/dataset/a66a4b6c-92de-4507-9546-aa1900474180/resource/018af991-4aa7-4043-a0d5-e429a55851fb/download/sdn_admin_boundaries.geojson.zip",
+     "m": "2026-01-26"
+    },
+    {
+     "n": "sdn_admin_boundaries.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/a66a4b6c-92de-4507-9546-aa1900474180/resource/6b6dc98a-3c49-4e16-9c2a-bc926d2ee988/download/sdn_admin_boundaries.xlsx",
+     "m": "2026-01-26"
+    }
+   ]
+  },
+  {
+   "name": "cod-ab-ssd",
+   "title": "South Sudan - Subnational Administrative Boundaries",
+   "org": "OCHA Field Information Services Section (FISS)",
+   "modified": "2026-08-19",
+   "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+   "res": [
+    {
+     "n": "ssd_admin_boundaries.gdb.zip",
+     "f": "Geodatabase",
+     "u": "https://data.humdata.org/dataset/cdd62bd9-e442-4eac-9b44-cfee8bf79153/resource/4a023359-0a23-4130-a987-9e979976919e/download/ssd_admin_boundaries.gdb.zip",
+     "m": "2026-08-19"
+    },
+    {
+     "n": "ssd_admin_boundaries.shp.zip",
+     "f": "SHP",
+     "u": "https://data.humdata.org/dataset/cdd62bd9-e442-4eac-9b44-cfee8bf79153/resource/47b1ce82-198e-4707-a70d-63c47021d669/download/ssd_admin_boundaries.shp.zip",
+     "m": "2026-08-19"
+    },
+    {
+     "n": "ssd_admin_boundaries.geojson.zip",
+     "f": "GeoJSON",
+     "u": "https://data.humdata.org/dataset/cdd62bd9-e442-4eac-9b44-cfee8bf79153/resource/c6bb2f28-6379-4750-b792-15915e9ab320/download/ssd_admin_boundaries.geojson.zip",
+     "m": "2026-08-19"
+    },
+    {
+     "n": "ssd_admin_boundaries.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/cdd62bd9-e442-4eac-9b44-cfee8bf79153/resource/153e2837-ed15-4f4e-95b9-b0700bb9440a/download/ssd_admin_boundaries.xlsx",
+     "m": "2026-08-19"
+    }
+   ]
+  },
+  {
+   "name": "sudan-administrive-boundaries-1",
+   "title": "Sudan - Administrative Boundaries",
+   "org": "OCHA Sudan",
+   "modified": "2025-04-15",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "State_Poly_Mar20.zip",
+     "f": "SHP",
+     "u": "https://data.humdata.org/dataset/eefd0daa-9fce-40cf-bc57-a8c6c8cadf6e/resource/9e52cc93-3783-4469-a5df-f4c8e68a9474/download/state_poly_mar20.zip",
+     "m": "2024-09-19"
+    }
+   ]
+  },
+  {
+   "name": "cod-ab-phl",
+   "title": "Philippines - Subnational Administrative Boundaries",
+   "org": "OCHA Field Information Services Section (FISS)",
+   "modified": "2026-08-14",
+   "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+   "res": [
+    {
+     "n": "phl_admin_boundaries.gdb.zip",
+     "f": "Geodatabase",
+     "u": "https://data.humdata.org/dataset/caf116df-f984-4deb-85ca-41b349d3f313/resource/3fa0dbcf-e07d-4506-9821-ba15baa6da07/download/phl_admin_boundaries.gdb.zip",
+     "m": "2026-05-28"
+    },
+    {
+     "n": "phl_admin_boundaries.shp.zip",
+     "f": "SHP",
+     "u": "https://data.humdata.org/dataset/caf116df-f984-4deb-85ca-41b349d3f313/resource/4e4067d6-3fc8-4d2c-91ea-330c3d4f8e8e/download/phl_admin_boundaries.shp.zip",
+     "m": "2026-05-28"
+    },
+    {
+     "n": "phl_admin_boundaries.geojson.zip",
+     "f": "GeoJSON",
+     "u": "https://data.humdata.org/dataset/caf116df-f984-4deb-85ca-41b349d3f313/resource/0120c30e-ba8b-487d-83f5-a664eddd3a8e/download/phl_admin_boundaries.geojson.zip",
+     "m": "2026-05-28"
+    },
+    {
+     "n": "phl_admin_boundaries.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/caf116df-f984-4deb-85ca-41b349d3f313/resource/159ffd3d-679f-431c-812f-b6d6f957045e/download/phl_admin_boundaries.xlsx",
+     "m": "2026-05-28"
+    }
+   ]
+  },
+  {
+   "name": "sudan-administative-line-boundaries-1",
+   "title": "Sudan :  Administrative line boundaries 1",
+   "org": "OCHA Sudan",
+   "modified": "2026-04-27",
+   "license": "Other",
+   "res": [
+    {
+     "n": "State_Line_Mar20.zip",
+     "f": "SHP",
+     "u": "https://data.humdata.org/dataset/e0ce199b-295f-4feb-b155-e3cf0f84705a/resource/76b9e30d-8e48-4dbd-863b-eeedfa052b0b/download/state_line_mar20.zip",
+     "m": "2020-03-10"
+    }
+   ]
+  }
+ ],
+ "unhcr sudan": [
+  {
+   "name": "unhcr-refugee-camps",
+   "title": "Sudan - UNHCR Refugee camps",
+   "org": "OCHA Sudan",
+   "modified": "2026-04-27",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "UNHCR_Refugee_11Jan21.zip",
+     "f": "SHP",
+     "u": "https://data.humdata.org/dataset/80b8342a-ca82-4fa2-aa00-d806d4d925bd/resource/f95d61fa-e3f3-4343-bc0b-0d00212673b9/download/unhcr_refugee_11jan21.zip",
+     "m": "2021-01-18"
+    }
+   ]
+  },
+  {
+   "name": "unhcr-situations",
+   "title": "UNHCR Situations: Monthly Refugees and Asylum Seekers",
+   "org": "UNHCR - The UN Refugee Agency",
+   "modified": "2026-10-23",
+   "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+   "res": [
+    {
+     "n": "unhcr-situations.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/e6320d49-1944-4c80-ad9c-ab83e4239267/resource/a1dc9602-b522-4966-bb59-f4a44d238dd1/download/unhcr-situations.csv",
+     "m": "2026-10-23"
+    }
+   ]
+  },
+  {
+   "name": "new-arrivals-from-sudan",
+   "title": "Sudan Emergency: New arrivals from Sudan",
+   "org": "UNHCR - The UN Refugee Agency",
+   "modified": "2026-10-24",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "UNHCR - New Arrivals from Sudan",
+     "f": "XLSX",
+     "u": "https://docs.google.com/spreadsheets/d/1G5FSrIZ5qvyrMSps4xE3vZf6kIQ9311Wm-mSx7HcPog/edit?usp=drive_web",
+     "m": "2026-10-24"
+    },
+    {
+     "n": "UNHCR - New Arrivals from Sudan per day",
+     "f": "XLSX",
+     "u": "https://docs.google.com/spreadsheets/d/1MEDlbvR09E4xcKtjJDnF6mQtb11NhuI_BEDPxkIuSfY/edit?usp=drive_web",
+     "m": "2026-10-24"
+    }
+   ]
+  },
+  {
+   "name": "population-movement-from-sudan-to-south-sudan",
+   "title": "Population Movement from Sudan to South Sudan",
+   "org": "OCHA South Sudan",
+   "modified": "2025-04-15",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "New-Arrivals_Daily_Update_2-4 Jun_UNHCR-IOM_Border_Monitoring.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/1d2ceb40-fc65-4a19-aa41-fe3e339e555b/resource/d655ae82-7930-4390-98e1-e265423a1c4c/download/new-arrivals_daily_update_2-4-jun_unhcr-iom_border_monitoring.xlsx",
+     "m": "2023-06-06"
+    }
+   ]
+  },
+  {
+   "name": "refugee-population-of-sudan-unhcr",
+   "title": "Sudan : Refugee population",
+   "org": "OCHA Sudan",
+   "modified": "2026-08-27",
+   "license": "Public Domain / No restrictions (CC0)",
+   "res": [
+    {
+     "n": "UNHCR - Population as of 29th Feb 2020.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/b567fefb-b9e0-45fd-813c-14974d2d592f/resource/9b0d3931-4059-46e5-a3ec-284e560526da/download/unhcr-population-as-of-29th-feb-2020.xlsx",
+     "m": "2020-04-09"
+    }
+   ]
+  },
+  {
+   "name": "hdx-hapi-sdn",
+   "title": "HDX HAPI Data for Sudan",
+   "org": "HDX Humanitarian API Data",
+   "modified": "2026-10-25",
+   "license": "Other",
+   "res": [
+    {
+     "n": "Affected People: Internally-Displaced Persons for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/17760c0d-ed8c-4fbc-a95f-53f104a5f3d2/download/hdx_hapi_idps_sdn.csv",
+     "m": "2026-10-20"
+    },
+    {
+     "n": "Affected People: Refugees & Persons of Concern for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/b3398d52-1ab2-426b-b2d4-148aec70f986/download/hdx_hapi_refugees_sdn.csv",
+     "m": "2026-06-13"
+    },
+    {
+     "n": "Affected People: Returnees for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/4abc1480-48bd-4551-a15f-0e6ae4896844/download/hdx_hapi_returnees_sdn.csv",
+     "m": "2026-06-13"
+    },
+    {
+     "n": "Affected People: Humanitarian Needs for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/b028496e-c210-4515-b24b-cb32ab76a8d7/download/hdx_hapi_humanitarian_needs_sdn.csv",
+     "m": "2026-02-11"
+    },
+    {
+     "n": "Coordination & Context: Operational Presence for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/b3f1aa9d-df49-4f77-ba3e-a01c07fac924/download/hdx_hapi_operational_presence_sdn.csv",
+     "m": "2026-10-21"
+    },
+    {
+     "n": "Coordination & Context: Funding for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/d74f57dd-2a9a-469c-b05a-d6595698b205/download/hdx_hapi_funding_sdn.csv",
+     "m": "2026-10-24"
+    },
+    {
+     "n": "Coordination & Context: Conflict Events for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/d6c17883-6ff8-455b-acbb-91011ac8c161/download/hdx_hapi_conflict_event_sdn.csv",
+     "m": "2026-10-24"
+    },
+    {
+     "n": "Coordination & Context: National Risk for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/8c08e457-c0c7-404b-ab5a-201539a7fbc1/resource/62640929-8799-4265-b522-485fd928024a/download/hdx_hapi_national_risk_sdn.csv",
+     "m": "2026-05-28"
+    }
+   ]
+  }
+ ],
+ "sudan health facilities": [
+  {
+   "name": "south-sudan-health-facilities",
+   "title": "South Sudan - Health Facilities",
+   "org": "OCHA South Sudan",
+   "modified": "2025-07-18",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "WHO-Master Facility List_April_2025.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/b60d95d8-c746-4046-93f1-b2dbcb976e29/resource/69256375-d453-4697-b5ac-fbdc8a351b92/download/who-master-facility-list_april2025.xlsx",
+     "m": "2025-07-18"
+    },
+    {
+     "n": "SS_Final_Master_List_of HFs _Codes_2023_20240615.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/b60d95d8-c746-4046-93f1-b2dbcb976e29/resource/dc7413b0-f68d-4c1f-b15e-cdd433a93d3d/download/ss_final_master_list_of-hfs-_codes_2023_20240615.xlsx",
+     "m": "2024-10-08"
+    }
+   ]
+  },
+  {
+   "name": "hotosm_sdn_health_facilities",
+   "title": "Health Facilities of Sudan",
+   "org": "Humanitarian OpenStreetMap Team (HOT)",
+   "modified": "2026-10-08",
+   "license": "Open Database License (ODC-ODbL)",
+   "res": [
+    {
+     "n": "Health Facilities (OSM), GeoJSON",
+     "f": "GeoJSON",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SDN/health_facilities/hotosm_sdn_health_facilities_osm_geojson.zip",
+     "m": "2026-10-06"
+    },
+    {
+     "n": "Health Facilities (OSM), GeoPackage",
+     "f": "Geopackage",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SDN/health_facilities/hotosm_sdn_health_facilities_osm_gpkg.zip",
+     "m": "2026-10-06"
+    },
+    {
+     "n": "Health Facilities (OSM), GeoParquet",
+     "f": "GeoParquet",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SDN/_layers/osm/health_facilities.parquet",
+     "m": "2026-10-06"
+    },
+    {
+     "n": "Health Facilities (OSM), KML",
+     "f": "KML",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SDN/health_facilities/hotosm_sdn_health_facilities_osm_kml.zip",
+     "m": "2026-10-06"
+    },
+    {
+     "n": "Health Facilities (OSM), Shapefile",
+     "f": "SHP",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SDN/health_facilities/hotosm_sdn_health_facilities_osm_shp.zip",
+     "m": "2026-10-06"
+    },
+    {
+     "n": "Health Facilities (OSM), STAC Collection",
+     "f": "JSON",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SDN/health_facilities/hotosm_sdn_health_facilities_osm_metadata.json",
+     "m": "2026-10-06"
+    },
+    {
+     "n": "Health Facilities (OSM), Vector Tiles (PMTiles)",
+     "f": "PMTiles",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SDN/health_facilities/hotosm_sdn_health_facilities_osm.pmtiles",
+     "m": "2026-10-06"
+    },
+    {
+     "n": "Health Facilities, Data Quality Report",
+     "f": "HTML",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SDN/health_facilities/hotosm_sdn_health_facilities_report.html",
+     "m": "2026-10-06"
+    }
+   ]
+  },
+  {
+   "name": "south-sudan-health",
+   "title": "South Sudan - Health Facilities",
+   "org": "OCHA South Sudan",
+   "modified": "2026-04-27",
+   "license": "Other",
+   "res": [
+    {
+     "n": "ssd_health_facilities_MOH-WB_2009.zip",
+     "f": "SHP",
+     "u": "https://data.humdata.org/dataset/64664568-616d-46e6-b190-11987d5d44e4/resource/9be8b0f7-6857-4161-b27d-5063027e7546/download/ssd_health_facilities_moh-wb_2009.zip",
+     "m": "2018-08-15"
+    },
+    {
+     "n": "List_HF_SS_MoH_update_v1_20160404.xls",
+     "f": "XLS",
+     "u": "https://data.humdata.org/dataset/64664568-616d-46e6-b190-11987d5d44e4/resource/bb00ae93-6c53-429c-8d28-a698cc2c9907/download/list_hf_ss_moh_update_v1_20160404.xls",
+     "m": "2018-08-15"
+    }
+   ]
+  },
+  {
+   "name": "hotosm_ssd_health_facilities",
+   "title": "Health Facilities of South Sudan",
+   "org": "Humanitarian OpenStreetMap Team (HOT)",
+   "modified": "2026-10-08",
+   "license": "Open Database License (ODC-ODbL)",
+   "res": [
+    {
+     "n": "Health Facilities (OSM), GeoJSON",
+     "f": "GeoJSON",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SSD/health_facilities/hotosm_ssd_health_facilities_osm_geojson.zip",
+     "m": "2026-10-06"
+    },
+    {
+     "n": "Health Facilities (OSM), GeoPackage",
+     "f": "Geopackage",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SSD/health_facilities/hotosm_ssd_health_facilities_osm_gpkg.zip",
+     "m": "2026-10-06"
+    },
+    {
+     "n": "Health Facilities (OSM), GeoParquet",
+     "f": "GeoParquet",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SSD/_layers/osm/health_facilities.parquet",
+     "m": "2026-10-06"
+    },
+    {
+     "n": "Health Facilities (OSM), KML",
+     "f": "KML",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SSD/health_facilities/hotosm_ssd_health_facilities_osm_kml.zip",
+     "m": "2026-10-06"
+    },
+    {
+     "n": "Health Facilities (OSM), Shapefile",
+     "f": "SHP",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SSD/health_facilities/hotosm_ssd_health_facilities_osm_shp.zip",
+     "m": "2026-10-06"
+    },
+    {
+     "n": "Health Facilities (OSM), STAC Collection",
+     "f": "JSON",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SSD/health_facilities/hotosm_ssd_health_facilities_osm_metadata.json",
+     "m": "2026-10-06"
+    },
+    {
+     "n": "Health Facilities (OSM), Vector Tiles (PMTiles)",
+     "f": "PMTiles",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SSD/health_facilities/hotosm_ssd_health_facilities_osm.pmtiles",
+     "m": "2026-10-06"
+    },
+    {
+     "n": "Health Facilities, Data Quality Report",
+     "f": "HTML",
+     "u": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SSD/health_facilities/hotosm_ssd_health_facilities_report.html",
+     "m": "2026-10-06"
+    }
+   ]
+  },
+  {
+   "name": "health-facilities-locations-darfur",
+   "title": "Health Facilities locations - Darfur",
+   "org": "OCHA Sudan",
+   "modified": "2026-08-27",
+   "license": "Public Domain / No restrictions (CC0)",
+   "res": [
+    {
+     "n": "HeRAMS Dataset&Anlysis June2019.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/bb7d79fa-66a4-42b0-bdb0-3b78ffa5c0d2/resource/29389d13-c3d9-4c99-a917-09927107df83/download/herams-datasetanlysis-june2019.xlsx",
+     "m": "2020-04-09"
+    }
+   ]
+  },
+  {
+   "name": "world-bank-health-indicators-for-sudan",
+   "title": "Sudan - Health",
+   "org": "World Bank Group",
+   "modified": "2026-09-29",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "Health Indicators for Sudan",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/85435fca-dcc0-439e-a0ac-1135c76e6ad0/resource/0f8fccec-cd17-41b6-81e5-9a0cd7e8fafd/download/health_sdn.csv",
+     "m": "2026-07-17"
+    }
+   ]
+  }
+ ],
+ "sudan cholera": [
+  {
+   "name": "world-health-organization-who-cholera-data",
+   "title": "World Health Organization (WHO)  Cholera Data",
+   "org": "World Health Organization",
+   "modified": "2026-09-28",
+   "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+   "res": [
+    {
+     "n": "WHO Cholera data",
+     "f": "XLSX",
+     "u": "https://who.maps.arcgis.com/sharing/rest/content/items/3aa7bfec5da047a7ba7d4f9bcebd0061/data",
+     "m": "2026-09-28"
+    }
+   ]
+  },
+  {
+   "name": "sudan-disease-outbreaks-2019",
+   "title": "Sudan Disease Outbreaks",
+   "org": "OCHA Sudan",
+   "modified": "2026-04-27",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "Sudan Disease Outbreaks 2019.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/33ea8b09-7501-46d2-89b1-8376a1d8834f/resource/b9465fc1-15d4-462e-91df-2f2c39ee5cc3/download/sudan-disease-outbreaks-2019.xlsx",
+     "m": "2020-03-12"
+    }
+   ]
+  },
+  {
+   "name": "repository-for-pdf-files",
+   "title": "Repository for PDF files",
+   "org": "HDX",
+   "modified": "2026-10-01",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "Tip Sheet Data Responsibility and Collective Community Feedback Mechanisms.pdf",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/2048a947-5714-4220-905b-e662cbcd14c8/resource/e9b5094c-bcda-413a-a881-dd2bf86f6e8f/download/tip-sheet-data-responsibility-and-collective-community-feedback-mechanisms.pdf",
+     "m": "2026-10-01"
+    },
+    {
+     "n": "The State of Open Humanitarian Data 2026.pdf",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/2048a947-5714-4220-905b-e662cbcd14c8/resource/9f83159c-5cda-47ab-b5fe-597034c37bd8/download/state-of-open-humanitarian-data-2026.pdf",
+     "m": "2026-03-16"
+    },
+    {
+     "n": "FINAL AA Govt-Led Impact Story.pdf",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/2048a947-5714-4220-905b-e662cbcd14c8/resource/e1f632fb-f54b-4158-a9ea-b216fe5d2465/download/final-aa-govt-led-impact-story.pdf",
+     "m": "2026-03-09"
+    },
+    {
+     "n": "chd_local_partners FINAL.pdf",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/2048a947-5714-4220-905b-e662cbcd14c8/resource/5028e935-de0e-433d-b8ab-168bf00c778a/download/chd_local_partners-final.pdf",
+     "m": "2026-01-27"
+    },
+    {
+     "n": "HDX_Sauti FINAL.pdf",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/2048a947-5714-4220-905b-e662cbcd14c8/resource/05172580-72e5-4d1e-b748-2ef5666e9ffb/download/hdx_sauti-final.pdf",
+     "m": "2025-11-03"
+    },
+    {
+     "n": "AA_Impact_Story_cholera_DRC_FINAL.pdf",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/2048a947-5714-4220-905b-e662cbcd14c8/resource/9e47fd0e-c0e0-4fa3-ab93-4efa4d740552/download/aa_impact_story_cholera_drc_final.pdf",
+     "m": "2025-06-30"
+    },
+    {
+     "n": "CADC_Drought_Trigger_Technical_Note_v5_2025.pdf",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/2048a947-5714-4220-905b-e662cbcd14c8/resource/e06e5c28-fc11-4543-bf87-b6758b5821aa/download/cadc_drought_trigger_technical_note_v5_2025.pdf",
+     "m": "2025-05-05"
+    },
+    {
+     "n": "HDX Signals Impact Story",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/2048a947-5714-4220-905b-e662cbcd14c8/resource/029df9aa-c277-4571-9dae-dc9bc33bdd14/download/hdx-signals-impact-story.pdf",
+     "m": "2025-04-03"
+    }
+   ]
+  }
+ ],
+ "sudan humanitarian needs": [
+  {
+   "name": "sudan-humanitarian-needs",
+   "title": "Sudan: Humanitarian Needs",
+   "org": "OCHA Humanitarian Programme Cycle Tools (HPC Tools)",
+   "modified": "2026-02-13",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "sdn_hpc_needs_api_2026.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/0aa8c43b-ea03-4ab4-b8dc-04c26542bf76/resource/97b92430-1fd7-4895-89eb-a142fadcfef1/download/sdn_hpc_needs_api_2026.csv",
+     "m": "2026-02-13"
+    },
+    {
+     "n": "sdn_hpc_needs_api_2025.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/0aa8c43b-ea03-4ab4-b8dc-04c26542bf76/resource/dd4470ca-cc74-4f6e-bfb6-1f8d6c905775/download/sdn_hpc_needs_api_2025.csv",
+     "m": "2025-11-26"
+    },
+    {
+     "n": "sdn_hpc_needs_api_2024.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/0aa8c43b-ea03-4ab4-b8dc-04c26542bf76/resource/aee15925-5816-4ae1-ab05-011ee41a9b0f/download/sdn_hpc_needs_api_2024.csv",
+     "m": "2025-02-20"
+    },
+    {
+     "n": "sdn_hpc_needs_2024.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/0aa8c43b-ea03-4ab4-b8dc-04c26542bf76/resource/174ee80d-e367-4059-9f4b-dca32b3adba6/download/sdn_hnrp_2024_122123.xlsx",
+     "m": "2023-12-22"
+    },
+    {
+     "n": "sdn_hpc_needs_2023.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/0aa8c43b-ea03-4ab4-b8dc-04c26542bf76/resource/642da384-7e86-4902-93e8-523fd63c15dd/download/sdn-2023-hno-2.xlsx",
+     "m": "2022-12-02"
+    },
+    {
+     "n": "sdn_hpc_needs_2022.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/0aa8c43b-ea03-4ab4-b8dc-04c26542bf76/resource/4e83fe59-bf87-4645-805a-69213854e4ec/download/sdn-hno-2022-v1.0.xlsx",
+     "m": "2022-12-02"
+    },
+    {
+     "n": "sdn_hpc_needs_2021.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/0aa8c43b-ea03-4ab4-b8dc-04c26542bf76/resource/b44bd4c5-f3c8-4089-925a-2530bc09f0d1/download/sudan_hno-2021_baseline-data.xlsx",
+     "m": "2021-07-12"
+    },
+    {
+     "n": "sdn_hpc_needs_2020.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/0aa8c43b-ea03-4ab4-b8dc-04c26542bf76/resource/952d6b3f-bb7f-4dfb-acad-88c75747a71b/download/sudan_hno-2020-baseline-data.xlsx",
+     "m": "2020-03-05"
+    }
+   ]
+  },
+  {
+   "name": "south-sudan-humanitarian-needs",
+   "title": "South Sudan: Humanitarian Needs",
+   "org": "OCHA Humanitarian Programme Cycle Tools (HPC Tools)",
+   "modified": "2026-02-13",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "ssd_hpc_needs_api_2026.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/13d4347e-91e0-4197-b387-98112a550b4f/resource/faec44be-63cb-43dc-afe4-a803bad6dbe1/download/ssd_hpc_needs_api_2026.csv",
+     "m": "2026-02-13"
+    },
+    {
+     "n": "ssd_hpc_needs_api_2025.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/13d4347e-91e0-4197-b387-98112a550b4f/resource/e003796b-7555-4f1a-b778-9adf7ecc680d/download/ssd_hpc_needs_api_2025.csv",
+     "m": "2025-11-26"
+    },
+    {
+     "n": "ssd_hpc_needs_api_2024.csv",
+     "f": "CSV",
+     "u": "https://data.humdata.org/dataset/13d4347e-91e0-4197-b387-98112a550b4f/resource/6148cbe8-6cf3-46f2-98a3-8d255b7fb624/download/ssd_hpc_needs_api_2024.csv",
+     "m": "2025-02-20"
+    },
+    {
+     "n": "ssd_hpc_needs_2024.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/13d4347e-91e0-4197-b387-98112a550b4f/resource/786c6ace-02c4-45c5-93a4-d4cf9d8b1452/download/south-sudan-humanitarian-needs-and-response-plan-2024.xlsx",
+     "m": "2024-01-03"
+    },
+    {
+     "n": "ssd_hpc_needs_2023.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/13d4347e-91e0-4197-b387-98112a550b4f/resource/a8e81653-8b2c-47a4-9d57-b0e10e81f777/download/ssd_humanitarian_needs_overview_2023.xlsx",
+     "m": "2022-12-06"
+    },
+    {
+     "n": "ssd_hpc_needs_2022.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/13d4347e-91e0-4197-b387-98112a550b4f/resource/9bc92fcf-4582-435f-9fa6-26c649ebe001/download/ssd_humanitarian_needs_overview_2022.xlsx",
+     "m": "2022-03-04"
+    },
+    {
+     "n": "ssd_hpc_needs_2021.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/13d4347e-91e0-4197-b387-98112a550b4f/resource/fc513b6d-8398-435e-9a6b-3b4650b33c7d/download/ssd_peopletargeted_peopleinneed_2021.xlsx",
+     "m": "2021-12-29"
+    },
+    {
+     "n": "ssd_hpc_needs_2019.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/13d4347e-91e0-4197-b387-98112a550b4f/resource/698f38df-8be5-483e-ac0f-2740bfbd73ef/download/ssd_hno_2019.xlsx",
+     "m": "2018-12-19"
+    }
+   ]
+  },
+  {
+   "name": "ssd-humanitarian-needs-overview",
+   "title": "South Sudan: Humanitarian needs overview",
+   "org": "HDX",
+   "modified": "2024-09-04",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "south_sudan_2021_humanitarian_needs_overview.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/a98aca08-3e9f-4108-82d2-53e7df37742c/resource/cf6f622e-a904-47f8-897e-a500507c70b4/download/south_sudan_2021_humanitarian_needs_overview.xlsx",
+     "m": "2021-04-06"
+    }
+   ]
+  },
+  {
+   "name": "sdn-jiaf-humanitarian-needs-pin-and-severity",
+   "title": "Sudan: JIAF Humanitarian Needs and Response Plan",
+   "org": "OCHA Sudan",
+   "modified": "2026-05-18",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "SDN Caseload Dissaggregation by Cluster.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/cfd63a4b-b95d-4c2d-bb53-cd2cc55f17fb/resource/8118eb45-af87-4d2d-bc5d-ddc2f36371f1/download/sdn-caseload-dissaggregation-by-cluster.xlsx",
+     "m": "2026-05-17"
+    },
+    {
+     "n": "SDN_Humanitarian_Needs_PiN_and_Severity_2026",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/cfd63a4b-b95d-4c2d-bb53-cd2cc55f17fb/resource/f7819808-4554-4aa7-856e-9473955f2b5a/download/jiaf_sudan_2026.xlsx",
+     "m": "2026-03-03"
+    },
+    {
+     "n": "SDN_Humanitarian_Needs_PiN_and_Severity_2025",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/cfd63a4b-b95d-4c2d-bb53-cd2cc55f17fb/resource/b9cedf62-d984-496c-8245-2d5e34fa7643/download/jiaf_sudan_2025.xlsx",
+     "m": "2025-03-11"
+    },
+    {
+     "n": "JIAF-2-Technical-Manual_Final-for-2025-HPC",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/cfd63a4b-b95d-4c2d-bb53-cd2cc55f17fb/resource/f5457cdf-7561-4cf5-b657-d81696137b97/download/jiaf-2-technical-manual_final-for-2025-hpc.pdf",
+     "m": "2024-12-12"
+    }
+   ]
+  },
+  {
+   "name": "ssd-jiaf-humanitarian-needs-pin-and-severity",
+   "title": "South Sudan: JIAF Humanitarian Needs People in Need and Severity",
+   "org": "OCHA South Sudan",
+   "modified": "2026-02-02",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "SSD_Humanitarian_Needs_PiN_and_Severity_2026",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/bfdf0ecb-0ee1-4813-bfa2-0cf3b5b8f9c5/resource/db9be050-a6ca-4268-8a3d-4252fc7b9f6b/download/jiaf_south_sudan_2026.xlsx",
+     "m": "2026-02-02"
+    },
+    {
+     "n": "SSD_Humanitarian_Needs_PiN_and_Severity_2025",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/bfdf0ecb-0ee1-4813-bfa2-0cf3b5b8f9c5/resource/40eb7c15-dec9-4f28-b97f-dad81274971c/download/jiaf_south_sudan_2025.xlsx",
+     "m": "2024-12-23"
+    },
+    {
+     "n": "JIAF-2-Technical-Manual_Final-for-2025-HPC",
+     "f": "PDF",
+     "u": "https://data.humdata.org/dataset/bfdf0ecb-0ee1-4813-bfa2-0cf3b5b8f9c5/resource/45b6c5d0-5576-4c29-b6b4-794960eee8af/download/jiaf-2-technical-manual_final-for-2025-hpc.pdf",
+     "m": "2024-12-23"
+    }
+   ]
+  },
+  {
+   "name": "sudan-2022-humanitarian-needs-overview-hno",
+   "title": "Sudan 2022 Humanitarian Needs Overview (HNO)",
+   "org": "OCHA Sudan",
+   "modified": "2026-07-22",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "SDN HNO 2022 V1.0.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/38696db4-dace-400f-b048-9431c849de1d/resource/23951ad5-25cd-4259-855e-d7b49ed861b0/download/sdn-hno-2022-v1.0.xlsx",
+     "m": "2021-09-26"
+    }
+   ]
+  }
+ ],
+ "sudan refugees returnees chad south sudan": [
+  {
+   "name": "new-arrivals-from-sudan",
+   "title": "Sudan Emergency: New arrivals from Sudan",
+   "org": "UNHCR - The UN Refugee Agency",
+   "modified": "2026-10-24",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "UNHCR - New Arrivals from Sudan",
+     "f": "XLSX",
+     "u": "https://docs.google.com/spreadsheets/d/1G5FSrIZ5qvyrMSps4xE3vZf6kIQ9311Wm-mSx7HcPog/edit?usp=drive_web",
+     "m": "2026-10-24"
+    },
+    {
+     "n": "UNHCR - New Arrivals from Sudan per day",
+     "f": "XLSX",
+     "u": "https://docs.google.com/spreadsheets/d/1MEDlbvR09E4xcKtjJDnF6mQtb11NhuI_BEDPxkIuSfY/edit?usp=drive_web",
+     "m": "2026-10-24"
+    }
+   ]
+  },
+  {
+   "name": "population-movement-from-sudan-to-south-sudan",
+   "title": "Population Movement from Sudan to South Sudan",
+   "org": "OCHA South Sudan",
+   "modified": "2025-04-15",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "New-Arrivals_Daily_Update_2-4 Jun_UNHCR-IOM_Border_Monitoring.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/1d2ceb40-fc65-4a19-aa41-fe3e339e555b/resource/d655ae82-7930-4390-98e1-e265423a1c4c/download/new-arrivals_daily_update_2-4-jun_unhcr-iom_border_monitoring.xlsx",
+     "m": "2023-06-06"
+    }
+   ]
+  },
+  {
+   "name": "sudan-returnee-data-iom-dtm",
+   "title": "Sudan Displacement Data - Returnees [IOM DTM]",
+   "org": "International Organization for Migration (IOM)",
+   "modified": "2025-07-22",
+   "license": "Other",
+   "res": [
+    {
+     "n": "DTM Sudan Returnees Master List Round 6",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/4992da89-4657-4b08-a4d6-c5f66a0ec7c0/resource/bf39bd1e-c935-42a0-9a48-a86313416ef3/download/mt-r6-permanent_seasonal_abroad_returnees-datasets-external.xlsx",
+     "m": "2023-09-21"
+    },
+    {
+     "n": "DTM Sudan Returnees Master List Round 5",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/4992da89-4657-4b08-a4d6-c5f66a0ec7c0/resource/98e7ee98-28b1-44dc-b8cc-9b65b26eb709/download/mt-r5-2-1-returneesexternal.xlsx",
+     "m": "2022-12-29"
+    },
+    {
+     "n": "DTM Sudan Returnees Master List Round 4",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/4992da89-4657-4b08-a4d6-c5f66a0ec7c0/resource/393348d1-39d4-48eb-8fa1-086af9075ffc/download/round-4_returnee.xlsx",
+     "m": "2022-09-01"
+    },
+    {
+     "n": "DTM Sudan Returnees Master List Round 3",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/4992da89-4657-4b08-a4d6-c5f66a0ec7c0/resource/6b26e606-0433-4923-99e5-b81bcac153ff/download/hdx_mt-r32-returnees-dataset.xlsx",
+     "m": "2023-01-23"
+    },
+    {
+     "n": "DTM Sudan Returnees Master List Round 2",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/4992da89-4657-4b08-a4d6-c5f66a0ec7c0/resource/35ce3076-9e65-4ec5-a529-ad3d3525ea29/download/dtm-sudan-returnees-master-list-round-2.xlsx",
+     "m": "2021-09-08"
+    },
+    {
+     "n": "DTM Sudan Returnees Master List Round 1",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/4992da89-4657-4b08-a4d6-c5f66a0ec7c0/resource/2399dff2-2799-44b7-9dae-a37559cd2c43/download/dtm-sudan-returnees-master-list-round-1.xlsx",
+     "m": "2020-11-06"
+    },
+    {
+     "n": "DTM Sudan Returnees",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/4992da89-4657-4b08-a4d6-c5f66a0ec7c0/resource/25de4aca-2431-485c-8fd4-81feb5e71ef4/download/dtm-sudan-returnees.xlsx",
+     "m": "2019-10-31"
+    }
+   ]
+  },
+  {
+   "name": "unicef-south-sudan-refugees-31-july-2017",
+   "title": "South Sudan - Regional refugee situation",
+   "org": "UNICEF Eastern and Southern Africa Regional Office (ESARO) (inactive)",
+   "modified": "2023-10-18",
+   "license": "Creative Commons Attribution International (CC BY)",
+   "res": [
+    {
+     "n": "Regional refugee db_aug18.xlsx",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/ef88f052-5337-46df-a083-e05e786f392a/resource/d0b76f87-396f-419b-b92c-c168526cc58a/download/regional-refugee-db_aug18.xlsx",
+     "m": "2017-08-25"
+    }
+   ]
+  },
+  {
+   "name": "south-sudan-displacement-data-idps-returnees-baseline-assessment-iom-dtm",
+   "title": "South Sudan Displacement - [IDPs, Returnees] - Baseline Assessment [IOM DTM]",
+   "org": "International Organization for Migration (IOM)",
+   "modified": "2025-05-07",
+   "license": "Other",
+   "res": [
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 16",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/14e85ffc-ef9d-4628-a44d-51b16c7cfe30/download/ssd-dtm-mobility-tracking-r16-baseline-assessment-dataset_updated_20250507.xlsx",
+     "m": "2025-05-07"
+    },
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 15",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/d2d40f85-3586-432a-956f-65976ada09d3/download/ssd-dtm-mobility-tracking-r15-baseline-assessment-dataset_publish_hdx.xlsx",
+     "m": "2024-11-25"
+    },
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 14",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/6341ffbf-85a3-44ec-b3eb-7ff300174252/download/ssd-dtm-mobility-tracking-r14-baseline-assessment-dataset.xlsx",
+     "m": "2023-10-10"
+    },
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 13",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/3c275af2-2d7a-408b-8c78-d6de10f7c5a6/download/ssd-dtm-mobility-tracking-r13-baseline-assessment-dataset_hdx.xlsx",
+     "m": "2023-04-04"
+    },
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 12",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/f45e1990-d881-43f6-bd67-d7ddf7faf6cb/download/ssd-dtm-mobility-tracking-r12-baseline-locations-dataset.xlsx",
+     "m": "2022-07-21"
+    },
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 11",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/fc91e2b5-460e-4c68-87f1-fafd33aba80d/download/dtm-south-sudan-baseline-assessment-round-11-hdx.xlsx",
+     "m": "2021-12-03"
+    },
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 10",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/4cb997a1-1dec-4983-896d-ceb606416268/download/dtm_south_sudan-baseline-assessment-round-10-hdx.xlsx",
+     "m": "2021-12-03"
+    },
+    {
+     "n": "DTM South Sudan Baseline Assessment Round 9",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/03c95eef-e3c5-40f6-9c86-9dcdc692be03/resource/0b18f98a-e9a4-4d15-9032-066a0f646ff2/download/dtm-south-sudan-baseline-assessment-round-9.xlsx",
+     "m": "2021-01-26"
+    }
+   ]
+  },
+  {
+   "name": "people-in-need-idps-refugees-and-returnees-in-2020",
+   "title": "People in Need, IDPs, Refugees and Returnees figures in 2020",
+   "org": "OCHA HQ",
+   "modified": "2026-04-27",
+   "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+   "res": [
+    {
+     "n": "PiN, IDPs, Refugees & Returnees 2020 figures",
+     "f": "XLSX",
+     "u": "https://data.humdata.org/dataset/9f98ac4f-f61b-4e2a-b1f4-3394a826dbbb/resource/e0da0453-eae1-412e-a84b-016c8e87b758/download/pin-idps-refugees-returnees-2020-figures.xlsx",
+     "m": "2020-05-06"
+    }
+   ]
+  }
+ ],
+ "fts_plans": "{\"data\":[{\"id\":46,\"revisionState\":null,\"isReleased\":false,\"releasedDate\":null,\"createdAt\":\"2017-01-14T00:52:54.417Z\",\"updatedAt\":\"2017-02-22T17:18:18.264Z\",\"planVersion\":{\"id\":617,\"planId\":46,\"name\":\"Sudan 2001\",\"shortName\":null,\"subtitle\":null,\"startDate\":\"2001-01-01\",\"endDate\":\"2001-12-31\",\"comments\":null,\"isForHPCProjects\":false,\"isPartOfGHO\":true,\"code\":\"CSDN01\",\"customLocationCode\":null,\"currentReportingPeriodId\":null,\"lastPublishedReportingPeriodId\":null,\"clusterSelectionType\":null,\"visibilityPreferences\":{\"isForNewHPCProjects\":false,\"isDisaggregationForCaseloads\":true,\"isDisaggregationForIndicators\":true},\"pdfPublishDate\":null,\"focusLocationId\":212,\"currentVersion\":true,\"latestVersion\":true,\"latestTaggedVersion\":true,\"versionTags\":[\"1.0\"],\"createdAt\":\"2017-01-14T00:52:54.417Z\",\"updatedAt\":\"2024-11-13T17:30:20.296Z\",\"organizations\":[]},\"categories\":[{\"id\":2170,\"name\":\"Consolidated inter-agency appeal\",\"description\":null,\"parentID\":null,\"code\":\"CIAA\",\"group\":\"planType\",\"createdAt\":\"2025-09-18T08:31:08.704Z\",\"updatedAt\":\"2025-09-18T08:31:08.704Z\",\"categoryRef\":{\"objectID\":46,\"versionID\":1,\"objectType\":\"plan\",\"categoryID\":2170,\"createdAt\":\"2017-01-14T00:53:14.958Z\",\"updatedAt\":\"2025-09-29T13:41:32.335Z\"}}],\"emergencies\":[],\"locations\":[{\"id\":212,\"externalId\":\"1\",\"name\":\"Sudan\",\"adminLevel\":0,\"latitude\":16.04892872324,\"longitude\":30.003391181169,\"iso3\":\"SDN\",\"pcode\":\"SD\",\"validOn\":null,\"status\":\"active\",\"itosSync\":false,\"isRegion\":false,\"createdAt\":\"2015-09-10T20:25:11.148Z\",\"updatedAt\":\"2019-11-26T06:44:37.410Z\",\"parentId\":null,\"planLocation\":{\"id\":11,\"planId\":46,\"locationId\":212,\"currentVersion\":true,\"latestVersion\":true,\"latestTaggedVersion\":true,\"versionTags\":[\"1.0\"],\"createdAt\":\"2017-01-14T00:53:14.947Z\",\"updatedAt\":\"2017-01-14T00:53:14.947Z\",\"deletedAt\":null}}],\"years\":[{\"id\":22,\"year\":\"2001\",\"createdAt\":\"2016-02-23T15:03:30.783Z\",\"updatedAt\":\"2016-02-23T15:03:30.783Z\",\"planYear\":{\"id\":13,\"planId\":46,\"usageYearId\":22,\"currentVersion\":true,\"latestVersion\":true,\"latestTaggedVersion\":true,\"versionTags\":[\"1.0\"],\"createdAt\":\"2017-01-14T00:53:14.958Z\",\"updatedAt\":\"2017-01-14T00:53:14.958Z\"}}],\"origRequirements\":194154116,\"revisedRequirements\":251970846},{\"id\":60,\"revisionState\":null,\"isReleased\":false,\"releasedDate\":null,\"createdAt\":\"2017-01-14T00:52:54.667Z\",\"updatedAt\":\"2017-02-22T17:18:18.450Z\",\"planVersion\":{\"id\":33,\"planId\":60,\"name\":\"Sudan 2000\",\"shortName\":null,\"subtitle\":null,\"startDate\":\"2000-01-01\",\"endDate\":\"2000-12-31\",\"comments\":null,\"isForHPCProjects\":false,\"isPartOfGHO\":true,\"code\":\"CSDN00\",\"customLocationCode\":null,\"currentReportingPeriodId\":null,\"lastPublishedReportingPeriodId\":null,\"clusterSelectionType\":null,\"visibilityPreferences\":{\"isForNewHPCProjects\":false,\"isDisaggregationForCaseloads\":true,\"isDisaggregationForIndicators\":true},\"pdfPublishDate\":null,\"focusLocationId\":212,\"currentVersion\":true,\"latestVersion\":true,\"latestTaggedVersion\":true,\"versionTags\":[\"1.0\"],\"createdAt\":\"2017-01-14T00:52:54.667Z\",\"updatedAt\":\"2024-11-",
+ "unhcr_pop": "{\"page\":1,\"short-url\":\"Anfkf9\",\"maxPages\":0,\"total\":[],\"items\":[]}",
+ "unhcr_sit": "{\"situation_view_id\":100,\"situation_view_name\":\"Europe Sea Arrivals\",\"situation_view_description\":\"Persecution, conflict and poverty forced over 1 million people to flee to Europe in 2015. Many came seeking safety for themselves and their families, risking their lives and facing a treacherous journey\",\"data\":[{\"geomaster_name\":\"Hungary\",\"geomaster_id\":24518,\"admin_level\":\"Country\",\"centroid_lon\":19.4131,\"centroid_lat\":47.1672,\"lat_max\":54.1672,\"lon_max\":26.4131,\"lat_min\":40.1672,\"lon_min\":12.4131,\"source\":\"Government, UNHCR\",\"date\":\"2025-02-28\",\"month\":2,\"year\":2025,\"population_groups_concat\":\"Border crossings from Ukraine (cumulative)\",\"population_group_id\":\"5460\",\"individuals_type\":2,\"demography_type\":1,\"individuals\":\"6397855\",\"households\":null,\"population_groups\":[{\"id\":5460,\"name\":\"Border crossings from Ukraine (cumulative)\",\"pop_accommodation_code\":null,\"pop_accommodation_name\":null,\"pop_data_type_code\":null,\"pop_data_type_name\":null,\"pop_type_code\":\"REF\",\"pop_type_name\":\"Refugees\",\"pop_frequency_name\":\"Daily\",\"pop_frequency_code\":\"D\",\"pop_frequency_cumulative\":\"cumulative\",\"pop_frequency_cumulative_code\":\"C\",\"pop_origin_name\":\"Ukraine\",\"pop_origin_code\":\"UKR\"}],\"published\":false,\"numChildren\":0,\"color\":\"#3c8dbc\"},{\"geomaster_name\":\"Romania\",\"geomaster_id\":24560,\"admin_level\":\"Country\",\"centroid_lon\":25.3,\"centroid_lat\":45.8667,\"lat_max\":52.8667,\"lon_max\":32.3,\"lat_min\":38.8667,\"lon_min\":18.3,\"source\":\"Government, UNHCR\",\"date\":\"2025-02-28\",\"month\":2,\"year\":2025,\"population_groups_concat\":\"Border crossings from Ukraine (cumulative)\",\"population_group_id\":\"5460\",\"individuals_type\":2,\"demography_type\":1,\"individuals\":\"6255424\",\"households\":\"0\",\"population_groups\":[{\"id\":5460,\"name\":\"Border crossings from Ukraine (cumulative)\",\"pop_accommodation_code\":null,\"pop_accommodation_name\":null,\"pop_data_type_code\":null,\"pop_data_type_name\":null,\"pop_type_code\":\"REF\",\"pop_type_name\":\"Refugees\",\"pop_frequency_name\":\"Daily\",\"pop_frequency_code\":\"D\",\"pop_frequency_cumulative\":\"cumulative\",\"pop_frequency_cumulative_code\":\"C\",\"pop_origin_name\":\"Ukraine\",\"pop_origin_code\":\"UKR\"}],\"published\":false,\"numChildren\":0,\"color\":\"#3c8dbc\"}]}",
+ "ipc_api": "<HTTPError 401: 'Unauthorized'>",
+ "worldpop": "{\"data\":[{\"id\":\"28977\",\"title\":\"The spatial distribution of population in 2000 with country total adjusted to match the corresponding UNPD estimate, Sudan\",\"desc\":\"Estimated total number of people per grid-cell. The dataset is available to download in Geotiff format at a resolution of 3 arc (approximately 100m at the equator). The projection is Geographic Coordinate System, WGS84. The units are number of people per pixel with country totals adjusted to match the corresponding official United Nations population estimates that have been prepared by the Population Division of the Department of Economic and Social Affairs of the United Nations Secretariat (2019 Revision of World Population Prospects). The mapping approach is Random Forest-based dasymetric redistribution.\",\"doi\":\"10.5258/SOTON/WP00660\",\"date\":\"2020-02-01\",\"popyear\":\"2000\",\"citation\":\"WorldPop (www.worldpop.org - School of Geography and Environmental Science, University of Southampton; Department of Geography and Geosciences, University of Louisville; Departement de Geographie, Universite de Namur) and Center for International Earth Science Information Network (CIESIN), Columbia University (2018). Global High Resolution Population Denominators Project - Funded by The Bill and Melinda Gates Foundation (OPP1134076). https://dx.doi.org/10.5258/SOTON/WP00660\",\"data_file\":\"GIS/Population/Global_2000_2020/2000/SDN/sdn_ppp_2000_UNadj.tif\",\"archive\":\"N\",\"public\":\"Y\",\"source\":\"WorldPop, University of Southampton, UK\",\"data_format\":\"Geotiff\",\"author_email\":\"info@worldpop.org\",\"author_name\":\"WorldPop\",\"maintainer_name\":\"WorldPop\",\"maintainer_email\":\"info@worldpop.org\",\"project\":\"Population Counts\",\"category\":\"Unconstrained individual countries 2000-2020 UN adjusted ( 100m resolution )\",\"gtype\":\"Population\",\"continent\":\"Africa\",\"country\":\"Sudan\",\"iso3\":\"SDN\",\"files\":[\"https://data.worldpop.org/GIS/Population/Global_2000_2020/2000/SDN/sdn_ppp_2000_UNadj.tif\"],\"url_img\":\"https://hub.worldpop.org/tabs/gdata/img/28977/sdn_ppp_wpgp_2000_Image.png\",\"organisation\":\"WorldPop, University of Southampton, UK, hub.worldpop.org\",\"license\":\"https://hub.worldpop.org/data/licence.txt\",\"url_summary\":\"https://hub.worldpop.org/geodata/summary?id=28977\"},{\"id\":\"28978\",\"title\":\"The spatial distribution of population in 2001 with country total adjusted to match the corresponding UNPD estimate, Sudan\",\"desc\":\"Estimated total number of people per grid-cell. The dataset is available to download in Geotiff format at a resolution of 3 arc (approximately 100m at the equator). The projection is Geographic Coordinate System, WGS84. The units are number of people per pixel with country totals adjusted to match the corresponding official United Nations population estimates that have been prepared by the Population Division of the Department of Economic and Social Affairs of the United Nations Secretariat (2019 Revision of World Population Prospects). The mapping approach is Random Forest-based dasymetric redistribution.\",\"doi\":\""
+}
