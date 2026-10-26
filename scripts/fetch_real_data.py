@@ -49,6 +49,8 @@ def window_months(today=None):
     """Last 12 complete months for which CHIRPS is published (it lags ~1 month)."""
     today = today or date.today()
     y, m = today.year, today.month - 1          # previous month
+    if m == 0:
+        y, m = y - 1, 12
     out = []
     for _ in range(12):
         out.append((y, m))

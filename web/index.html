@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>East Africa Mobility Watch</title>
-<meta name="description" content="Disaster displacement by hazard across the IGAD region: explore the map, read the insights or follow the guided story (illustrative sample data).">
+<meta name="description" content="Displacement by hazard across the IGAD region, with admin-1 detail and CHIRPS rainfall anomalies. Real open data from IDMC, CHIRPS and geoBoundaries.">
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 <header class="top">
@@ -14,7 +14,7 @@
     <div class="logo" aria-hidden="true"></div>
     <div>
       <h1>East Africa Mobility Watch</h1>
-      <p>Disaster displacement by hazard · IGAD region · 2025</p>
+      <p id="subtitle">Displacement × climate hazards · IGAD region</p>
     </div>
   </div>
   <nav class="tabs" role="tablist" aria-label="Views">
@@ -22,20 +22,23 @@
     <button role="tab" data-view="insights" aria-selected="false">Insights</button>
     <button role="tab" data-view="story" aria-selected="false">Story</button>
   </nav>
-  <span class="badge" title="Displacement figures are synthetic estimates for demonstration">Illustrative estimates</span>
+  <span class="badge" id="badge" title="IDMC Internal Displacement Updates, CHIRPS v2.0 rainfall, geoBoundaries ADM1">Real open data</span>
 </header>
 
 <section class="filterbar" id="filterbar" aria-label="Filters">
   <div class="seg" id="hazard" role="group" aria-label="Hazard">
-    <button data-h="All" class="on">All hazards</button><button data-h="Flood">Flood</button><button data-h="Drought">Drought</button><button data-h="Conflict">Conflict</button>
+    <button data-h="All" class="on">All</button><button data-h="Flood">Flood</button><button data-h="Drought">Drought</button><button data-h="Conflict">Conflict</button><button data-h="Other disasters">Other</button>
   </div>
   <div class="period">
     <button id="play" class="icon" aria-label="Play timeline">▶</button>
     <input type="range" id="month" min="0" max="12" value="12" aria-label="Month">
-    <b id="monthLabel">Full year 2025</b>
+    <b id="monthLabel"></b>
+  </div>
+  <div class="seg" id="level" role="group" aria-label="Admin level">
+    <button data-l="country" class="on">Country</button><button data-l="adm1">Admin-1</button>
   </div>
   <div class="seg" id="metric" role="group" aria-label="Measure">
-    <button data-m="abs" class="on">People</button><button data-m="share">Share of region</button>
+    <button data-m="abs" class="on">People</button><button data-m="share">Share</button>
   </div>
 </section>
 
@@ -44,9 +47,9 @@
 <div class="layout" id="map-layout">
   <aside class="panel" id="panel-explore">
     <h2 id="dTitle">IGAD region</h2>
-    <p class="hint" id="dHint">Click a country on the map or in the table to see its monthly trend.</p>
-    <div class="chart-wrap" style="height:200px"><canvas id="c-trend" aria-label="Monthly displacements by hazard"></canvas></div>
-    <table class="tbl" id="rank"><thead><tr><th>Country</th><th>New displacements</th><th class="r">Share</th></tr></thead><tbody></tbody></table>
+    <p class="hint" id="dHint"></p>
+    <div class="chart-wrap" style="height:210px"><canvas id="c-trend" aria-label="Monthly displacements by hazard and rainfall"></canvas></div>
+    <table class="tbl" id="rank"><thead><tr><th id="rankH">Country</th><th>New displacements</th><th class="r">Share</th></tr></thead><tbody></tbody></table>
     <div class="btns"><button id="download">Download current view (CSV)</button></div>
   </aside>
 
@@ -58,7 +61,7 @@
     <h2 id="st-title"></h2>
     <div class="hero"><b id="st-hero"></b><span id="st-hero-l"></span></div>
     <p class="st-text" id="st-text"></p>
-    <div class="chart-wrap" style="height:150px"><canvas id="c-story" aria-label="Story chart"></canvas></div>
+    <div class="chart-wrap" style="height:160px"><canvas id="c-story" aria-label="Story chart"></canvas></div>
     <div class="st-nav">
       <button id="st-prev">← Back</button>
       <button id="st-next" class="primary">Next →</button>
@@ -67,7 +70,28 @@
 
   <main class="mapbox">
     <div id="map" aria-label="Map of IGAD countries"></div>
-    <div class="map-ui"><div class="seg" id="basemap"><button data-b="gray" class="on">Map</button><button data-b="imagery">Imagery</button></div></div>
+    <details class="layers" id="layers" open>
+      <summary>Layers</summary>
+      <div class="lg">
+        <h5>Displacement</h5>
+        <label><input type="checkbox" data-layer="choro" checked> New displacements <small>choropleth</small></label>
+        <label><input type="checkbox" data-layer="events" checked> Displacement events <small>IDMC, ≥100 people</small></label>
+      </div>
+      <div class="lg">
+        <h5>Climate</h5>
+        <label><input type="checkbox" data-layer="rain"> Rainfall, % of normal <small>CHIRPS vs 1991–2020</small></label>
+        <div class="op" id="rainOp" hidden><span>Opacity</span><input type="range" id="rainOpacity" min="20" max="100" value="70" aria-label="Rainfall layer opacity"></div>
+      </div>
+      <div class="lg">
+        <h5>Boundaries</h5>
+        <label><input type="checkbox" data-layer="countries" checked> Countries</label>
+        <label><input type="checkbox" data-layer="adm1lines"> Admin-1 outlines</label>
+      </div>
+      <div class="lg">
+        <h5>Basemap</h5>
+        <div class="seg" id="basemap"><button data-b="gray" class="on">Map</button><button data-b="imagery">Imagery</button></div>
+      </div>
+    </details>
     <div class="legend" id="legend"></div>
   </main>
 </div>
@@ -81,23 +105,32 @@
       <div class="heat-legend" id="heat-legend"></div>
     </figure>
     <figure class="card">
+      <figcaption><h3>Rainfall and displacement</h3><p>Bars: new displacements by hazard. Line: rainfall as % of the 1991–2020 normal (gaps = dry season).</p></figcaption>
+      <select id="rainIso" aria-label="Country"></select>
+      <div class="chart-wrap" style="height:240px"><canvas id="c-rain"></canvas></div>
+    </figure>
+    <figure class="card">
+      <figcaption><h3>Admin-1 hotspots</h3><p>The 10 states / regions with the most new displacement, selected hazard</p></figcaption>
+      <div class="chart-wrap" style="height:268px"><canvas id="c-hot"></canvas></div>
+    </figure>
+    <figure class="card">
       <figcaption><h3>Regional trend by hazard</h3><p>All IGAD countries, people per month</p></figcaption>
       <div class="chart-wrap" style="height:250px"><canvas id="c-region"></canvas></div>
     </figure>
     <figure class="card">
-      <figcaption><h3>What drives displacement in each country</h3><p>Share of each country's yearly total (%)</p></figcaption>
+      <figcaption><h3>What drives displacement in each country</h3><p>Share of each country's 12-month total (%)</p></figcaption>
       <div class="chart-wrap" style="height:250px"><canvas id="c-mix"></canvas></div>
     </figure>
   </div>
 </div>
 
-<footer class="foot">
-  Displacement figures are <b>illustrative estimates</b> generated for demonstration, not official data. Boundaries: Natural Earth (public domain).
-  Basemaps: Esri, © OpenStreetMap contributors. Built by Amna Abdein · Leaflet · Chart.js · Python pipeline · GitHub Actions.
+<footer class="foot" id="foot">
+  <b>Data:</b> displacement — <a href="https://www.internal-displacement.org/" target="_blank" rel="noopener">IDMC</a> Internal Displacement Updates (preliminary, event-based figures); rainfall — <a href="https://www.chc.ucsb.edu/data/chirps" target="_blank" rel="noopener">CHIRPS v2.0</a>, UCSB Climate Hazards Center; admin-1 — <a href="https://www.geoboundaries.org/" target="_blank" rel="noopener">geoBoundaries</a> (CC BY 4.0 / IGO); countries — Natural Earth. Basemaps: Esri, © OpenStreetMap contributors.
+  <span id="meta"></span> Portfolio sample by Amna Abdein, not an official ICPAC/IGAD product.
 </footer>
 
 <script src="vendor/leaflet/leaflet.js"></script>
 <script src="vendor/chart.umd.js"></script>
-<script src="app.js?v=5"></script>
+<script src="app.js?v=6"></script>
 </body>
 </html>

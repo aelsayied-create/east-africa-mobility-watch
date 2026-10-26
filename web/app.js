@@ -1,37 +1,50 @@
-// East Africa Mobility Watch — Explore · Insights · Story (Leaflet + Chart.js)
+// East Africa Mobility Watch — Explore · Insights · Story
+// Leaflet + Chart.js, real open data (IDMC IDU, CHIRPS, geoBoundaries) prepared by scripts/build_data.py
 (async function () {
-  const [D, geo] = await Promise.all([
-    fetch("data/displacement.json?v=5").then(r => r.json()),
-    fetch("data/igad_countries.geojson").then(r => r.json()),
+  const V = "6";
+  const [D, geoC, geoA, ev] = await Promise.all([
+    fetch(`data/displacement.json?v=${V}`).then(r => r.json()),
+    fetch(`data/igad_countries.geojson?v=${V}`).then(r => r.json()),
+    fetch(`data/igad_adm1.geojson?v=${V}`).then(r => r.json()),
+    fetch(`data/events.geojson?v=${V}`).then(r => r.json()),
   ]);
-  const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const N = D.months.length;                    // 12 months
+  const ALLM = [...Array(N).keys()];
+  const LAB = D.labels;                          // "Oct 2025" …
+  const SHORT = LAB.map(l => l.slice(0, 3));
+  const WIN = `${LAB[0]} – ${LAB[N - 1]}`;
   const ISO = Object.keys(D.countries);
-  const HZ = D.hazards; // Flood, Drought, Conflict
-  const RAMP = ["#e6f0fc", "#b7d3f6", "#6da7ec", "#2a78d6", "#1c5cab", "#0d366b"]; // sequential blue, light → dark
+  const ADM = Object.keys(D.adm1);
+  const HZ = D.hazards;                          // Flood, Drought, Conflict, Other disasters
+  const RAMP = ["#e6f0fc", "#b7d3f6", "#6da7ec", "#2a78d6", "#1c5cab", "#0d366b"];
 
   // ---------- helpers ----------
   const $ = id => document.getElementById(id);
   const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
   const fmt = n => Math.round(n).toLocaleString("en-US");
   const short = n => n >= 1e6 ? (n / 1e6).toFixed(1) + "M" : n >= 1e3 ? Math.round(n / 1e3) + "k" : fmt(n);
-  const HZC = () => ({ Flood: css("--c1"), Drought: css("--c2"), Conflict: css("--c3") });
+  const pct = (a, b) => Math.round(a / Math.max(1, b) * 100);
+  const HZC = () => ({ Flood: css("--c1"), Drought: css("--c2"), Conflict: css("--c3"), "Other disasters": css("--c5") });
   let C = HZC();
-
-  // v(iso, months[], hazards[])
-  function v(iso, months, hz) {
-    let s = 0;
-    for (const mi of months) for (const h of hz) s += D.values[iso]?.[D.months[mi]]?.[h] || 0;
+  const hzList = h => h === "All" ? HZ : [h];
+  const hzLabel = hz => hz.length === HZ.length ? "All hazards" : hz[0];
+  const nameOf = (lvl, id) => lvl === "adm1" ? `${D.adm1[id].n}, ${D.countries[D.adm1[id].c]}` : D.countries[id];
+  const arrOf = (lvl, id) => lvl === "adm1" ? D.adm1[id].v : D.values[id];
+  function v(lvl, id, months, hz) {
+    const a = arrOf(lvl, id); let s = 0;
+    for (const m of months) for (const h of hz) s += a[m][HZ.indexOf(h)];
     return s;
   }
-  const ALLM = [...Array(12).keys()];
-  const hzList = h => h === "All" ? HZ : [h];
+  const vc = (iso, months, hz) => v("country", iso, months, hz);
+  const regionM = (months, hz) => ISO.reduce((s, i) => s + vc(i, months, hz), 0);
+  const rainOf = (lvl, id, k) => (lvl === "adm1" ? D.rain.adm1[id] : D.rain.country[id])?.[k] ?? null;
 
   // ---------- state ----------
-  const state = { hazard: "All", monthIdx: 12, metric: "abs", selected: null, view: "explore" };
-  const monthsOf = () => state.monthIdx === 12 ? ALLM : [state.monthIdx];
-  const periodLabel = () => state.monthIdx === 12 ? "Full year 2025" : `${MONTHS[state.monthIdx]} 2025`;
-  const val = iso => v(iso, monthsOf(), hzList(state.hazard));
-  const regionTotal = () => ISO.reduce((s, i) => s + val(i), 0);
+  const state = { hazard: "All", k: N, metric: "abs", level: "country", sel: null, view: "explore",
+    layers: { choro: true, events: true, rain: false, countries: true, adm1lines: false }, rainOpacity: 0.7 };
+  const monthsOf = () => state.k === N ? ALLM : [state.k];
+  const periodLabel = () => state.k === N ? `12 months · ${WIN}` : LAB[state.k];
+  const ids = lvl => lvl === "adm1" ? ADM : ISO;
 
   // ---------- Chart.js theme ----------
   function themeCharts() {
@@ -46,9 +59,31 @@
   const charts = {};
   const mk = (id, cfg) => { charts[id]?.destroy(); charts[id] = new Chart($(id), cfg); return charts[id]; };
   const bar = (label, data, color, extra = {}) => ({ label, data, backgroundColor: color, borderColor: css("--surface"), borderWidth: 1, borderRadius: 3, borderSkipped: false, maxBarThickness: 26, ...extra });
+  const rainLine = data => ({ type: "line", label: "Rainfall % of normal", data, yAxisID: "y2", borderColor: css("--ink"), backgroundColor: css("--ink"), borderWidth: 2, borderDash: [4, 3], pointRadius: 2.5, pointStyle: "line", tension: 0.25, spanGaps: false, order: -1 });
+
+  // combo chart: stacked bars by hazard (+ optional rainfall line on a right axis)
+  function combo(id, lvl, sid, hz, opts = {}) {
+    const series = hz.map(h => bar(h, ALLM.map(m => sid ? v(lvl, sid, [m], [h]) : regionM([m], [h])),
+      opts.focus ? ALLM.map(m => opts.focus.includes(m) ? C[h] : css("--neutral")) : C[h], { maxBarThickness: 18 }));
+    const rain = sid ? ALLM.map(m => rainOf(lvl, sid, m)) : null;
+    const showRain = rain && rain.some(x => x != null);
+    if (showRain) series.push(rainLine(rain));
+    return mk(id, {
+      type: "bar",
+      data: { labels: SHORT, datasets: series },
+      options: { maintainAspectRatio: false, interaction: { mode: "index", intersect: false },
+        plugins: { legend: { display: hz.length > 1 || showRain, position: "bottom" },
+          tooltip: { callbacks: { title: c => LAB[c[0].dataIndex], label: c => c.dataset.yAxisID === "y2" ? ` Rainfall: ${c.raw == null ? "dry season" : Math.round(c.raw) + "% of normal"}` : ` ${c.dataset.label}: ${fmt(c.raw)}` } } },
+        scales: { x: { stacked: true, grid: { display: false } }, y: { stacked: true, ticks: { callback: short } },
+          ...(showRain ? { y2: { position: "right", min: 0, suggestedMax: 200, grid: { display: false }, ticks: { callback: x => x + "%" }, title: { display: true, text: "rain % normal" } } } : {}) } },
+    });
+  }
 
   // ---------- map ----------
-  const map = L.map("map", { minZoom: 3 }).setView([6, 38], 4);
+  const map = L.map("map", { minZoom: 3, zoomSnap: 0.5 }).setView([6, 38], 4);
+  map.createPane("rainPane").style.zIndex = 420;
+  map.createPane("linePane").style.zIndex = 430; map.getPane("linePane").style.pointerEvents = "none";
+  map.createPane("eventPane").style.zIndex = 640;
   const basemaps = {
     gray: L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", { attribution: "Tiles © Esri — Esri, HERE, Garmin, © OpenStreetMap contributors", maxZoom: 16 }),
     imagery: L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", { attribution: "Imagery © Esri", maxZoom: 18 }),
@@ -59,208 +94,287 @@
     Object.values(basemaps).forEach(l => map.removeLayer(l)); basemaps[b.dataset.b].addTo(map).bringToBack();
   });
 
-  let breaks = [];
-  function computeBreaks(valFn) {
-    const max = Math.max(1, ...ISO.map(valFn));
-    breaks = [0.08, 0.2, 0.4, 0.6, 0.8].map(p => max * p);
+  // choropleth classes: quantiles of non-zero values, rounded to nice numbers
+  let breaks = [], paint = { lvl: "country", fn: id => 0, title: "", f: short };
+  const nice = x => { if (x < 10) return Math.ceil(x); const p = 10 ** Math.floor(Math.log10(x)); return Math.ceil(x / p * 2) / 2 * p; };
+  function computeBreaks(lvl, fn) {
+    const xs = ids(lvl).map(fn).filter(x => x > 0).sort((a, b) => a - b);
+    if (!xs.length) { breaks = [1, 2, 3, 4, 5]; return; }
+    if (lvl === "country") {           // only 8 units: classes proportional to the maximum
+      breaks = [...new Set([0.05, 0.15, 0.3, 0.5, 0.75].map(p => nice(xs[xs.length - 1] * p)))]; return;
+    }
+    const q = p => xs[Math.min(xs.length - 1, Math.floor(p * xs.length))];
+    breaks = [...new Set([0.2, 0.4, 0.6, 0.8, 0.95].map(p => nice(q(p))))];
   }
-  const colorFor = x => { let i = 0; while (i < breaks.length && x > breaks[i]) i++; return RAMP[i]; };
-  let valueFn = val, highlight = null;
-  const layer = L.geoJSON(geo, {
-    style: f => style(f),
-    onEachFeature: (f, l) => {
+  const colorFor = x => { if (!(x > 0)) return css("--empty"); let i = 0; while (i < breaks.length && x > breaks[i]) i++; return RAMP[Math.min(i + (6 - breaks.length - 1), 5)]; };
+  let highlight = null;
+
+  function polyStyle(lvl) {
+    return f => {
+      const id = lvl === "adm1" ? f.properties.id : f.properties.iso3;
+      const on = (highlight || state.sel?.id) === id;
+      const dim = highlight && highlight !== id && !(lvl === "adm1" && D.adm1[id]?.c === highlight);
+      return { fillColor: colorFor(paint.fn(id)), fillOpacity: state.layers.choro ? (dim ? 0.3 : 0.82) : 0,
+        color: on ? css("--ink") : "#ffffff", weight: on ? 3 : lvl === "adm1" ? 0.6 : 1 };
+    };
+  }
+  function bindPoly(lvl) {
+    return (f, l) => {
+      const id = lvl === "adm1" ? f.properties.id : f.properties.iso3;
       l.on({
-        mouseover: e => e.target.setStyle({ weight: 3, color: css("--ink") }),
-        mouseout: e => layer.resetStyle(e.target),
-        click: () => { if (state.view === "explore") select(f.properties.iso3); },
+        mouseover: e => e.target.setStyle({ weight: 2.5, color: css("--ink") }),
+        mouseout: e => (lvl === "adm1" ? adm1Fill : countryFill).resetStyle(e.target),
+        click: () => { if (state.view === "explore") select(lvl, id); },
       });
-      l.bindTooltip(() => tip(f.properties.iso3), { sticky: true });
-    },
-  }).addTo(map);
-  const regionBounds = layer.getBounds();
+      l.bindTooltip(() => tip(lvl, id), { sticky: true });
+    };
+  }
+  const countryFill = L.geoJSON(geoC, { style: polyStyle("country"), onEachFeature: bindPoly("country") });
+  const adm1Fill = L.geoJSON(geoA, { style: polyStyle("adm1"), onEachFeature: bindPoly("adm1") });
+  const countryLine = L.geoJSON(geoC, { pane: "linePane", interactive: false, style: { fill: false, color: "#3a3a36", weight: 1.4, opacity: 0.85 } });
+  const adm1Line = L.geoJSON(geoA, { pane: "linePane", interactive: false, style: { fill: false, color: "#5a5a55", weight: 0.6, opacity: 0.7 } });
+  const regionBounds = countryFill.getBounds();
   map.fitBounds(regionBounds, { padding: [10, 10] });
+
+  function tip(lvl, id) {
+    const x = paint.fn(id), tot = ids(paint.lvl).reduce((s, i) => s + paint.fn(i), 0);
+    const r = rainOf(lvl, id, state.view === "explore" ? state.k : (story?.rainK ?? N));
+    const val = paint.title.startsWith("Share") ? `${Math.round(x)}% of region` : `${fmt(x)} people newly displaced`;
+    return `<b>${nameOf(lvl, id)}</b><br>${val}${paint.title.startsWith("Share") ? "" : `<br><span style="opacity:.75">${pct(x, tot)}% of region</span>`}` +
+      (state.layers.rain ? `<br>Rainfall: ${r == null ? "dry season" : Math.round(r) + "% of normal"}` : "");
+  }
+
+  // events (IDMC records) as proportional circles
+  const evRenderer = L.canvas({ pane: "eventPane" });
+  const evLayer = L.layerGroup();
+  function drawEvents(months, hz) {
+    evLayer.clearLayers();
+    const ms = new Set(months), hs = new Set(hz.map(h => HZ.indexOf(h)));
+    const feats = ev.features.filter(f => ms.has(f.properties.m) && hs.has(f.properties.h)).sort((a, b) => b.properties.f - a.properties.f);
+    for (const f of feats) {
+      const p = f.properties, [lon, lat] = f.geometry.coordinates;
+      L.circleMarker([lat, lon], { renderer: evRenderer, radius: Math.max(3, Math.sqrt(p.f) / 18), color: "#ffffff", weight: 1, fillColor: C[HZ[p.h]], fillOpacity: 0.85 })
+        .bindPopup(`<div class="pop"><b>${fmt(p.f)} people · ${HZ[p.h]}</b><br>${p.d} · ${D.countries[p.c]}<br>${p.loc}<br><span class="src">${p.ev}<br>Source: ${p.src || "n/a"} (via IDMC)</span></div>`)
+        .addTo(evLayer);
+    }
+    return feats.length;
+  }
+
+  // rainfall overlay
+  let rainImg = null, rainK = null;
+  function drawRain(k) {
+    const key = k === N ? "all" : D.months[k];
+    if (!state.layers.rain) { if (rainImg) map.removeLayer(rainImg); rainImg = null; rainK = null; return; }
+    if (rainImg && rainK === key) { rainImg.setOpacity(state.rainOpacity); return; }
+    if (rainImg) map.removeLayer(rainImg);
+    rainImg = L.imageOverlay(`data/rain/${key}.png?v=${V}`, D.rain.bounds, { pane: "rainPane", opacity: state.rainOpacity, interactive: false, className: "rainimg" }).addTo(map);
+    rainK = key;
+  }
+
+  function syncLayers(lvl) {
+    const want = [[countryFill, lvl === "country"], [adm1Fill, lvl === "adm1"], [countryLine, state.layers.countries],
+      [adm1Line, state.layers.adm1lines && lvl === "country"], [evLayer, state.layers.events]];
+    for (const [l, on] of want) { if (on && !map.hasLayer(l)) l.addTo(map); if (!on && map.hasLayer(l)) map.removeLayer(l); }
+    $("rainOp").hidden = !state.layers.rain;
+  }
+
+  function drawLegend(nEvents, k) {
+    let h = "";
+    if (state.layers.choro) {
+      const f = paint.f, lab = [`≤ ${f(breaks[0])}`];
+      for (let i = 1; i < breaks.length; i++) lab.push(`${f(breaks[i - 1])} – ${f(breaks[i])}`);
+      lab.push(`> ${f(breaks[breaks.length - 1])}`);
+      const off = 6 - breaks.length - 1;
+      h += `<h4>${paint.title}</h4><div><i class="sq" style="background:${css("--empty")}"></i>None reported</div>` +
+        lab.map((t, i) => `<div><i class="sq" style="background:${RAMP[i + off]}"></i>${t}</div>`).join("");
+    }
+    if (state.layers.rain) {
+      const b = D.rain.breaks, cl = D.rain.colors, t = [`< ${b[0]}%`];
+      for (let i = 1; i < b.length; i++) t.push(`${b[i - 1]}–${b[i]}%`);
+      t.push(`> ${b[b.length - 1]}%`);
+      h += `<h4 class="sep">Rainfall · ${k === N ? "12-month total" : LAB[k]} · % of normal</h4><div class="ramp">${cl.map((c, i) => `<span title="${t[i]}" style="background:${c}"></span>`).join("")}</div><div class="ramp-l"><span>drier</span><span>normal</span><span>wetter</span></div><div><i class="sq" style="background:#bebeb9"></i>dry season</div>`;
+    }
+    if (state.layers.events) h += `<h4 class="sep">Events</h4><div><i class="dot"></i>${fmt(nEvents)} records · size = people</div>`;
+    $("legend").innerHTML = h; $("legend").hidden = !h;
+  }
+
+  // one call repaints every map layer
+  function paintMap(lvl, fn, title, f = short, opt = {}) {
+    paint = { lvl, fn, title, f };
+    computeBreaks(lvl, fn);
+    syncLayers(lvl);
+    (lvl === "adm1" ? adm1Fill : countryFill).setStyle(polyStyle(lvl));
+    const n = drawEvents(opt.months || monthsOf(), opt.hz || hzList(state.hazard));
+    drawRain(opt.rainK ?? state.k);
+    drawLegend(n, opt.rainK ?? state.k);
+  }
+
   function fly(b, opts) {
     setTimeout(() => {
       const el = map.getContainer();
-      if (!el.clientWidth || !el.clientHeight) return;
+      if (!el.clientWidth || !el.clientHeight || !b) return;
       map.invalidateSize();
       try { map.stop(); map.flyToBounds(b, opts); } catch (e) { map.fitBounds(b, { padding: opts.padding }); }
     }, 60);
   }
-  const boundsOf = iso => { let b = null; layer.eachLayer(l => { if (l.feature.properties.iso3 === iso) b = l.getBounds(); }); return b; };
-
-  function style(f) {
-    const iso = f.properties.iso3;
-    const on = highlight ? highlight === iso : state.selected === iso;
-    const dim = highlight && highlight !== iso;
-    return { fillColor: colorFor(valueFn(iso)), fillOpacity: dim ? 0.35 : 0.85, color: on ? "#0b0b0b" : "#ffffff", weight: on ? 3 : 1 };
-  }
-  function tip(iso) {
-    const fn = state.view === "explore" ? val : valueFn;
-    const x = fn(iso), tot = ISO.reduce((s, i) => s + fn(i), 0);
-    return `<b>${D.countries[iso]}</b><br>${fmt(x)} people newly displaced<br><span style="opacity:.75">${Math.round(x / Math.max(1, tot) * 100)}% of region</span>`;
-  }
-  function drawLegend(title, f = short) {
-    const lab = [`≤ ${f(breaks[0])}`];
-    for (let i = 1; i < breaks.length; i++) lab.push(`${f(breaks[i - 1])} – ${f(breaks[i])}`);
-    lab.push(`> ${f(breaks[breaks.length - 1])}`);
-    $("legend").innerHTML = `<h4>${title}</h4>` + lab.map((t, i) => `<div><i class="sq" style="background:${RAMP[i]}"></i>${t}</div>`).join("");
-  }
-  function paintMap(fn, title, f) {
-    valueFn = fn; computeBreaks(fn); layer.setStyle(style); drawLegend(title, f);
-  }
+  const boundsOf = (lvl, id) => { let b = null; (lvl === "adm1" ? adm1Fill : countryFill).eachLayer(l => { const p = l.feature.properties; if ((lvl === "adm1" ? p.id : p.iso3) === id) b = l.getBounds(); }); return b; };
 
   // ---------- KPIs ----------
-  function drawKpis(months, hz, focus) {
-    const tot = ISO.reduce((s, i) => s + v(i, months, hz), 0);
-    const byC = ISO.map(i => [i, v(i, months, hz)]).sort((a, b) => b[1] - a[1]);
-    const byH = HZ.map(h => [h, ISO.reduce((s, i) => s + v(i, months, [h]), 0)]).sort((a, b) => b[1] - a[1]);
-    const peak = ALLM.map(m => [m, ISO.reduce((s, i) => s + v(i, [m], hz), 0)]).sort((a, b) => b[1] - a[1])[0];
+  function drawKpis(months, hz, lvl, focus) {
+    const tot = regionM(months, hz);
+    const top = ids(lvl).map(i => [i, v(lvl, i, months, hz)]).sort((a, b) => b[1] - a[1])[0];
+    const byH = HZ.map(h => [h, regionM(months, [h])]).sort((a, b) => b[1] - a[1]);
+    const peak = ALLM.map(m => [m, regionM([m], hz)]).sort((a, b) => b[1] - a[1])[0];
     const items = [
-      ["New displacements", fmt(tot), "", focus || (months.length === 12 ? "2025, all IGAD countries" : `${MONTHS[months[0]]} 2025`)],
-      ["Most affected country", D.countries[byC[0][0]], "", `${fmt(byC[0][1])} people · ${Math.round(byC[0][1] / Math.max(1, tot) * 100)}%`],
-      ["Main driver", byH[0][0], C[byH[0][0]], `${Math.round(byH[0][1] / Math.max(1, tot) * 100)}% of displacements`],
-      ["Peak month", MONTHS[peak[0]], "", `${fmt(peak[1])} people (year view)`],
+      ["New displacements", fmt(tot), "", focus],
+      [lvl === "adm1" ? "Top admin-1 hotspot" : "Most affected country", lvl === "adm1" ? D.adm1[top[0]].n : D.countries[top[0]], "", `${lvl === "adm1" ? D.countries[D.adm1[top[0]].c] + " · " : ""}${fmt(top[1])} people · ${pct(top[1], tot)}%`],
+      ["Main driver (all hazards)", byH[0][0], C[byH[0][0]], `${pct(byH[0][1], regionM(months, HZ))}% of displacements`],
+      ["Peak month", LAB[peak[0]], "", `${fmt(peak[1])} people · ${hzLabel(hz).toLowerCase()}`],
     ];
     $("kpis").innerHTML = items.map(([t, val, col, s]) =>
       `<div class="kpi"><span>${col ? `<i style="background:${col}"></i>` : ""}${t}</span><b>${val}</b><small>${s}</small></div>`).join("");
   }
 
   // ---------- Explore ----------
+  const curVal = (lvl, id) => v(lvl, id, monthsOf(), hzList(state.hazard));
   function drawExplore() {
-    const months = monthsOf(), hz = hzList(state.hazard);
-    const metricFn = state.metric === "share"
-      ? iso => { const t = regionTotal(); return t ? val(iso) / t * 100 : 0; }
-      : val;
-    if (state.metric === "share") paintMap(metricFn, "Share of region", x => Math.round(x) + "%");
-    else paintMap(metricFn, "People newly displaced");
-    drawKpis(months, hz);
+    const months = monthsOf(), hz = hzList(state.hazard), lvl = state.level;
+    const tot = regionM(months, hz);
+    const fn = state.metric === "share" ? id => curVal(lvl, id) / Math.max(1, tot) * 100 : id => curVal(lvl, id);
+    paintMap(lvl, fn, state.metric === "share" ? "Share of region" : "People newly displaced", state.metric === "share" ? x => (x < 1 ? x.toFixed(1) : Math.round(x)) + "%" : short);
+    drawKpis(months, hz, lvl, state.k === N ? `${WIN}, all IGAD countries` : LAB[state.k]);
     $("monthLabel").textContent = periodLabel();
-    const isos = state.selected ? [state.selected] : ISO;
-    $("dTitle").textContent = state.selected ? D.countries[state.selected] : "IGAD region";
-    $("dHint").innerHTML = state.selected
-      ? `Monthly trend in 2025 · <a href="#" id="clr">back to region</a>`
-      : "Click a country on the map or in the table to see its monthly trend.";
+    const s = state.sel;
+    $("dTitle").textContent = s ? nameOf(s.lvl, s.id) : "IGAD region";
+    $("dHint").innerHTML = s
+      ? `Monthly displacement by hazard, with rainfall vs normal · <a href="#" id="clr">back to region</a>`
+      : `Click a ${lvl === "adm1" ? "state / region" : "country"} on the map, or a row below. Turn on <b>Rainfall</b> in the Layers panel to compare with climate.`;
     $("clr") && ($("clr").onclick = e => { e.preventDefault(); select(null); });
-    mk("c-trend", {
-      type: "bar",
-      data: { labels: MONTHS, datasets: hz.map(h => bar(h, ALLM.map(m => isos.reduce((s, i) => s + v(i, [m], [h]), 0)), C[h], { maxBarThickness: 18 })) },
-      options: { maintainAspectRatio: false, interaction: { mode: "index", intersect: false },
-        plugins: { legend: { display: hz.length > 1, position: "bottom" }, tooltip: { callbacks: { label: c => ` ${c.dataset.label}: ${fmt(c.raw)}` } } },
-        scales: { x: { stacked: true, grid: { display: false } }, y: { stacked: true, ticks: { callback: short } } } },
-    });
-    const rows = ISO.map(i => ({ i, x: val(i) })).sort((a, b) => b.x - a.x);
-    const tot = rows.reduce((s, r) => s + r.x, 0), max = rows[0].x || 1;
-    $("rank").tBodies[0].innerHTML = rows.map(r => `<tr data-iso="${r.i}"${r.i === state.selected ? ' style="font-weight:700"' : ""}>
-      <td>${D.countries[r.i]}</td><td><div class="b"><i style="width:${r.x / max * 70}%;background:${css("--c1")}"></i>${fmt(r.x)}</div></td>
-      <td class="r">${Math.round(r.x / Math.max(1, tot) * 100)}%</td></tr>`).join("");
-    document.querySelectorAll("#rank tbody tr").forEach(tr => tr.onclick = () => select(tr.dataset.iso));
+    combo("c-trend", s?.lvl, s?.id, hz);
+    // ranking table
+    let pool = ids(lvl);
+    const scopeIso = s ? (s.lvl === "adm1" ? D.adm1[s.id].c : s.id) : null;
+    if (lvl === "adm1" && scopeIso) pool = pool.filter(i => D.adm1[i].c === scopeIso);
+    const rows = pool.map(i => ({ i, x: curVal(lvl, i) })).sort((a, b) => b.x - a.x).slice(0, lvl === "adm1" ? 15 : 99);
+    const max = rows[0]?.x || 1;
+    $("rankH").textContent = lvl === "adm1" ? (scopeIso ? `Admin-1 in ${D.countries[scopeIso]}` : "Top admin-1 units") : "Country";
+    $("rank").tBodies[0].innerHTML = rows.map(r => `<tr data-id="${r.i}"${r.i === s?.id ? ' class="sel"' : ""}>
+      <td>${lvl === "adm1" ? `${D.adm1[r.i].n}<small> ${D.adm1[r.i].c}</small>` : D.countries[r.i]}</td><td><div class="b"><i style="width:${r.x / max * 70}%;background:${css("--c1")}"></i>${fmt(r.x)}</div></td>
+      <td class="r">${pct(r.x, tot)}%</td></tr>`).join("");
+    document.querySelectorAll("#rank tbody tr").forEach(tr => tr.onclick = () => select(lvl, tr.dataset.id));
   }
-  function select(iso) {
-    state.selected = state.selected === iso ? null : iso;
-    const b = state.selected && boundsOf(state.selected);
-    fly(b || regionBounds, { padding: [20, 20], maxZoom: 6, duration: 0.7 });
+  function select(lvl, id) {
+    state.sel = !lvl || (state.sel?.id === id) ? null : { lvl, id };
+    const b = state.sel && boundsOf(state.sel.lvl, state.sel.id);
+    fly(b || regionBounds, { padding: [20, 20], maxZoom: state.sel?.lvl === "adm1" ? 7 : 6, duration: 0.7 });
     refresh();
   }
 
   // ---------- Insights ----------
   const tipEl = Object.assign(document.createElement("div"), { className: "tip", hidden: true });
   document.body.appendChild(tipEl);
+  const order = [...ISO].sort((a, b) => vc(b, ALLM, HZ) - vc(a, ALLM, HZ));
+  $("rainIso").innerHTML = order.filter(i => vc(i, ALLM, HZ) > 0).map(i => `<option value="${i}">${D.countries[i]}</option>`).join("");
+  $("rainIso").value = "SOM";
+  $("rainIso").onchange = () => drawInsights();
   function drawInsights() {
     const hz = hzList(state.hazard);
-    drawKpis(ALLM, hz);
-    // heatmap
-    const cells = ISO.flatMap(i => ALLM.map(m => v(i, [m], hz)));
+    drawKpis(ALLM, hz, "adm1", `${WIN}, ${hzLabel(hz).toLowerCase()}`);
+    // seasonal heatmap
+    const cells = ISO.flatMap(i => ALLM.map(m => vc(i, [m], hz)));
     const max = Math.max(1, ...cells);
-    const heatColor = x => RAMP[Math.min(RAMP.length - 1, Math.floor(x / max * RAMP.length))];
-    const order = [...ISO].sort((a, b) => v(b, ALLM, hz) - v(a, ALLM, hz));
-    $("heat").innerHTML = `<div></div>` + MONTHS.map(m => `<div class="h">${m}</div>`).join("") +
-      order.map(i => `<div class="n">${D.countries[i]}</div>` + ALLM.map(m => {
-        const x = v(i, [m], hz);
-        return `<div class="c" style="background:${heatColor(x)}" data-t="${D.countries[i]} · ${MONTHS[m]}: ${fmt(x)} people"></div>`;
+    const heatColor = x => x <= 0 ? css("--empty") : RAMP[Math.min(RAMP.length - 1, Math.floor(Math.sqrt(x / max) * RAMP.length))];
+    const ord = [...ISO].sort((a, b) => vc(b, ALLM, hz) - vc(a, ALLM, hz));
+    $("heat").innerHTML = `<div></div>` + SHORT.map((m, i) => `<div class="h">${m}${i === 0 || m === "Jan" ? `<br><small>${LAB[i].slice(-4)}</small>` : "<br><small>&nbsp;</small>"}</div>`).join("") +
+      ord.map(i => `<div class="n">${D.countries[i]}</div>` + ALLM.map(m => {
+        const x = vc(i, [m], hz), r = rainOf("country", i, m);
+        return `<div class="c" style="background:${heatColor(x)}" data-t="${D.countries[i]} · ${LAB[m]}: ${fmt(x)} people${r != null ? ` · rain ${Math.round(r)}% of normal` : ""}"></div>`;
       }).join("")).join("");
-    $("heat-legend").innerHTML = `Fewer ${RAMP.map(c => `<i style="background:${c}"></i>`).join("")} More · ${state.hazard === "All" ? "all hazards" : state.hazard.toLowerCase()}`;
-    $("heat").onmousemove = e => { const c = e.target.closest(".c"); if (!c) { tipEl.hidden = true; return; } tipEl.hidden = false; tipEl.textContent = c.dataset.t; tipEl.style.left = e.clientX + 12 + "px"; tipEl.style.top = e.clientY + 12 + "px"; };
+    $("heat-legend").innerHTML = `None <i style="background:${css("--empty")}"></i> Fewer ${RAMP.map(c => `<i style="background:${c}"></i>`).join("")} More · ${hzLabel(hz).toLowerCase()} (square-root scale)`;
+    $("heat").onmousemove = e => { const c = e.target.closest(".c"); if (!c) { tipEl.hidden = true; return; } tipEl.hidden = false; tipEl.textContent = c.dataset.t; tipEl.style.left = Math.min(e.clientX + 12, innerWidth - 300) + "px"; tipEl.style.top = e.clientY + 12 + "px"; };
     $("heat").onmouseleave = () => tipEl.hidden = true;
-    // regional trend lines
+    combo("c-rain", "country", $("rainIso").value, hz);
+    // admin-1 hotspots
+    const hot = [...ADM].sort((a, b) => v("adm1", b, ALLM, hz) - v("adm1", a, ALLM, hz)).slice(0, 10);
+    mk("c-hot", {
+      type: "bar",
+      data: { labels: hot.map(i => `${D.adm1[i].n} (${D.adm1[i].c})`), datasets: hz.map(h => bar(h, hot.map(i => v("adm1", i, ALLM, [h])), C[h], { maxBarThickness: 16 })) },
+      options: { indexAxis: "y", maintainAspectRatio: false, plugins: { legend: { display: hz.length > 1, position: "bottom" }, tooltip: { callbacks: { label: c => ` ${c.dataset.label}: ${fmt(c.raw)}` } } },
+        scales: { x: { stacked: true, ticks: { callback: short } }, y: { stacked: true, grid: { display: false } } } },
+    });
     mk("c-region", {
       type: "line",
-      data: { labels: MONTHS, datasets: HZ.map(h => ({ label: h, data: ALLM.map(m => ISO.reduce((s, i) => s + v(i, [m], [h]), 0)), borderColor: C[h], backgroundColor: C[h], borderWidth: 2, pointRadius: 0, pointHoverRadius: 5, tension: 0.3 })) },
+      data: { labels: SHORT, datasets: HZ.map(h => ({ label: h, data: ALLM.map(m => regionM([m], [h])), borderColor: C[h], backgroundColor: C[h], borderWidth: 2, pointRadius: 0, pointHoverRadius: 5, tension: 0.3 })) },
       options: { maintainAspectRatio: false, interaction: { mode: "index", intersect: false },
-        plugins: { legend: { position: "bottom" }, tooltip: { callbacks: { label: c => ` ${c.dataset.label}: ${fmt(c.raw)}` } } },
+        plugins: { legend: { position: "bottom" }, tooltip: { callbacks: { title: c => LAB[c[0].dataIndex], label: c => ` ${c.dataset.label}: ${fmt(c.raw)}` } } },
         scales: { x: { grid: { display: false } }, y: { beginAtZero: true, ticks: { callback: short } } } },
     });
-    // hazard mix per country (100%)
+    const mixIso = order.filter(i => vc(i, ALLM, HZ) > 0);
     mk("c-mix", {
       type: "bar",
-      data: { labels: order.map(i => D.countries[i]), datasets: HZ.map(h => bar(h, order.map(i => { const t = v(i, ALLM, HZ); return t ? v(i, ALLM, [h]) / t * 100 : 0; }), C[h])) },
+      data: { labels: mixIso.map(i => D.countries[i]), datasets: HZ.map(h => bar(h, mixIso.map(i => vc(i, ALLM, [h]) / vc(i, ALLM, HZ) * 100), C[h])) },
       options: { indexAxis: "y", maintainAspectRatio: false,
         plugins: { legend: { position: "bottom" }, tooltip: { callbacks: { label: c => ` ${c.dataset.label}: ${c.raw.toFixed(0)}%` } } },
         scales: { x: { stacked: true, max: 100, ticks: { callback: x => x + "%" } }, y: { stacked: true, grid: { display: false } } } },
     });
-    // findings
-    const yr = ISO.reduce((s, i) => s + v(i, ALLM, HZ), 0);
-    const fl = ALLM.map(m => ISO.reduce((s, i) => s + v(i, [m], ["Flood"]), 0));
-    const jas = fl[6] + fl[7] + fl[8], flTot = fl.reduce((a, b) => a + b, 0);
-    const dr = ALLM.map(m => ISO.reduce((s, i) => s + v(i, [m], ["Drought"]), 0));
-    const dry = dr[11] + dr[0] + dr[1] + dr[2], drTot = dr.reduce((a, b) => a + b, 0);
-    const top2 = [...ISO].sort((a, b) => v(b, ALLM, HZ) - v(a, ALLM, HZ)).slice(0, 2);
-    const top2s = top2.reduce((s, i) => s + v(i, ALLM, HZ), 0);
+    // findings, all computed from the data
+    const yr = regionM(ALLM, HZ), top2 = order.slice(0, 2), conf = regionM(ALLM, ["Conflict"]);
+    const hot1 = [...ADM].sort((a, b) => v("adm1", b, ALLM, HZ) - v("adm1", a, ALLM, HZ))[0];
+    const dryM = somDry();
     $("findings").innerHTML = [
-      [`${Math.round(top2s / yr * 100)}% in two countries`, `${D.countries[top2[0]]} and ${D.countries[top2[1]]} account for most new displacement in 2025.`],
-      [`Floods peak July–September`, `${Math.round(jas / flTot * 100)}% of flood displacement happens in these three months, mostly in the Sudans.`],
-      [`Drought builds in the dry season`, `${Math.round(dry / drTot * 100)}% of drought displacement falls between December and March.`],
-      [`Conflict never stops`, `Conflict displacement stays high all year, so early warning must layer it with seasonal hazards.`],
-    ].map(([t, s]) => `<div class="finding"><b>${t}</b>${s}</div>`).join("");
+      [`${pct(vc(top2[0], ALLM, HZ) + vc(top2[1], ALLM, HZ), yr)}% in two countries`, `${D.countries[top2[0]]} and ${D.countries[top2[1]]} recorded most of the ${short(yr)} new displacements in ${WIN}.`],
+      [`Conflict drives ${pct(conf, yr)}%`, `Climate hazards add ${short(yr - conf)} more, led by floods (${short(regionM(ALLM, ["Flood"]))}) and drought (${short(regionM(ALLM, ["Drought"]))}).`],
+      [`${D.adm1[hot1].n} is the top hotspot`, `${fmt(v("adm1", hot1, ALLM, HZ))} people (${pct(v("adm1", hot1, ALLM, HZ), yr)}% of the region) in one admin-1 unit of ${D.countries[D.adm1[hot1].c]}, from ${topHz("adm1", hot1).join(" and ").toLowerCase()}.`],
+      dryM ? [`Failed rains, then drought`, `Somalia's rainfall fell to ${Math.round(dryM.r)}% of normal in ${LAB[dryM.m]}; ${short(dryM.after)} drought displacements followed over the next three months.`] : null,
+    ].filter(Boolean).map(([t, s]) => `<div class="finding"><b>${t}</b>${s}</div>`).join("");
+  }
+  const topHz = (lvl, id) => HZ.map(h => [h, v(lvl, id, ALLM, [h])]).filter(x => x[1] > 0).sort((a, b) => b[1] - a[1]).slice(0, 2).map(x => x[0]);
+  function somDry() {   // driest rainy-season month in Somalia and the drought displacement after it
+    const r = ALLM.map(m => [m, rainOf("country", "SOM", m)]).filter(x => x[1] != null && x[0] < N - 1).sort((a, b) => a[1] - b[1])[0];
+    if (!r) return null;
+    const after = [r[0] + 1, r[0] + 2, r[0] + 3].filter(m => m < N);
+    return { m: r[0], r: r[1], after: vc("SOM", after, ["Drought"]), months: [r[0], ...after] };
   }
 
-  // ---------- Story ----------
-  const yearAll = iso => v(iso, ALLM, HZ);
-  const topIso = [...ISO].sort((a, b) => yearAll(b) - yearAll(a))[0];
-  const regionMonthly = h => ALLM.map(m => ISO.reduce((s, i) => s + v(i, [m], [h]), 0));
-  const countryMonthly = (iso, h) => ALLM.map(m => v(iso, [m], [h]));
+  // ---------- Story (every number computed from the data) ----------
+  const yearAll = iso => vc(iso, ALLM, HZ);
+  const topIso = order[0];
+  const peakOf = (lvl, id, h) => ALLM.reduce((b, m) => v(lvl, id, [m], [h]) > v(lvl, id, [b], [h]) ? m : b, 0);
+  const hot1 = [...ADM].sort((a, b) => v("adm1", b, ALLM, HZ) - v("adm1", a, ALLM, HZ))[0];
+  const hotIso = D.adm1[hot1].c;
+  const flPeak = peakOf("country", hotIso, "Flood");
+  const sd = somDry();
+  const kenWet = ALLM.filter(m => rainOf("country", "KEN", m) != null).sort((a, b) => rainOf("country", "KEN", b) - rainOf("country", "KEN", a))[0];
+  const conflictTop = [...ISO].sort((a, b) => vc(b, ALLM, ["Conflict"]) - vc(a, ALLM, ["Conflict"]));
   const STEPS = [
-    {
-      title: "A region on the move", iso: null, months: ALLM, hz: HZ,
-      hero: () => short(ISO.reduce((s, i) => s + yearAll(i), 0)), heroL: () => "people newly displaced in 2025",
-      text: () => `Floods, drought and conflict forced people from their homes in every IGAD country. ${D.countries[topIso]} saw the most new displacement. Darker countries on the map had more people displaced.`,
-      chart: () => ({ type: "bar", labels: MONTHS, sets: HZ.map(h => [h, regionMonthly(h)]), stacked: true }),
-    },
-    {
-      title: "Sudan's rainy season", iso: "SDN", months: [6, 7, 8], hz: ["Flood"],
-      hero: () => short(v("SDN", [6, 7, 8], ["Flood"])), heroL: () => `flood displacements in Sudan, July–September`,
-      text: () => `${Math.round(v("SDN", [6, 7, 8], ["Flood"]) / Math.max(1, v("SDN", ALLM, ["Flood"])) * 100)}% of Sudan's yearly flood displacement happens in just three months, when the Nile and its tributaries overflow. Forecasts issued in June give a window for anticipatory action.`,
-      chart: () => ({ type: "bar", labels: MONTHS, sets: [["Flood", countryMonthly("SDN", "Flood")]], focus: [6, 7, 8] }),
-    },
-    {
-      title: "Somalia's two rainy seasons", iso: "SOM", months: [3, 4, 9, 10], hz: ["Flood"],
-      hero: () => "2 peaks", heroL: () => "Gu (Apr–May) and Deyr (Oct–Nov)",
-      text: () => `Somalia's flood displacement follows its two rainy seasons, so early warning must run twice a year. The Gu and Deyr peaks together account for ${Math.round(v("SOM", [3, 4, 9, 10], ["Flood"]) / Math.max(1, v("SOM", ALLM, ["Flood"])) * 100)}% of the country's flood displacement.`,
-      chart: () => ({ type: "bar", labels: MONTHS, sets: [["Flood", countryMonthly("SOM", "Flood")]], focus: [3, 4, 9, 10] }),
-    },
-    {
-      title: "Drought in the dry months", iso: null, months: [11, 0, 1, 2], hz: ["Drought"],
-      hero: () => { const d = regionMonthly("Drought"); return Math.round((d[11] + d[0] + d[1] + d[2]) / d.reduce((a, b) => a + b, 0) * 100) + "%"; },
-      heroL: () => "of drought displacement falls in Dec–Mar",
-      text: () => `Drought moves more slowly than floods. As pasture and water run out in the dry season, pastoralist families move with their herds. Seasonal outlooks months ahead can trigger support before they have to leave.`,
-      chart: () => ({ type: "bar", labels: MONTHS, sets: [["Drought", regionMonthly("Drought")]], focus: [11, 0, 1, 2] }),
-    },
-    {
-      title: "Conflict: a constant pressure", iso: null, months: ALLM, hz: ["Conflict"],
-      hero: () => short(ISO.reduce((s, i) => s + v(i, ALLM, ["Conflict"]), 0)), heroL: () => "conflict displacements in 2025",
-      text: () => { const t = [...ISO].sort((a, b) => v(b, ALLM, ["Conflict"]) - v(a, ALLM, ["Conflict"]))[0]; return `Unlike seasonal hazards, conflict displacement is steady through the year, highest in ${D.countries[t]}. When a flood hits an area already affected by conflict, the risk of displacement multiplies.`; },
-      chart: () => ({ type: "line", labels: MONTHS, sets: HZ.map(h => [h, regionMonthly(h)]) }),
-    },
-    {
-      title: "From data to early action", iso: null, months: ALLM, hz: HZ,
-      hero: () => "3 hazards", heroL: () => "one regional picture",
-      text: () => `Bringing displacement data into the hazard watch systems lets decision-makers see who is likely to move, where and when, and act before it happens. This demo uses illustrative estimates; a real system would use IOM DTM and IDMC data.`,
-      chart: () => ({ type: "bar", labels: [...ISO].sort((a, b) => yearAll(b) - yearAll(a)).map(i => D.countries[i]), sets: HZ.map(h => [h, [...ISO].sort((a, b) => yearAll(b) - yearAll(a)).map(i => v(i, ALLM, [h]))]), stacked: true, horizontal: true }),
-    },
+    { title: "A region on the move", lvl: "country", months: ALLM, hz: HZ, rainK: null,
+      hero: () => short(regionM(ALLM, HZ)), heroL: () => `new displacements, ${WIN}`,
+      text: () => `IDMC recorded displacement in ${ISO.filter(i => yearAll(i) > 0).length} of the 8 IGAD countries in the last 12 months. ${D.countries[topIso]} had the most (${short(yearAll(topIso))}). Each dot on the map is one IDMC record; darker countries had more people displaced.`,
+      chart: () => ({ sid: null, hz: HZ }) },
+    { title: "Conflict is the main driver", lvl: "adm1", months: ALLM, hz: ["Conflict"], rainK: null,
+      hero: () => pct(regionM(ALLM, ["Conflict"]), regionM(ALLM, HZ)) + "%", heroL: () => "of all new displacement was caused by conflict",
+      text: () => `${conflictTop.slice(0, 3).map(i => D.countries[i]).join(", ")} account for most conflict displacement. At admin-1 level the picture is sharper: a few states carry most of the load, which is where anticipatory action for climate hazards must also work.`,
+      chart: () => ({ sid: null, hz: ["Conflict"] }) },
+    { title: `${D.adm1[hot1].n}: floods on top of conflict`, lvl: "adm1", sel: hot1, months: ALLM, hz: HZ, rainK: flPeak, rain: true,
+      hero: () => short(v("adm1", hot1, ALLM, HZ)), heroL: () => `people displaced in ${D.adm1[hot1].n}, the region's top hotspot`,
+      text: () => { const r = rainOf("adm1", hot1, flPeak); return `${topHz("adm1", hot1).join(" and ")} displaced people here. Flood displacement in ${D.countries[hotIso]} peaked in ${LAB[flPeak]} (${short(vc(hotIso, [flPeak], ["Flood"]))}), yet local rainfall was ${r == null ? "seasonally low" : Math.round(r) + "% of normal"}. Floods in the Sudd come from river flows upstream, so warnings need hydrological forecasts, not just local rain.`; },
+      chart: () => ({ lvl: "adm1", sid: hot1, hz: HZ }) },
+    ...(sd ? [{ title: "Somalia: failed rains, then drought", lvl: "adm1", iso: "SOM", months: sd.months, hz: ["Drought"], rainK: sd.m, rain: true,
+      hero: () => Math.round(sd.r) + "%", heroL: () => `of normal rainfall in ${LAB[sd.m]}`,
+      text: () => `When the rains failed, pasture and water ran out. ${short(sd.after)} people were displaced by drought in the following three months, mostly in ${[...ADM].filter(i => D.adm1[i].c === "SOM").sort((a, b) => v("adm1", b, ALLM, ["Drought"]) - v("adm1", a, ALLM, ["Drought"])).slice(0, 2).map(i => D.adm1[i].n).join(" and ")}. A seasonal outlook issued before the rains could have triggered support earlier.`,
+      chart: () => ({ lvl: "country", sid: "SOM", hz: ["Drought"], focus: sd.months }) }] : []),
+    ...(kenWet != null ? [{ title: "Kenya: when the rains overshoot", lvl: "adm1", iso: "KEN", months: [kenWet], hz: ["Flood"], rainK: kenWet, rain: true,
+      hero: () => Math.round(rainOf("country", "KEN", kenWet)) + "%", heroL: () => `of normal rainfall in ${LAB[kenWet]}`,
+      text: () => `Kenya's wettest month relative to normal displaced ${short(vc("KEN", [kenWet], ["Flood"]))} people by floods. Over the 12 months, floods displaced ${short(vc("KEN", ALLM, ["Flood"]))} people in Kenya, ${pct(vc("KEN", ALLM, ["Flood"]), yearAll("KEN"))}% of its total.`,
+      chart: () => ({ lvl: "country", sid: "KEN", hz: ["Flood"], focus: [kenWet] }) }] : []),
+    { title: "From data to early action", lvl: "adm1", months: ALLM, hz: HZ, rainK: N, rain: true,
+      hero: () => "2 layers", heroL: () => "hazard + displacement, one map",
+      text: () => `Hazard watch platforms show rain, floods and drought; this sample adds where people actually moved. The pipeline refreshes monthly from IDMC and CHIRPS in GitHub Actions, so the same view can feed early-warning bulletins and anticipatory action triggers.`,
+      chart: () => ({ sid: null, hz: HZ }) },
   ];
-  let step = 0;
+  let step = 0, story = null;
   function drawStory() {
-    const s = STEPS[step];
+    const s = STEPS[step]; story = s;
     $("st-count").textContent = `Story · ${step + 1} of ${STEPS.length}`;
     $("st-dots").innerHTML = STEPS.map((_, i) => `<button aria-label="Step ${i + 1}" class="${i === step ? "on" : ""}" data-i="${i}"></button>`).join("");
     $("st-title").textContent = s.title;
@@ -268,20 +382,16 @@
     $("st-text").textContent = s.text();
     $("st-prev").disabled = step === 0;
     $("st-next").textContent = step === STEPS.length - 1 ? "Explore the data →" : "Next →";
-    highlight = s.iso;
-    paintMap(iso => v(iso, s.months, s.hz), `${s.hz.length === 3 ? "All hazards" : s.hz[0]} · ${s.months.length === 12 ? "2025" : s.months.map(m => MONTHS[m]).join(", ")}`);
-    drawKpis(s.months, s.hz, s.months.length === 12 ? "2025, all IGAD countries" : `${s.months.map(m => MONTHS[m]).join(", ")} 2025`);
-    fly((s.iso && boundsOf(s.iso)) || regionBounds, { padding: [20, 20], maxZoom: 6, duration: 0.9 });
+    highlight = s.sel || s.iso || null;
+    state.layers.rain = !!s.rain;
+    document.querySelector('[data-layer="rain"]').checked = state.layers.rain;
+    const per = s.months.length === N ? WIN : s.months.map(m => LAB[m]).join(", ");
+    paintMap(s.lvl, id => v(s.lvl, id, s.months, s.hz), `${hzLabel(s.hz)} · ${per}`, short, { months: s.months, hz: s.hz, rainK: s.rainK ?? N });
+    drawKpis(s.months, s.hz, s.lvl, per);
+    const b = (s.sel && boundsOf("adm1", s.sel)) || (s.iso && boundsOf("country", s.iso)) || regionBounds;
+    fly(b, { padding: [30, 30], maxZoom: s.sel ? 7 : 6, duration: 0.9 });
     const c = s.chart();
-    mk("c-story", {
-      type: c.type,
-      data: { labels: c.labels, datasets: c.sets.map(([h, data]) => c.type === "line"
-        ? { label: h, data, borderColor: C[h], backgroundColor: C[h], borderWidth: 2, pointRadius: 0, tension: 0.3 }
-        : bar(h, data, c.focus ? data.map((_, i) => c.focus.includes(i) ? C[h] : css("--neutral")) : C[h], { maxBarThickness: 16 })) },
-      options: { maintainAspectRatio: false, indexAxis: c.horizontal ? "y" : "x",
-        plugins: { legend: { display: c.sets.length > 1, position: "bottom" }, tooltip: { callbacks: { label: x => ` ${x.dataset.label}: ${fmt(x.raw)}` } } },
-        scales: { x: { stacked: !!c.stacked, grid: { display: false }, ticks: c.horizontal ? { callback: short } : {} }, y: { stacked: !!c.stacked, grid: { display: !c.horizontal }, ticks: c.horizontal ? {} : { callback: short } } } },
-    });
+    combo("c-story", c.lvl, c.sid, c.hz, { focus: c.focus });
   }
   $("st-dots").onclick = e => { const b = e.target.closest("button"); if (b) { step = +b.dataset.i; drawStory(); } };
   $("st-prev").onclick = () => { if (step > 0) { step--; drawStory(); } };
@@ -293,51 +403,60 @@
   });
 
   // ---------- views ----------
-  function setView(v) {
-    state.view = v; highlight = null;
-    document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.view === v));
-    $("map-layout").hidden = v === "insights";
-    $("view-insights").hidden = v !== "insights";
-    $("panel-explore").hidden = v !== "explore";
-    $("panel-story").hidden = v !== "story";
-    $("filterbar").hidden = v === "story";
-    document.querySelector(".period").style.visibility = v === "insights" ? "hidden" : "";
-    $("metric").style.visibility = v === "insights" ? "hidden" : "";
-    if (v !== "insights") setTimeout(() => map.invalidateSize(), 50);
-    if (v === "story") { step = 0; drawStory(); }
-    else { if (v === "explore") fly(regionBounds, { padding: [10, 10], duration: 0.6 }); refresh(); }
+  function setView(vw) {
+    state.view = vw; highlight = null; story = null;
+    document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.view === vw));
+    $("map-layout").hidden = vw === "insights";
+    $("view-insights").hidden = vw !== "insights";
+    $("panel-explore").hidden = vw !== "explore";
+    $("panel-story").hidden = vw !== "story";
+    $("filterbar").hidden = vw === "story";
+    for (const id of ["level", "metric"]) $(id).style.display = vw === "insights" ? "none" : "";
+    document.querySelector(".period").style.display = vw === "insights" ? "none" : "";
+    if (vw !== "insights") setTimeout(() => map.invalidateSize(), 50);
+    if (vw === "story") { step = 0; drawStory(); }
+    else {
+      if (vw === "explore") { state.layers.rain = document.querySelector('[data-layer="rain"]').checked = false; fly(regionBounds, { padding: [10, 10], duration: 0.6 }); }
+      refresh();
+    }
   }
   document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => setView(b.dataset.view));
 
   // ---------- controls ----------
-  document.querySelectorAll("#hazard button").forEach(b => b.onclick = () => {
-    document.querySelectorAll("#hazard button").forEach(x => x.classList.toggle("on", x === b));
-    state.hazard = b.dataset.h; refresh();
+  const seg = (id, key, cb) => document.querySelectorAll(`#${id} button`).forEach(b => b.onclick = () => {
+    document.querySelectorAll(`#${id} button`).forEach(x => x.classList.toggle("on", x === b));
+    cb(b.dataset[key]); refresh();
   });
-  document.querySelectorAll("#metric button").forEach(b => b.onclick = () => {
-    document.querySelectorAll("#metric button").forEach(x => x.classList.toggle("on", x === b));
-    state.metric = b.dataset.m; refresh();
-  });
+  seg("hazard", "h", x => state.hazard = x);
+  seg("metric", "m", x => state.metric = x);
+  seg("level", "l", x => { state.level = x; if (state.sel?.lvl === "adm1" && x === "country") state.sel = null; });
+  document.querySelectorAll("[data-layer]").forEach(cb => cb.onchange = () => { state.layers[cb.dataset.layer] = cb.checked; state.view === "story" ? (story && paintMap(paint.lvl, paint.fn, paint.title, paint.f, { months: story.months, hz: story.hz, rainK: story.rainK ?? N })) : refresh(); });
+  $("rainOpacity").oninput = e => { state.rainOpacity = e.target.value / 100; if (rainImg) rainImg.setOpacity(state.rainOpacity); };
   const slider = $("month");
-  slider.oninput = () => { state.monthIdx = +slider.value; refresh(); };
+  slider.max = N;
+  slider.oninput = () => { state.k = +slider.value; refresh(); };
   let timer = null;
   $("play").onclick = () => {
     if (timer) { clearInterval(timer); timer = null; $("play").textContent = "▶"; return; }
     $("play").textContent = "❚❚";
-    if (state.monthIdx >= 11) state.monthIdx = -1;
+    if (state.k >= N - 1) state.k = -1;
     timer = setInterval(() => {
-      state.monthIdx++;
-      if (state.monthIdx > 11) { clearInterval(timer); timer = null; $("play").textContent = "▶"; state.monthIdx = 12; }
-      slider.value = state.monthIdx; refresh();
-    }, 900);
+      state.k++;
+      if (state.k > N - 1) { clearInterval(timer); timer = null; $("play").textContent = "▶"; state.k = N; }
+      slider.value = state.k; refresh();
+    }, 1100);
   };
   $("download").onclick = () => {
-    const rows = ISO.map(i => [D.countries[i], i, periodLabel(), state.hazard, val(i)]).sort((a, b) => b[4] - a[4]);
-    const csv = ["country,iso3,period,hazard,new_displacements", ...rows.map(r => r.join(","))].join("\n");
+    const lvl = state.level, rows = ids(lvl).map(i => [lvl === "adm1" ? `"${D.adm1[i].n}"` : `"${D.countries[i]}"`, lvl === "adm1" ? D.adm1[i].c : i, periodLabel(), state.hazard, curVal(lvl, i), rainOf(lvl, i, state.k) ?? ""]).sort((a, b) => b[4] - a[4]);
+    const csv = ["area,iso3,period,hazard,new_displacements,rain_pct_of_normal", ...rows.map(r => r.join(","))].join("\n");
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
-    a.download = `displacement_${state.hazard}_${periodLabel().replace(/\s+/g, "_")}.csv`; a.click();
+    a.download = `eamw_${lvl}_${state.hazard}_${periodLabel().replace(/[^\w]+/g, "_")}.csv`; a.click();
   };
+
+  if (innerWidth < 860) $("layers").open = false;
+  $("subtitle").textContent = `Displacement × climate hazards · IGAD region · ${WIN}`;
+  $("meta").textContent = `Data refreshed ${D.meta.fetched || D.meta.built}: ${fmt(D.meta.records)} IDMC records, ${pct(D.meta.located.inside + D.meta.located.nearest, D.meta.records)}% located to admin-1.`;
 
   function refresh() {
     if (state.view === "insights") return drawInsights();
